@@ -132,11 +132,40 @@ a:hover {
     list-style: none;
 }
 
+#container ul li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    max-width: 15rem;
+    max-height: 15rem;
+    margin: 2rem;
+}
+
 #container p{
     margin: 0.5rem 0 0.5rem 0;
 }
 
 
+.services{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service{
+    margin: 1rem 1rem 1rem 1rem;
+    max-width: 15rem;
+    max-height: 15rem;
+    border: 2px solid rgb(160, 190, 209);
+    border-radius: 4px;
+}
+
+.service:hover{
+    background-color: rgb(169, 212, 212);
+    color: black;
+}
 
 
 
