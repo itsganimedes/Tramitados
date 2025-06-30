@@ -41,27 +41,49 @@
 
     <section id="container-3">
         <p class="title-2">Servicios</p>
-        <p>Servicios vigentes</p>
+        <h3>Servicios vigentes</h3>
+        <br>
+        <p><span>Nota:</span> al presionar CONTRATAR, se enviará un mensaje a través de GMAIL a la moderación de Tramitados anunciando tu solicitud. Luego, la misma se distribuirá a los profesionales en el área y, en cuanto uno tome el puesto, se te comunicará con él.</p>
 
         <section class="servicesvig">
 
 
             <div class="servicevig">
-                <b>Plomería</b>
-                <p>Profesionales independientes que te pueden ayudar.</p>
+                <b class="title-2"><i class="fa-solid fa-wrench"></i> Plomería</b>
+                <p>140 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
                 <br>
-                <div class="btn-3">
-                <a href="#">Contratar</a>
-                </div>
+                <button onclick="mostrarFormulario('plomeria')">Contratar</button>
+
+                <form id="form-plomeria" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Plomería">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Ubicación" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="Comentario adicional (opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
             </div>
 
             <div class="servicevig">
-                <b>Plomería</b>
-                <p>Profesionales independientes que te pueden ayudar.</p>
+                <b class="title-2"><i class="fa-solid fa-seedling"></i> Jardinería</b>
+                <p>95 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
                 <br>
-                <div class="btn-3">
-                <a href="#">Contratar</a>
-                </div>
+                <button onclick="mostrarFormulario('plomeria')">Contratar</button>
+
+                <form id="form-plomeria" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Jardinería">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Ubicación" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="Comentario adicional (opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
             </div>
 
 
@@ -75,4 +97,19 @@
 
     </div>
 </body>
+
+
+<script>
+    function mostrarFormulario(idServicio) {
+    const form = document.getElementById('form-' + idServicio);
+    if (form.classList.contains('oculto')) {
+        form.classList.remove('oculto');
+    } else {
+        form.classList.add('oculto');
+    }
+    }
+</script>
+
+
+
 </html>
