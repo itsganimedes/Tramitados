@@ -47,6 +47,53 @@
 
         <section class="servicesvig">
 
+            <!--recados-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-store"></i></i> Recados</b>
+                <p>322 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('recados')">Contratar</button>
+
+                <form id="form-recados" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Recados">
+
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--organizacion-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-calendar-days"></i> Organización</b>
+                <p>78 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('organizacion')">Contratar</button>
+
+                <form id="form-organizacion" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Organización">
+
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+
             <!--plomería-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-wrench"></i> Plomería</b>
@@ -62,10 +109,10 @@
 
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <input type="text" name="ubicacion" placeholder="Ubicación" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
                     <input type="date" name="fecha" required>
                     <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="Comentario adicional (opcional)"></textarea>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>
@@ -85,10 +132,10 @@
 
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <input type="text" name="ubicacion" placeholder="Ubicación" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
                     <input type="date" name="fecha" required>
                     <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="Comentario adicional (opcional)"></textarea>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>
@@ -109,10 +156,126 @@
 
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <input type="text" name="ubicacion" placeholder="Ubicación" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
                     <input type="date" name="fecha" required>
                     <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="Comentario adicional (opcional)"></textarea>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--profesores-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-chalkboard-user"></i> Profesores</b>
+                <p>55 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('profesores')">Contratar</button>
+
+                <form id="form-profesores" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Profesores">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Profesor de qué?" required></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            
+            <!--hogar-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-broom"></i> Cuidado del Hogar</b>
+                <p>173 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('hogar')">Contratar</button>
+
+                <form id="form-hogar" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Cuidado del Hogar">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--legales-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-gavel"></i> Trámites Legales</b>
+                <p>9 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('legales')">Contratar</button>
+
+                <form id="form-legales" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Tramites Legales">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--musica-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-guitar"></i> Música</b>
+                <p>42 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('musica')">Contratar</button>
+
+                <form id="form-musica" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Música">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--asistencia física-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-handshake-angle"></i> Asistencia Física</b>
+                <p>14 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('fisica')">Contratar</button>
+
+                <form id="form-fisica" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Asistencia Física">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Tu región/departamento" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>

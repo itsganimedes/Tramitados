@@ -95,7 +95,6 @@
 }
 
 
-
 #container-3{
     background: rgb(71, 101, 109);
     padding: 2rem;
@@ -255,7 +254,6 @@ a:hover {
 }
 
 .servicevig{
-
     width: 100%;
     max-width: 30rem;
     margin: 1rem auto;
@@ -265,6 +263,7 @@ a:hover {
     border-radius: 0.5rem;
     font-weight: bold;
     padding: 1rem;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
 
 
@@ -304,13 +303,6 @@ a:hover {
 
 
 
-
-
-
-
-
-
-
 .available {
     color: rgb(0, 122, 0);
 }
@@ -319,6 +311,7 @@ a:hover {
 }
 
 #container-3 button{
+    display: block;
     width: 100%;
     max-width: 7rem;
     background-color: rgb(91, 138, 160);
