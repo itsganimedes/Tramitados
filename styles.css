@@ -94,6 +94,16 @@
     text-align: justify;
 }
 
+
+
+#container-3{
+    background: rgb(71, 101, 109);
+    padding: 2rem;
+    text-align: justify;
+}
+
+
+
 .info{
     text-align: justify;
 }
@@ -152,6 +162,8 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgb(42, 70, 73);
+    border-radius: 10px;
 }
 
 .service{
@@ -160,6 +172,7 @@ a:hover {
     max-height: 15rem;
     border: 2px solid rgb(160, 190, 209);
     border-radius: 4px;
+    background: rgb(71, 101, 109);
 }
 
 .service:hover{
@@ -208,6 +221,77 @@ a:hover {
 #container-2 p{
     margin: 0.5rem 0 0.5rem 0;
 }
+
+
+
+
+
+
+
+#container-3 span{
+    color: rgb(128, 255, 213);
+    text-decoration: underline;
+}
+
+#container-3 img {
+    width: 100%;
+    max-width: 15rem;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+#container-3 img:hover{
+    border-color: aquamarine;
+}
+
+.servicesvig{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servicevig{
+    margin: 1rem 0 1rem 0;
+    background-color: aquamarine;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    width: 30rem;
+}
+
+
+.btn-3{
+    width: 7rem;
+    height: 2rem;
+    background-color: rgb(91, 138, 160);
+    border-radius: 10px;
+    margin: 1rem 0 1rem 0;
+}
+
+.btn-3:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+#container-3 a{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    line-height: 2rem;
+    margin: 0 0.8rem 0 0.8rem;
+}
+
+#container-3 a:hover {
+    color: white;
+}
+
+
+#container-3 p{
+    margin: 0.5rem 0 0.5rem 0;
+}
+
 
 
 
