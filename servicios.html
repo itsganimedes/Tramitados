@@ -45,6 +45,12 @@
         <br>
         <p><span>Nota:</span> al presionar CONTRATAR, se enviará un mensaje a través de GMAIL a la moderación de Tramitados anunciando tu solicitud. Luego, la misma se distribuirá a los profesionales en el área y, en cuanto uno tome el puesto, se te comunicará con él.</p>
 
+        <div class="search-bar">
+            <input type="text" id="busqueda" placeholder="¿Qué servicio buscás?">
+            <p>Utiliza acentos si es necesario</p>
+            <button onclick="servicesearch()">Buscar</button>
+        </div>
+        
         <section class="servicesvig">
 
             <!--recados-->
@@ -289,20 +295,8 @@
     </footer>
 
     </div>
+
+    <script src="codigo.js"></script>
 </body>
-
-
-<script>
-    function mostrarFormulario(idServicio) {
-    const form = document.getElementById('form-' + idServicio);
-    if (form.classList.contains('oculto')) {
-        form.classList.remove('oculto');
-    } else {
-        form.classList.add('oculto');
-    }
-    }
-</script>
-
-
 
 </html>
