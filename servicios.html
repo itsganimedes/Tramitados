@@ -47,7 +47,7 @@
 
         <section class="servicesvig">
 
-
+            <!--plomería-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-wrench"></i> Plomería</b>
                 <p>140 profesionales inscriptos.</p>
@@ -57,6 +57,54 @@
 
                 <form id="form-plomeria" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
                     <input type="hidden" name="_subject" value="Solicitud de Plomería">
+
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Ubicación" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="Comentario adicional (opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--jardinería-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-seedling"></i> Jardinería</b>
+                <p>95 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('jardineria')">Contratar</button>
+
+                <form id="form-jardineria" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Jardinería">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input type="text" name="ubicacion" placeholder="Ubicación" required>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="Comentario adicional (opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+
+            <!--fotografía-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-camera"></i> Fotografía</b>
+                <p>23 profesionales inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('fotografia')">Contratar</button>
+
+                <form id="form-fotografia" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Fotografía">
+                    
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
