@@ -251,6 +251,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-align: left;
 }
 
 .servicevig{
