@@ -274,12 +274,22 @@ a:hover {
     height: 3rem;
     max-height: 5rem;
     margin: 1rem auto;
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     background: rgb(51, 72, 78);
     text-align: center;
     color: white;
     font-size: large;
+}
+
+.search-bar{
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: rgb(31, 43, 46);
 }
 
 .search-bar p{
