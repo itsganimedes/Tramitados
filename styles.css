@@ -29,7 +29,19 @@
         color: white;
         font-style: italic;
         padding: 0.5rem 0.5rem 0 3rem;
+        text-align: center;
         font-size: 4rem;
+    }
+
+    header img{
+        margin: 0 auto;
+        width: 100%;
+        width: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 5px;
     }
 
     header h4{
@@ -37,6 +49,7 @@
         font-style: italic;
         padding: 0 0.5rem 0.5rem 3rem;
         font-size: 1.5rem;
+        text-align: center;
     }
 
 
@@ -311,7 +324,7 @@ select {
 
 
 
-
+    
 .formulario-servicio {
     margin-top: 1rem;
     padding: 1rem;
@@ -331,6 +344,7 @@ select {
     padding: 0.5rem;
     border-radius: 0.3rem;
     border: none;
+    font-family: Georgia, serif;
 }
 
 .formulario-servicio button {
@@ -388,7 +402,14 @@ select {
 
 
 
-
+.text{
+    text-align: justify;
+    span{
+        background-color: #2f4f4f;
+        border: 1px solid rgb(255, 255, 255);
+        padding: 0.2rem;
+    }
+}
 
 
 
