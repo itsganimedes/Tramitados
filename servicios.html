@@ -44,7 +44,7 @@
         <p class="title-2">Servicios</p>
         <h3>Servicios vigentes</h3>
         <br>
-        <p><span>Nota:</span> al presionar CONTRATAR, se enviará un mensaje a través de GMAIL a la moderación de Tramitados anunciando tu solicitud. Luego, la misma se distribuirá a los profesionales en el área y, en cuanto uno tome el puesto, se te comunicará con él.</p>
+        <p><span>Nota:</span> al presionar ENVIAR SOLICITUD, se enviará un mensaje a través de GMAIL a la moderación de Tramitados anunciando tu solicitud. Luego, la misma se distribuirá a los profesionales en el área y, en cuanto uno tome el puesto, se te comunicará con él.</p>
 
         <div class="search-bar">
             <input type="text" id="busqueda" placeholder="¿Qué servicio buscás?">
@@ -57,7 +57,7 @@
             <!--recados-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-store"></i></i> Recados</b>
-                <p>322 profesionales inscriptos.</p>
+                <p id="res-ins-0"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('recados')">Contratar</button>
@@ -100,7 +100,7 @@
             <!--organizacion-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-calendar-days"></i> Organización</b>
-                <p>78 profesionales inscriptos.</p>
+                <p id="res-ins-1"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('organizacion')">Contratar</button>
@@ -140,7 +140,7 @@
             <!--plomería-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-wrench"></i> Plomería</b>
-                <p>140 profesionales inscriptos.</p>
+                <p id="res-ins-2"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('plomeria')">Contratar</button>
@@ -179,7 +179,7 @@
             <!--jardinería-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-seedling"></i> Jardinería</b>
-                <p>95 profesionales inscriptos.</p>
+                <p id="res-ins-3"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('jardineria')">Contratar</button>
@@ -218,7 +218,7 @@
             <!--electricista-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-bolt"></i> Electricista</b>
-                <p>37 profesionales inscriptos.</p>
+                <p id="res-ins-4"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('electricista')">Contratar</button>
@@ -257,7 +257,7 @@
             <!--gasista-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-fire"></i> Gasista</b>
-                <p>20 profesionales inscriptos.</p>
+                <p id="res-ins-5"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('gasista')">Contratar</button>
@@ -296,7 +296,7 @@
             <!--cuidadoadultos-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-person-cane"></i> Cuidado de Mayores</b>
-                <p>118 profesionales inscriptos.</p>
+                <p id="res-ins-6"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('cuidadoadultos')">Contratar</button>
@@ -335,7 +335,7 @@
             <!--ninera-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-baby-carriage"></i> Cuidado de Niños</b>
-                <p>203 profesionales inscriptos.</p>
+                <p id="res-ins-7"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('ninera')">Contratar</button>
@@ -375,7 +375,7 @@
             <!--fotografía-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-camera"></i> Fotografía</b>
-                <p>23 profesionales inscriptos.</p>
+                <p id="res-ins-8"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('fotografia')">Contratar</button>
@@ -414,7 +414,7 @@
             <!--profesores-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-chalkboard-user"></i> Profesores</b>
-                <p>55 profesionales inscriptos.</p>
+                <p  id="res-ins-9"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('profesores')">Contratar</button>
@@ -454,7 +454,7 @@
             <!--hogar-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-broom"></i> Cuidado del Hogar</b>
-                <p>173 profesionales inscriptos.</p>
+                <p id="res-ins-10"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('hogar')">Contratar</button>
@@ -493,7 +493,7 @@
             <!--legales-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-gavel"></i> Trámites Legales</b>
-                <p>9 profesionales inscriptos.</p>
+                <p id="res-ins-11"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('legales')">Contratar</button>
@@ -532,7 +532,7 @@
             <!--musica-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-guitar"></i> Música</b>
-                <p>42 profesionales inscriptos.</p>
+                <p id="res-ins-12"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('musica')">Contratar</button>
@@ -571,7 +571,7 @@
             <!--asistencia física-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-handshake-angle"></i> Asistencia Física</b>
-                <p>14 profesionales inscriptos.</p>
+                <p id="res-ins-13"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('fisica')">Contratar</button>
@@ -603,6 +603,55 @@
                     <input type="date" name="fecha" required>
                     <input type="time" name="hora" required>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--servicio técnico-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-screwdriver-wrench"></i> Servicio Técnico</b>
+                <p id="res-ins-14"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('servtecnico')">Contratar</button>
+
+                <form id="form-servtecnico" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Servicio Técnico">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+
+                    <select name="servicio-tecnico" id="servicio-tecnico" required>
+                    <option value="">Servicio Técnico a Solicitar</option>
+                    <option value="Aire Acondicionado">Aire Acondicionado</option>
+                    <option value="Lavarropas">Lavarropas</option>
+                    <option value="Computadoras">Computadoras</option>
+                    <option value="Celular">Celular</option>
+                    </select>
+
+
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>
