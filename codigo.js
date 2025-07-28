@@ -3,7 +3,7 @@ let str=" responsables inscriptos.";
 
 let total=15;
 
-//inscriptos por servicio
+//cantidad de inscriptos por servicio
 let inscriptos=[
     0,              //1 RECADOS
     0,              //2 ORGANIZACIÓN

@@ -95,6 +95,15 @@
         color:rgb(0, 255, 255)
     }
 
+.text-info{
+    background-color: #2f4f4f;
+    padding: 1rem;
+}
+.text-info-2{
+    background: rgb(52, 74, 80);
+    padding: 1rem;  
+}
+
 #container{
     background: rgb(71, 101, 109);
     padding: 2rem;
@@ -319,13 +328,16 @@ a:hover {
     width: 100%;
     max-width: 30rem;
     margin: 1rem auto;
-    background-color: aquamarine;
+    background-color: rgb(129, 255, 213);
     color: black;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-weight: bold;
     padding: 1rem;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+.col2{
+    background-color: rgb(132, 255, 214);
 }
 
 #busqueda{
@@ -396,7 +408,7 @@ select {
 }
 
 .formulario-servicio button {
-    background-color: aquamarine;
+    background: rgb(71, 101, 109);
     padding: 0.7rem;
     font-weight: bold;
     border: none;
@@ -533,6 +545,11 @@ footer{
     padding: 2rem;
     text-align: center;
     line-height: 2rem;
+}
+
+footer ul{
+    list-style: none;
+    color: white;
 }
 
 @media (max-width: 600px) {
