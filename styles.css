@@ -118,7 +118,7 @@
 
 
 #container-3{
-    background: rgb(71, 101, 109);
+    background: linear-gradient(125deg, rgb(71, 101, 109), rgb(69, 92, 99));
     padding: 2rem;
     text-align: justify;
 }
@@ -201,6 +201,7 @@ a:hover {
 .service:hover{
     background-color: rgb(169, 212, 212);
     color: black;
+    transform: scale(1.05);
 }
 
 .services-2{
@@ -336,6 +337,21 @@ a:hover {
     padding: 1rem;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
+
+.servicevig:hover{
+    transform: scale(1.05);
+    background-color: rgb(73, 168, 164);
+}
+
+.servicevig button {
+    background: rgb(71, 101, 109);
+    padding: 0.7rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
 .col2{
     background-color: rgb(132, 255, 214);
 }
@@ -369,6 +385,16 @@ a:hover {
     text-align: center;
     margin: 0;
 }
+
+.search-bar button {
+    background: rgb(71, 101, 109);
+    padding: 0.7rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
 
 
 
@@ -445,7 +471,7 @@ select {
 }
 
 #container-3 a{
-    color: rgb(0, 0, 0);
+    color: rgb(128, 255, 213);
     text-decoration: underline;
     line-height: 2rem;
     margin: 0 0.8rem 0 0.8rem;
@@ -466,6 +492,9 @@ select {
     margin: 0 auto;
     text-align: center;
     text-decoration: none;
+    a{
+        text-decoration: none;
+    }
 }
 
 .pdf{
@@ -482,11 +511,14 @@ select {
     margin: 0 auto;
     text-align: center;
     text-decoration: none;
+    position: relative;
 }
 
 .pdf:hover{
-    background-color: #7ccfcf;
+    background-color: rgb(128, 255, 213);
     color: rgb(0, 0, 0);
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 
@@ -516,6 +548,11 @@ select {
 .title-3{
     font-size: 2rem;
     padding: 2rem 0 2rem 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.p-center{
     font-style: italic;
     text-align: center;
 }
