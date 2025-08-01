@@ -20,13 +20,22 @@
 
 
     header{
-        background-color: rgb(42, 70, 73);
-        padding: 3rem 0 3rem 0;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        background-image: url('img/Header.png');
+        padding: 10rem 0;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+        flex-direction: column;
+        color: white;
+        text-shadow: 1px 1px 3px black;
+        position: relative;
     }
 
     header h2{
-        color: white;
         font-style: italic;
         padding: 0.5rem 0.5rem 0 3rem;
         text-align: center;
@@ -34,20 +43,13 @@
     }
 
     header img{
-        margin: 0 auto;
-        width: 100%;
+        margin: 0 15rem;
         width: 5rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        border-radius: 5px;
     }
 
     header h4{
-        color: white;
         font-style: italic;
-        padding: 0 0.5rem 0.5rem 3rem;
+        padding: 0 0.5rem 0.5rem 9rem;
         font-size: 1.5rem;
         text-align: center;
     }
@@ -60,19 +62,19 @@
         min-height: 3rem;
         line-height: 2rem;
         border-bottom: 2px solid rgb(255, 255, 255);
-        flex-direction: column;
         color: white;
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    }   
+        padding: 0.5rem 0;
+    }
 
     @media (min-width: 600px) {
     nav {
-        flex-direction: row;
         justify-content: space-between;
     }
-}
+    }
 
     nav ul{
         display: flex;
@@ -118,7 +120,7 @@
 
 
 #container-3{
-    background: linear-gradient(125deg, rgb(71, 101, 109), rgb(69, 92, 99));
+    background: linear-gradient(0, rgb(71, 101, 109), rgb(55, 99, 112));
     padding: 2rem;
     text-align: justify;
 }
@@ -142,20 +144,6 @@ a:hover {
 
 #container span{
     color: rgb(128, 255, 213);
-    text-decoration: underline;
-}
-
-#container img {
-    width: 100%;
-    max-width: 15rem;
-    height: auto;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: 1rem;
-}
-
-#container img:hover{
-    border-color: aquamarine;
 }
 
 #container ul{
@@ -177,6 +165,67 @@ a:hover {
     margin: 0.5rem 0 0.5rem 0;
 }
 
+.fondo-blanco{
+    background-color: #dfdfdf;
+    height: 10rem;
+    color: rgb(26, 26, 26);
+    text-align: center;
+    margin: 0 -2rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-con-texto {
+    position: relative;
+    max-width: 50rem;
+    overflow: hidden;
+    margin: 0 auto;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.fondo-imagen-con-texto {
+    background: #000000;
+    margin: 0 -2rem;
+}
+
+
+.imagen-con-texto img {
+    width: 100%;
+    transform: scale(1.01);
+}
+
+.imagen-con-texto:hover img{
+    transform: scale(1.05);
+}
+
+.texto-superpuesto {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.texto-superpuesto:hover{
+    color:aqua;
+}
+
+
+
 
 .services{
     display: flex;
@@ -185,7 +234,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     background-color: rgb(42, 70, 73);
-    border-radius: 10px;
+    margin: 2rem -2rem 0 -2rem;
+    padding: 3rem 0;
 }
 
 .service{
@@ -236,25 +286,24 @@ a:hover {
 }
 
 .violet{
-    background-color: rgb(26, 1, 32);
+    background-color: rgb(12, 1, 51);
 }
 
 .yellow{
-    background-color: rgb(105, 116, 6);
+    background-color: rgb(0, 58, 112);
 }
 
 .orange{
-    background-color: rgb(133, 86, 0);
+    background-color: rgb(0, 89, 190);
 }
 
 .red{
-    background-color: rgb(124, 0, 0);
+    background-color: rgb(0, 119, 216);
 }
 
 
 #container-2 span{
     color: rgb(128, 255, 213);
-    text-decoration: underline;
 }
 
 #container-2 img {
@@ -300,7 +349,10 @@ a:hover {
 
 #container-3 span{
     color: rgb(128, 255, 213);
-    text-decoration: underline;
+}
+
+#container-3 label{
+    color: #fff;
 }
 
 #container-3 img {
@@ -364,7 +416,6 @@ a:hover {
     max-height: 5rem;
     margin: 1rem auto;
     border: 2px solid rgb(255, 255, 255);
-    border-radius: 10px;
     background: rgb(51, 72, 78);
     text-align: center;
     color: white;
@@ -372,12 +423,9 @@ a:hover {
 }
 
 .search-bar{
-    width: 100%;
-    max-width: 25rem;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    border: 2px solid white;
-    border-radius: 10px;
+    width: calc(100% + 4rem);
+    margin: 2rem -2rem;
+    padding: 1rem;
     background: rgb(31, 43, 46);
 }
 
@@ -442,6 +490,10 @@ select {
     cursor: pointer;
 }
 
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+}
 
 
 .available {
@@ -577,10 +629,16 @@ select {
     border-radius: 5px;
 }
 
+.line{
+    width: calc(100% + 4rem);
+    border: 1px solid rgb(31, 51, 53);;
+    margin: 1rem -2rem;
+}
+
 footer{
     background-color: rgb(42, 70, 73);
     padding: 2rem;
-    text-align: center;
+    text-align: left;
     line-height: 2rem;
 }
 
@@ -590,15 +648,27 @@ footer ul{
 }
 
 @media (max-width: 600px) {
+
+    header{
+        background-position: -30rem;
+    }
+
     header h2 {
         font-size: 2rem;
         text-align: center;
-        padding-left: 0;
+        padding-left: 1rem;
+        margin: 0 auto;
+    }
+
+    header img{
+        margin-left: 10.5rem;
+        width: 3rem;
     }
 
     header h4 {
         font-size: 1rem;
         text-align: center;
-        padding-left: 0;
+        padding-left: 1rem;
+        margin: 0 auto;
     }
 }
