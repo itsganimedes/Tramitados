@@ -56,141 +56,18 @@
         
         <section class="servicesvig">
 
-            <!--recados-->
-            <div class="servicevig">
-                <b class="title-2"><i class="fa-solid fa-store"></i></i> Recados</b>
+
+            <!--asistencia física-->
+            <div class="servicevig col2">
+                <b class="title-2"><i class="fa-solid fa-handshake-angle"></i> Asistencia Física</b>
                 <p>Tramitador Oficial</p>
                 <p id="res-ins-0"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
-                <button onclick="mostrarFormulario('recados')">Contratar</button>
+                <button onclick="mostrarFormulario('fisica')">Contratar</button>
 
-                <form id="form-recados" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Recados">
-
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
-
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
-
-                    <select name="ubicacion" id="ubicacion" required>
-                    <option value="">Región/Localidad</option>
-                    <option value="Albardón">Albardón</option>
-                    <option value="Angaco">Angaco</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Caucete">Caucete</option>
-                    <option value="Chimbas">Chimbas</option>
-                    <option value="9deJulio">9 de Julio</option>
-                    <option value="Pocito">Pocito</option>
-                    <option value="Rawson">Rawson</option>
-                    <option value="Rivadavia">Rivadavia</option>
-                    <option value="SanMartín">San Martín</option>
-                    <option value="SantaLucía">Santa Lucía</option>
-                    <option value="Sarmiento">Sarmiento</option>
-                    <option value="Ullum">Ullúm</option>
-                    <option value="25deMayo">25 de Mayo</option>
-                    </select>
-
-
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
-                    <button type="submit">Enviar solicitud</button>
-                </form>
-            </div>
-
-            <!--organizacion-->
-            <div class="servicevig col2">
-                <b class="title-2"><i class="fa-solid fa-calendar-days"></i> Organización</b>
-                <p>Tramitador Oficial</p>
-                <p id="res-ins-1"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
-                <br>
-                <button onclick="mostrarFormulario('organizacion')">Contratar</button>
-
-                <form id="form-organizacion" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Organización">
-
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
-
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <select name="ubicacion" id="ubicacion" required>
-                    <option value="">Región/Localidad</option>
-                    <option value="Albardón">Albardón</option>
-                    <option value="Angaco">Angaco</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Caucete">Caucete</option>
-                    <option value="Chimbas">Chimbas</option>
-                    <option value="9deJulio">9 de Julio</option>
-                    <option value="Pocito">Pocito</option>
-                    <option value="Rawson">Rawson</option>
-                    <option value="Rivadavia">Rivadavia</option>
-                    <option value="SanMartín">San Martín</option>
-                    <option value="SantaLucía">Santa Lucía</option>
-                    <option value="Sarmiento">Sarmiento</option>
-                    <option value="Ullum">Ullúm</option>
-                    <option value="25deMayo">25 de Mayo</option>
-                    </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
-                    <button type="submit">Enviar solicitud</button>
-                </form>
-            </div>
-
-
-            <!--plomería-->
-            <div class="servicevig">
-                <b class="title-2"><i class="fa-solid fa-wrench"></i> Plomería</b>
-                <p>Tramitador Independiente</p>
-                <p id="res-ins-2"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
-                <br>
-                <button onclick="mostrarFormulario('plomeria')">Contratar</button>
-
-                <form id="form-plomeria" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Plomería">
-
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
-
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <select name="ubicacion" id="ubicacion" required>
-                    <option value="">Región/Localidad</option>
-                    <option value="Albardón">Albardón</option>
-                    <option value="Angaco">Angaco</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Caucete">Caucete</option>
-                    <option value="Chimbas">Chimbas</option>
-                    <option value="9deJulio">9 de Julio</option>
-                    <option value="Pocito">Pocito</option>
-                    <option value="Rawson">Rawson</option>
-                    <option value="Rivadavia">Rivadavia</option>
-                    <option value="SanMartín">San Martín</option>
-                    <option value="SantaLucía">Santa Lucía</option>
-                    <option value="Sarmiento">Sarmiento</option>
-                    <option value="Ullum">Ullúm</option>
-                    <option value="25deMayo">25 de Mayo</option>
-                    </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
-                    <button type="submit">Enviar solicitud</button>
-                </form>
-            </div>
-
-            <!--jardinería-->
-            <div class="servicevig col2">
-                <b class="title-2"><i class="fa-solid fa-seedling"></i> Jardinería</b>
-                <p>Tramitador Oficial</p>
-                <p id="res-ins-3"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
-                <br>
-                <button onclick="mostrarFormulario('jardineria')">Contratar</button>
-
-                <form id="form-jardineria" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Jardinería">
+                <form id="form-fisica" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Asistencia Física">
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
@@ -219,6 +96,130 @@
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>
+
+            <!--cuidadoadultos-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-person-cane"></i> Cuidado de Mayores</b>
+                <p>Tramitador Oficial</p>
+                <p id="res-ins-1"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('cuidadoadultos')">Contratar</button>
+
+                <form id="form-cuidadoadultos" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Cuidado de Mayores">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            
+
+            <!--ninera-->
+            <div class="servicevig col2">
+                <b class="title-2"><i class="fa-solid fa-baby-carriage"></i> Cuidado de Niños</b>
+                <p>Tramitador Oficial</p>
+                <p id="res-ins-2"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('ninera')">Contratar</button>
+
+                <form id="form-ninera" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Cuidado de Niños">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+
+            <!--hogar-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-broom"></i> Cuidado del Hogar</b>
+                <p>Tramitador Oficial</p>
+                <p id="res-ins-3"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('hogar')">Contratar</button>
+
+                <form id="form-hogar" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Cuidado del Hogar">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
 
             <!--electricista-->
             <div class="servicevig">
@@ -260,17 +261,18 @@
                 </form>
             </div>
 
-            <!--gasista-->
-            <div class="servicevig col2">
-                <b class="title-2"><i class="fa-solid fa-fire"></i> Gasista</b>
-                <p>Tramitador Independiente</p>
+
+            <!--fletes-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-cart-flatbed"></i> Fletes</b>
+                <p>Tramitador Oficial</p>
                 <p id="res-ins-5"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
-                <button onclick="mostrarFormulario('gasista')">Contratar</button>
+                <button onclick="mostrarFormulario('fletes')">Contratar</button>
 
-                <form id="form-gasista" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Gasista">
+                <form id="form-fletes" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Fletes">
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
@@ -293,89 +295,13 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
+
                     <input type="date" name="fecha" required>
                     <input type="time" name="hora" required>
+
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
-                    <button type="submit">Enviar solicitud</button>
-                </form>
-            </div>
 
-            <!--cuidadoadultos-->
-            <div class="servicevig">
-                <b class="title-2"><i class="fa-solid fa-person-cane"></i> Cuidado de Mayores</b>
-                <p>Tramitador Oficial</p>
-                <p id="res-ins-6"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
-                <br>
-                <button onclick="mostrarFormulario('cuidadoadultos')">Contratar</button>
 
-                <form id="form-cuidadoadultos" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Cuidado de Mayores">
-                    
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
-
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <select name="ubicacion" id="ubicacion" required>
-                    <option value="">Región/Localidad</option>
-                    <option value="Albardón">Albardón</option>
-                    <option value="Angaco">Angaco</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Caucete">Caucete</option>
-                    <option value="Chimbas">Chimbas</option>
-                    <option value="9deJulio">9 de Julio</option>
-                    <option value="Pocito">Pocito</option>
-                    <option value="Rawson">Rawson</option>
-                    <option value="Rivadavia">Rivadavia</option>
-                    <option value="SanMartín">San Martín</option>
-                    <option value="SantaLucía">Santa Lucía</option>
-                    <option value="Sarmiento">Sarmiento</option>
-                    <option value="Ullum">Ullúm</option>
-                    <option value="25deMayo">25 de Mayo</option>
-                    </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
-                    <button type="submit">Enviar solicitud</button>
-                </form>
-            </div>
-
-            <!--ninera-->
-            <div class="servicevig col2">
-                <b class="title-2"><i class="fa-solid fa-baby-carriage"></i> Cuidado de Niños</b>
-                <p>Tramitador Oficial</p>
-                <p id="res-ins-7"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
-                <br>
-                <button onclick="mostrarFormulario('ninera')">Contratar</button>
-
-                <form id="form-ninera" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Cuidado de Niños">
-                    
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
-
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <select name="ubicacion" id="ubicacion" required>
-                    <option value="">Región/Localidad</option>
-                    <option value="Albardón">Albardón</option>
-                    <option value="Angaco">Angaco</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Caucete">Caucete</option>
-                    <option value="Chimbas">Chimbas</option>
-                    <option value="9deJulio">9 de Julio</option>
-                    <option value="Pocito">Pocito</option>
-                    <option value="Rawson">Rawson</option>
-                    <option value="Rivadavia">Rivadavia</option>
-                    <option value="SanMartín">San Martín</option>
-                    <option value="SantaLucía">Santa Lucía</option>
-                    <option value="Sarmiento">Sarmiento</option>
-                    <option value="Ullum">Ullúm</option>
-                    <option value="25deMayo">25 de Mayo</option>
-                    </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>
@@ -385,7 +311,7 @@
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-camera"></i> Fotografía</b>
                 <p>Tramitador Independiente</p>
-                <p id="res-ins-8"> responsables inscriptos.</p>
+                <p id="res-ins-6"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('fotografia')">Contratar</button>
@@ -421,98 +347,18 @@
                 </form>
             </div>
 
-            <!--profesores-->
-            <div class="servicevig col2">
-                <b class="title-2"><i class="fa-solid fa-chalkboard-user"></i> Profesores</b>
-                <p>Tramitador Independiente</p>
-                <p  id="res-ins-9"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
-                <br>
-                <button onclick="mostrarFormulario('profesores')">Contratar</button>
-
-                <form id="form-profesores" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Profesores">
-                    
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
-
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <select name="ubicacion" id="ubicacion" required>
-                    <option value="">Región/Localidad</option>
-                    <option value="Albardón">Albardón</option>
-                    <option value="Angaco">Angaco</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Caucete">Caucete</option>
-                    <option value="Chimbas">Chimbas</option>
-                    <option value="9deJulio">9 de Julio</option>
-                    <option value="Pocito">Pocito</option>
-                    <option value="Rawson">Rawson</option>
-                    <option value="Rivadavia">Rivadavia</option>
-                    <option value="SanMartín">San Martín</option>
-                    <option value="SantaLucía">Santa Lucía</option>
-                    <option value="Sarmiento">Sarmiento</option>
-                    <option value="Ullum">Ullúm</option>
-                    <option value="25deMayo">25 de Mayo</option>
-                    </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="¿Profesor de qué?" required></textarea>
-                    <button type="submit">Enviar solicitud</button>
-                </form>
-            </div>
-
             
-            <!--hogar-->
-            <div class="servicevig">
-                <b class="title-2"><i class="fa-solid fa-broom"></i> Cuidado del Hogar</b>
-                <p>Tramitador Oficial</p>
-                <p id="res-ins-10"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
-                <br>
-                <button onclick="mostrarFormulario('hogar')">Contratar</button>
-
-                <form id="form-hogar" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Cuidado del Hogar">
-                    
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
-
-                    <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
-                    <select name="ubicacion" id="ubicacion" required>
-                    <option value="">Región/Localidad</option>
-                    <option value="Albardón">Albardón</option>
-                    <option value="Angaco">Angaco</option>
-                    <option value="Capital">Capital</option>
-                    <option value="Caucete">Caucete</option>
-                    <option value="Chimbas">Chimbas</option>
-                    <option value="9deJulio">9 de Julio</option>
-                    <option value="Pocito">Pocito</option>
-                    <option value="Rawson">Rawson</option>
-                    <option value="Rivadavia">Rivadavia</option>
-                    <option value="SanMartín">San Martín</option>
-                    <option value="SantaLucía">Santa Lucía</option>
-                    <option value="Sarmiento">Sarmiento</option>
-                    <option value="Ullum">Ullúm</option>
-                    <option value="25deMayo">25 de Mayo</option>
-                    </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
-                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
-                    <button type="submit">Enviar solicitud</button>
-                </form>
-            </div>
-
-            <!--legales-->
+            <!--gasista-->
             <div class="servicevig col2">
-                <b class="title-2"><i class="fa-solid fa-gavel"></i> Trámites Legales</b>
-                <p>Tramitador Oficial</p>
-                <p id="res-ins-11"> responsables inscriptos.</p>
+                <b class="title-2"><i class="fa-solid fa-fire"></i> Gasista</b>
+                <p>Tramitador Independiente</p>
+                <p id="res-ins-7"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
-                <button onclick="mostrarFormulario('legales')">Contratar</button>
+                <button onclick="mostrarFormulario('gasista')">Contratar</button>
 
-                <form id="form-legales" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Tramites Legales">
+                <form id="form-gasista" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Gasista">
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
@@ -541,12 +387,55 @@
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>
+
+
+
+            <!--jardinería-->
+            <div class="servicevig col2">
+                <b class="title-2"><i class="fa-solid fa-seedling"></i> Jardinería</b>
+                <p>Tramitador Oficial</p>
+                <p id="res-ins-8"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('jardineria')">Contratar</button>
+
+                <form id="form-jardineria" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Jardinería">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
 
             <!--musica-->
             <div class="servicevig">
                 <b class="title-2"><i class="fa-solid fa-guitar"></i> Música</b>
                 <p>Tramitador Independiente</p>
-                <p id="res-ins-12"> responsables inscriptos.</p>
+                <p id="res-ins-9"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
                 <button onclick="mostrarFormulario('musica')">Contratar</button>
@@ -582,17 +471,101 @@
                 </form>
             </div>
 
-            <!--asistencia física-->
+
+
+            <!--organizacion-->
             <div class="servicevig col2">
-                <b class="title-2"><i class="fa-solid fa-handshake-angle"></i> Asistencia Física</b>
+                <b class="title-2"><i class="fa-solid fa-calendar-days"></i> Organización</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-13"> responsables inscriptos.</p>
+                <p id="res-ins-10"> responsables inscriptos.</p>
                 <p class="available">Disponible</p>
                 <br>
-                <button onclick="mostrarFormulario('fisica')">Contratar</button>
+                <button onclick="mostrarFormulario('organizacion')">Contratar</button>
 
-                <form id="form-fisica" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
-                    <input type="hidden" name="_subject" value="Solicitud de Asistencia Física">
+                <form id="form-organizacion" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Organización">
+
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+
+            <!--plomería-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-wrench"></i> Plomería</b>
+                <p>Tramitador Independiente</p>
+                <p id="res-ins-11"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('plomeria')">Contratar</button>
+
+                <form id="form-plomeria" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Plomería">
+
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+
+            <!--profesores-->
+            <div class="servicevig col2">
+                <b class="title-2"><i class="fa-solid fa-chalkboard-user"></i> Profesores</b>
+                <p>Tramitador Independiente</p>
+                <p  id="res-ins-12"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('profesores')">Contratar</button>
+
+                <form id="form-profesores" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Profesores">
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
@@ -615,6 +588,51 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Profesor de qué?" required></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+
+
+            <!--recados-->
+            <div class="servicevig">
+                <b class="title-2"><i class="fa-solid fa-store"></i></i> Recados</b>
+                <p>Tramitador Oficial</p>
+                <p id="res-ins-13"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('recados')">Contratar</button>
+
+                <form id="form-recados" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Recados">
+
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+
+
                     <input type="date" name="fecha" required>
                     <input type="time" name="hora" required>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
@@ -670,6 +688,46 @@
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
 
 
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--legales-->
+            <div class="servicevig col2">
+                <b class="title-2"><i class="fa-solid fa-gavel"></i> Trámites Legales</b>
+                <p>Tramitador Oficial</p>
+                <p id="res-ins-15"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <br>
+                <button onclick="mostrarFormulario('legales')">Contratar</button>
+
+                <form id="form-legales" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                    <input type="hidden" name="_subject" value="Solicitud de Tramites Legales">
+                    
+                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9deJulio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="SanMartín">San Martín</option>
+                    <option value="SantaLucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25deMayo">25 de Mayo</option>
+                    </select>
+                    <input type="date" name="fecha" required>
+                    <input type="time" name="hora" required>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>

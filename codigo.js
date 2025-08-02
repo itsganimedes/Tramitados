@@ -1,25 +1,26 @@
 //variables
 let str=" responsables inscriptos.";
 
-let total=15;
+let total=16;
 
 //cantidad de inscriptos por servicio
 let inscriptos=[
-    0,              //1 RECADOS
-    0,              //2 ORGANIZACIÓN
-    0,              //3 PLOMERÍA 
-    0,              //4 JARDINERÍA
+    0,              //1 ASISTENCIA FÍSICA
+    0,              //2 CUIDADO DE MAYORES
+    0,              //3 CUIDADO DE NIÑOS
+    0,              //4 CUIDADO DEL HOGAR
     0,              //5 ELECTRICISTA 
-    0,              //6 GASISTA 
-    0,              //7 CUIDADO DE MAYORES
-    0,              //8 CUIDADO DE NIÑOS
-    0,              //9 FOTOGRAFÍA
-    0,              //10 PROFESORES
-    0,              //11 CUIDADO DEL HOGAR
-    0,              //12 TRÁMITES LEGALES
-    0,              //13 MÚSICA
-    0,              //14 ASISTENCIA FÍSICA
-    0               //15 SERVICIO TECNICO 
+    0,              //6 FLETES
+    0,              //7 FOTOGRAFÍA
+    0,              //8 GASISTA 
+    0,              //9 JARDINERÍA
+    0,              //10 MÚSICA
+    0,              //11 ORGANIZACIÓN
+    0,              //12 PLOMERÍA 
+    0,              //13 PROFESORES
+    0,              //14 RECADOS
+    0,              //15 SERVICIO TECNICO 
+    0               //16 TRÁMITES LEGALES
 ];
 
 //escribir cuantos responsables inscriptos hay

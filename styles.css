@@ -6,7 +6,7 @@
     }
 
     #content{
-        max-width: 1200px;
+        max-width: 80rem;
         margin: 0 auto;
     }
 
@@ -180,7 +180,7 @@ a:hover {
 
 .imagen-con-texto {
     position: relative;
-    max-width: 50rem;
+    max-width: 80rem;
     overflow: hidden;
     margin: 0 auto;
     border-left: 2px solid white;
@@ -234,6 +234,11 @@ a:hover {
     justify-content: center;
     align-items: center;
     background-color: rgb(42, 70, 73);
+    background-image: url('img/Inicio4.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 2rem -2rem 0 -2rem;
     padding: 3rem 0;
 }
