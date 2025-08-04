@@ -20,7 +20,7 @@
 
 
     header{
-        background: #dfdfdf;
+        background: #f1f1f1;
         padding: 1rem 0;
         display: flex;
         color: rgb(26, 26, 26);
@@ -162,7 +162,7 @@ a:hover {
 }
 
 .fondo-blanco{
-    background-color: #dfdfdf;
+    background: #f1f1f1;
     height: 10rem;
     color: rgb(26, 26, 26);
     text-align: center;
@@ -229,7 +229,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #bed4d3, #aeddda);
+    background: linear-gradient(135deg, #bed4d3, #a2dbd7);
     
     margin: 2rem -2rem 0 -2rem;
     padding: 3rem 0;
@@ -355,7 +355,7 @@ a:hover {
     justify-content: center;
     i{
         font-size: 2rem;
-        background-color: #ecfffe;
+        background: #f7f7f7;
         color: rgb(131, 190, 190);
     }
 }
@@ -477,7 +477,7 @@ a:hover {
     border: 2px solid #ccc;
     background: rgb(255, 255, 255);
     text-align: center;
-    color: white;
+    color: rgb(24, 24, 24);
     font-size: large;
 }
 
@@ -542,6 +542,13 @@ select {
     font-family: Georgia, serif;
 }
 
+.formulario-servicio textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 4rem;
+    max-height: 10rem;
+}
+
 .formulario-servicio button {
     border: none;
     border-radius: 0.3rem;
@@ -575,10 +582,10 @@ input[type="time"] {
     display: block;
     max-width: 20rem;
     max-height: 3rem;
-    background-color: #2f4f4f;
-    border: 2px solid white;
+    background: rgb(131, 190, 190);
+    border: 1px solid #ccc;
     border-radius: 2px;
-    color: white;
+    color: rgb(24, 24, 24);
     padding: 1rem;
     text-wrap: nowrap;
     font-family: Georgia, 'Times New Roman', Times, serif;  
