@@ -293,6 +293,14 @@ a:hover {
 .service-2:hover{
     background-color: rgb(169, 212, 212);
     color: black;
+    box-shadow: none;
+}
+
+.line-up{
+    width: 0.1rem;
+    height: 4rem;
+    margin: 0 auto;
+    border-left: 2px dashed #10576d;
 }
 
 .team-members{
@@ -343,9 +351,10 @@ a:hover {
 }
 
 .team-member:hover{
-    background-color: rgb(169, 212, 212);
+    background-color: rgb(169, 200, 212);
     color: black;
     transform: scale(1.05);
+    box-shadow: none;
 }
 
 #container-2 span{
@@ -705,6 +714,14 @@ input[type="time"] {
     border-radius: 5px;
 }
 
+.quienessomos{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    gap:50px; 
+    margin: 3rem 2rem;
+}
+
 .line{
     width: calc(100% + 4rem);
     border: 1px solid #ccc;
@@ -756,7 +773,7 @@ footer ul{
         justify-content: center;
         i{
             font-size: 2rem;
-            background-color: #ecfffe;
+            background: transparent;
             color: rgb(131, 190, 190);
         }
     }
@@ -773,5 +790,19 @@ footer ul{
 
     .contacto:hover{
         transform: scale(1.05);
+    }
+
+    .team-members{
+        width: calc(100% + 4rem);
+        margin: 0 -2rem;
+    }
+
+    .quienessomos{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    gap:50px; 
+    margin: 3rem 2rem;
+    text-align: center;
     }
 }
