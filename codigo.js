@@ -23,12 +23,30 @@ let inscriptos=[
     0               //16 TRÁMITES LEGALES
 ];
 
+const disponibles = document.querySelectorAll(".available");
+const nodisponibles = document.querySelectorAll(".unavailable");
+
+for (let i = 0; i < disponibles.length; i++) {
+    disponibles[i].textContent = "Disponible";
+}
+for (let i = 0; i < nodisponibles.length; i++) {
+    nodisponibles[i].textContent = "No Disponible";
+}
+
 //escribir cuantos responsables inscriptos hay
 for(let i = 0 ; i < total; i++)
 {
     const parrafo=document.getElementById("res-ins-" + i)
     parrafo.textContent=inscriptos[i] + String(str);
 }
+
+//evitar funcion al clickear el formulario del servicio 
+document.querySelectorAll('.formulario-servicio').forEach(form => {
+    form.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+});
+
 
 //barra de búsqueda
 function servicesearch() {
@@ -53,4 +71,9 @@ function servicesearch() {
     } else {
         form.classList.add('oculto');
     }
+    }
+
+    function available(){
+        let p=document.querySelector("available");
+        p.textContent="BANANA";
     }
