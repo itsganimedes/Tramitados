@@ -23,14 +23,26 @@ let inscriptos=[
     0               //16 TRÁMITES LEGALES
 ];
 
+let recarga_emergencias=10;
+let recarga_urgencias=5;
+
 const disponibles = document.querySelectorAll(".available");
 const nodisponibles = document.querySelectorAll(".unavailable");
+
+const parrafo_recarga_e=document.querySelectorAll(".recargaemergencia");
+const parrafo_recarga_u=document.querySelectorAll(".recargaurgencia");
 
 for (let i = 0; i < disponibles.length; i++) {
     disponibles[i].textContent = "Disponible";
 }
 for (let i = 0; i < nodisponibles.length; i++) {
     nodisponibles[i].textContent = "No Disponible";
+}
+for (let i = 0; i < parrafo_recarga_e.length; i++) {
+    parrafo_recarga_e[i].textContent = String("(+")+String(recarga_emergencias)+String("%)");
+}
+for (let i = 0; i < parrafo_recarga_u.length; i++) {
+    parrafo_recarga_u[i].textContent = String("(+")+String(recarga_urgencias)+String("%)");
 }
 
 //escribir cuantos responsables inscriptos hay
@@ -65,15 +77,16 @@ function servicesearch() {
 
     //aparecer formulario de contratacion
     function mostrarFormulario(idServicio) {
-    const form = document.getElementById('form-' + idServicio);
-    if (form.classList.contains('oculto')) {
-        form.classList.remove('oculto');
-    } else {
-        form.classList.add('oculto');
-    }
-    }
+        const formularios = document.querySelectorAll('.formulario-servicio');
+        const form = document.getElementById('form-' + idServicio);
+        
+        const yaEstabaVisible = !form.classList.contains('oculto');
 
-    function available(){
-        let p=document.querySelector("available");
-        p.textContent="BANANA";
+        // Oculta todos
+        formularios.forEach(form => form.classList.add('oculto'));
+
+        // Si no estaba visible, lo mostramos (si ya estaba visible, lo dejamos oculto)
+        if (!yaEstabaVisible) {
+            form.classList.remove('oculto');
+        }
     }

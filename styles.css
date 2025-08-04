@@ -106,20 +106,20 @@
 }
 
 #container{
-    background: linear-gradient(135deg, #ecfffe, #d9eeed);
+    background: linear-gradient(135deg, #ecfffe, #e5f7f6);
     padding: 2rem;
     text-align: center;
 }
 
 #container-2{
-    background: linear-gradient(135deg, #ecfffe, #d9eeed);
+    background: linear-gradient(135deg, #ecfffe, #e5f7f6);
     padding: 2rem;
     text-align: justify;
 }
 
 
 #container-3{
-    background: linear-gradient(135deg, #ecfffe, #d9eeed);;
+    background: linear-gradient(135deg, #ecfffe, #e5f7f6);;
     padding: 2rem;
     text-align: justify;
 }
@@ -275,7 +275,7 @@ a:hover {
     border: 2px solid #ccc;
     border-radius: 10px;
     box-shadow: inset 2px 1px 5px rgb(226, 226, 226);
-    background: rgb(235, 235, 235);
+    background: rgb(252, 252, 252);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -289,12 +289,8 @@ a:hover {
     margin-bottom: 1rem;
 }
 
-.service-2-icon-title{
-    
-}
-
 .service-2:hover{
-    background-color: rgb(169, 212, 212);
+    background: rgb(169, 212, 212);
     color: black;
     box-shadow: none;
 }
@@ -313,9 +309,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #a2ccc8, #cbebe9);
-    border-radius: 10px;
-    width: 100%;
-    margin: 0 auto;
+    width: calc(100% + 4rem);
+    margin: 0 -2rem;
     color: #effffd;
 }
 
@@ -332,7 +327,7 @@ a:hover {
     border: 2px solid #ccc;
     border-radius: 10px;
     box-shadow: inset 2px 1px 5px rgb(226, 226, 226);
-    background: rgb(235, 235, 235);
+    background: rgb(252, 252, 252);
     text-align: center;
     color: #10576d;
     position: relative;
@@ -512,12 +507,43 @@ a:hover {
     box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
 
+.fecha-opcion {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* <-- Alinea verticalmente todo al centro */
+    margin-left: 0.5rem;
+    width: 100%;
+    cursor: default;
+    gap: 10px;
+}
+
+.fecha-opcion label {
+    line-height: 1;
+    margin: 0;
+}
+
+.fecha-opcion p {
+    margin: 0;
+    position: static; /* <-- Elimina el desplazamiento */
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.fecha-opcion input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0;
+}
+
+
 .servicevig:hover{
     transform: scale(1.05);
     background-color: rgb(73, 168, 164);
     border: 2px solid #8f8f8f;
     cursor: pointer;
 }
+
 
 .descripcion{
     color: #686868;
@@ -583,7 +609,7 @@ select {
 .formulario-servicio {
     margin-top: 1rem;
     padding: 1rem;
-    background: rgb(117, 223, 214);
+    background: rgb(245, 255, 254);
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -595,10 +621,12 @@ select {
 }
 
 .formulario-servicio input,
-.formulario-servicio textarea {
+.formulario-servicio textarea,
+.formulario-servicio select {
     padding: 0.5rem;
     border-radius: 0.3rem;
-    border: none;
+    margin: -0.5rem 0 0.5rem 0;
+    border: 1px solid #ccc;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
