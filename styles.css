@@ -12,7 +12,7 @@
 
     body {
         width: 100%;
-        background-color: rgb(183, 192, 191);
+        background: rgb(183, 192, 191);
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color: rgb(26, 26, 26);
         transition: 0.5s;
@@ -253,11 +253,11 @@ a:hover {
 
 .services-2{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: rgb(131, 190, 190);
+    background: linear-gradient(135deg, #ecfffe, #cbebe9);
     border-radius: 10px;
     width: 100%;
     margin: 0 auto;
@@ -266,12 +266,28 @@ a:hover {
 
 .service-2{
     margin: 1rem;
-    width: calc(100% - 20%);
-    max-height: 20rem;
-    border: 2px solid rgb(160, 190, 209);
-    border-radius: 4px;
-    background: rgb(71, 101, 109);
+    padding: 1rem;
+    max-width: 15rem;
+    height: 20rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: inset 2px 1px 5px rgb(226, 226, 226);
+    background: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
+    color: #10576d;
+}
+
+.service-2 i{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-2-icon-title{
+    
 }
 
 .service-2:hover{
@@ -279,26 +295,58 @@ a:hover {
     color: black;
 }
 
-.black{
-    background-color: rgb(21, 22, 22);
+.team-members{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #a2ccc8, #cbebe9);
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto;
+    color: #effffd;
 }
 
-.violet{
-    background-color: rgb(12, 1, 51);
+.team-member{
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 20rem;
+    max-width: 20rem;
+    height: 25rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: inset 2px 1px 5px rgb(226, 226, 226);
+    background: rgb(235, 235, 235);
+    text-align: center;
+    color: #10576d;
+    position: relative;
+    i{
+        font-size: 3rem;
+        margin: 2rem 0;
+    }
 }
 
-.yellow{
-    background-color: rgb(0, 58, 112);
+.team-member-img{
+    width: 6rem;
+    height: 6rem;
+    margin: 1rem auto;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: url(img/ManUser.png);
+    background-size: cover;
+    background-position: center;
 }
 
-.orange{
-    background-color: rgb(0, 89, 190);
+.team-member:hover{
+    background-color: rgb(169, 212, 212);
+    color: black;
+    transform: scale(1.05);
 }
-
-.red{
-    background-color: rgb(0, 119, 216);
-}
-
 
 #container-2 span{
     color: rgb(27, 83, 156);
@@ -355,7 +403,7 @@ a:hover {
     justify-content: center;
     i{
         font-size: 2rem;
-        background: #f7f7f7;
+        background: transparent;
         color: rgb(131, 190, 190);
     }
 }
@@ -404,7 +452,7 @@ a:hover {
     padding: 0.5rem 0;
     max-height: 5rem;
     color: rgb(0, 0, 0);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #container-3 button:hover{
@@ -513,7 +561,7 @@ select {
     padding: 0.5rem;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-family: Georgia, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #f8f8f8;
 }
 
@@ -539,7 +587,7 @@ select {
     padding: 0.5rem;
     border-radius: 0.3rem;
     border: none;
-    font-family: Georgia, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .formulario-servicio textarea {
@@ -588,7 +636,7 @@ input[type="time"] {
     color: rgb(24, 24, 24);
     padding: 1rem;
     text-wrap: nowrap;
-    font-family: Georgia, 'Times New Roman', Times, serif;  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0 auto;
     text-align: center;
     text-decoration: none;
@@ -629,7 +677,6 @@ input[type="time"] {
 .title-3{
     font-size: 2rem;
     padding: 2rem 0 2rem 0;
-    font-style: italic;
     text-align: center;
 }
 
