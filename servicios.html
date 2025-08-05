@@ -96,15 +96,15 @@
                     <div class="servicevig-fecha">
 
                         <div class="fecha-opcion">
-                            <input type="radio" id="emergencia" name="datechoose" value="emergencia" required>
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
                             <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
                         </div>
                         <div class="fecha-opcion">
-                            <input type="radio" id="urgente" name="datechoose" value="urgencia">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
                             <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
                         </div>
                         <div class="fecha-opcion">
-                            <input type="radio" id="normal" name="datechoose" value="normal">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
                             <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
                         </div>
 
@@ -140,8 +140,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -159,8 +162,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -181,8 +213,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -200,8 +235,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -221,8 +285,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -240,8 +307,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -261,8 +357,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -280,8 +379,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -301,8 +429,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -321,8 +452,36 @@
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
 
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
 
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
 
@@ -345,8 +504,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -364,8 +526,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -385,8 +576,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -404,8 +598,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -426,8 +649,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -445,8 +671,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -466,8 +721,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -485,8 +743,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -507,8 +794,11 @@
 
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -526,8 +816,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -547,8 +866,11 @@
 
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -566,8 +888,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -587,8 +938,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -606,8 +960,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Profesor de qué?" required></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -628,9 +1011,11 @@
 
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
-
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -649,9 +1034,36 @@
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
 
+                    <p>Nivel de Urgencia</p>
 
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
@@ -670,8 +1082,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -690,8 +1105,36 @@
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
 
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
 
                     <select name="servicio-tecnico" id="servicio-tecnico" required>
                     <option value="">Servicio Técnico a Solicitar</option>
@@ -721,8 +1164,11 @@
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
 
+                    <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
                     <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
                     <option value="Albardón">Albardón</option>
@@ -740,8 +1186,37 @@
                     <option value="Ullum">Ullúm</option>
                     <option value="25deMayo">25 de Mayo</option>
                     </select>
-                    <input type="date" name="fecha" required>
-                    <input type="time" name="hora" required>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
                     <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
                     <button type="submit">Enviar solicitud</button>
                 </form>
