@@ -255,8 +255,9 @@ a:hover {
 .service{
     margin: 1rem;
     max-width: 15rem;
+    height: 9rem;
     max-height: 15rem;
-    padding: 0 1rem;
+    padding: auto;
     border: 2px solid rgb(155, 219, 221);
     border-radius: 4px;
     background: rgb(131, 190, 190);
