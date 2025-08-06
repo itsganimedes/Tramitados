@@ -36,6 +36,11 @@
                     Contacto
                 </a>
             </li>
+            <li>
+                <a href="trabaja-con-nosotros.html"><i class="fa-solid fa-users"></i>
+                    <b>Trabajá con Nosotros</b>
+                </a>
+            </li>
         </ul>
     </nav>
 
@@ -63,7 +68,7 @@
                 <p id="res-ins-0"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Movimiento de objetos pesados, ayuda para caminar y/o moverse, y más</p>
-                <form id="form-fisica" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                <form id="form-fisica" class="formulario-servicio oculto" onsubmit="enviarFormulario(event)">
                     <input type="hidden" name="_subject" value="Solicitud de Asistencia Física">
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
@@ -1258,6 +1263,64 @@
     </div>
 
     <script src="codigo.js"></script>
+
+
+
+    <!-- Firebase SDK desde el CDN -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+<script>
+  // Tu configuración personalizada (copiada desde Firebase)
+    const firebaseConfig = {
+        apiKey: "AIzaSyC3ASWc6EH8qX46wHcOfMmg0sevivOQJh8",
+        authDomain: "tramitados-9a3f1.firebaseapp.com",
+        projectId: "tramitados-9a3f1",
+        storageBucket: "tramitados-9a3f1.firebaseapp.com",
+        messagingSenderId: "642561222614",
+        appId: "1:642561222614:web:eba3fb0711da8c1e222677",
+        measurementId: "G-WTHP4FXM8N"
+    };
+
+    // Inicialización de Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+
+    <script>
+    // Función para enviar los datos del formulario a Firestore
+    function enviarFormulario(e) {
+        e.preventDefault();
+
+        const form = document.getElementById("form-fisica");
+
+        const nombre = form.nombre.value;
+        const telefono = form.telefono.value;
+        const ubicacion = form.ubicacion.value;
+        const urgencia = form.urgencia.value;
+        const hora = form.hora.value;
+        const comentario = form.comentario.value;
+
+        db.collection("asistenciasFisicas").add({
+        nombre,
+        telefono,
+        ubicacion,
+        urgencia,
+        hora,
+        comentario,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        })
+        .then(() => {
+        alert("¡Solicitud enviada correctamente!");
+        form.reset();
+        })
+        .catch((error) => {
+        console.error("Error al enviar: ", error);
+        alert("Hubo un error al enviar la solicitud.");
+        });
+    }
+    </script>
+
 
 </body>
 

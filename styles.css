@@ -228,20 +228,35 @@ a:hover {
 
 .services{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #bed4d3, #a2dbd7);
-    
     margin: 2rem -2rem 0 -2rem;
     padding: 3rem 0;
+}
+
+.services-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.services a{
+    margin-top: 2rem;
+    color: #0d5e5a;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
 .service{
     margin: 1rem;
     max-width: 15rem;
     max-height: 15rem;
+    padding: 0 1rem;
     border: 2px solid rgb(155, 219, 221);
     border-radius: 4px;
     background: rgb(131, 190, 190);
@@ -253,6 +268,8 @@ a:hover {
     color: rgb(226, 226, 226);
     transform: scale(1.05);
 }
+
+
 
 .services-2{
     display: flex;
@@ -294,6 +311,63 @@ a:hover {
     color: black;
     box-shadow: none;
 }
+
+
+
+
+
+.categorias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: transparent;
+    justify-content: center;
+    color: #effffd;
+    background: #0d495c;
+    margin: 2rem -2rem;
+}
+
+.categoria{
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 15rem;
+    min-width: 15rem;
+    height: 20rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: rgb(252, 252, 252);
+    text-align: center;
+    color: #0d495c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categoria-box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.categoria-box i{
+    position: absolute;
+    right: 0;
+    top: 90px;
+    font-size: 1rem;
+}
+
+.categoria-pos{
+    font-size: 5rem;
+}
+
+.categoria:hover{
+    transform: scale(1.05);
+}
+
+
+
 
 .line-up{
     width: 0.1rem;
