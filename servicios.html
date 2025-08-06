@@ -6,6 +6,8 @@
     <title>Tramitados</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="send.js"></script>
 </head>
 <body>
     <div id="content">
@@ -18,7 +20,7 @@
         <ul>
             <li>
                 <a href="index.html" ><i class="fa-solid fa-house"></i>
-                    Inicio
+                    <b>Inicio</b>
                 </a>
             </li>
             <li>
@@ -28,12 +30,12 @@
             </li>
             <li>
                 <a href="quienessomos.html"><i class="fa-solid fa-user"></i>
-                    ¿Quiénes somos?
+                    <b>¿Quiénes somos?</b>
                 </a>
             </li>
             <li>
                 <a href="contacto.html"><i class="fa-solid fa-phone"></i>
-                    Contacto
+                    <b>Contacto</b>
                 </a>
             </li>
             <li>
@@ -68,15 +70,30 @@
                 <p id="res-ins-0"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Movimiento de objetos pesados, ayuda para caminar y/o moverse, y más</p>
-                <form id="form-fisica" class="formulario-servicio oculto" onsubmit="enviarFormulario(event)">
+                <form 
+                id="form-fisica" 
+                action="#" 
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="Asistencia Fisica"
+                class="formulario-servicio oculto"
+                >
                     <input type="hidden" name="_subject" value="Solicitud de Asistencia Física">
                     
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+                    <input type="hidden" name="_next" value="">
 
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -140,15 +157,28 @@
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Acompañamiento, guía, asistencia y ayuda en ámbitos cotidianos</p>
 
-                <form id="form-cuidadoadultos" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                <form 
+                id="form-cuidadoadultos" 
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="Cuidado de Mayores"
+                class="formulario-servicio oculto"
+                >
                     <input type="hidden" name="_subject" value="Solicitud de Cuidado de Mayores">
-                    
-                    <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
+                    <input type="hidden" name="_next" value="">
 
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -213,7 +243,13 @@
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Alimentarlos, acompañarlos y hacerlos jugar</p>
 
-                <form id="form-ninera" action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" class="formulario-servicio oculto">
+                <form 
+                id="form-cuidadoadultos" 
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="Cuidado de Mayores"
+                class="formulario-servicio oculto"
+                >
                     <input type="hidden" name="_subject" value="Solicitud de Cuidado de Niños">
                     
                     <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/gracias.html">
@@ -221,7 +257,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -293,7 +335,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -365,7 +413,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -437,7 +491,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -512,7 +572,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -584,7 +650,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -657,7 +729,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -729,7 +807,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -802,7 +886,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -874,7 +964,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -946,7 +1042,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -1019,7 +1121,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -1090,7 +1198,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -1172,7 +1286,13 @@
                     <p>Nombre Completo</p>
                     <input type="text" name="nombre" placeholder="Tu nombre" required>
                     <p>Número de Celular</p>
-                    <input type="text" name="telefono" placeholder="Tu teléfono" required>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos)" 
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
                     <p>Región/Localidad</p>
                     <select name="ubicacion" id="ubicacion" required>
                     <option value="">Región/Localidad</option>
@@ -1263,64 +1383,6 @@
     </div>
 
     <script src="codigo.js"></script>
-
-
-
-    <!-- Firebase SDK desde el CDN -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-
-<script>
-  // Tu configuración personalizada (copiada desde Firebase)
-    const firebaseConfig = {
-        apiKey: "AIzaSyC3ASWc6EH8qX46wHcOfMmg0sevivOQJh8",
-        authDomain: "tramitados-9a3f1.firebaseapp.com",
-        projectId: "tramitados-9a3f1",
-        storageBucket: "tramitados-9a3f1.firebaseapp.com",
-        messagingSenderId: "642561222614",
-        appId: "1:642561222614:web:eba3fb0711da8c1e222677",
-        measurementId: "G-WTHP4FXM8N"
-    };
-
-    // Inicialización de Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    </script>
-
-    <script>
-    // Función para enviar los datos del formulario a Firestore
-    function enviarFormulario(e) {
-        e.preventDefault();
-
-        const form = document.getElementById("form-fisica");
-
-        const nombre = form.nombre.value;
-        const telefono = form.telefono.value;
-        const ubicacion = form.ubicacion.value;
-        const urgencia = form.urgencia.value;
-        const hora = form.hora.value;
-        const comentario = form.comentario.value;
-
-        db.collection("asistenciasFisicas").add({
-        nombre,
-        telefono,
-        ubicacion,
-        urgencia,
-        hora,
-        comentario,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        })
-        .then(() => {
-        alert("¡Solicitud enviada correctamente!");
-        form.reset();
-        })
-        .catch((error) => {
-        console.error("Error al enviar: ", error);
-        alert("Hubo un error al enviar la solicitud.");
-        });
-    }
-    </script>
-
 
 </body>
 

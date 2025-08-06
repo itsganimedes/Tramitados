@@ -32,6 +32,7 @@ const nodisponibles = document.querySelectorAll(".unavailable");
 const parrafo_recarga_e=document.querySelectorAll(".recargaemergencia");
 const parrafo_recarga_u=document.querySelectorAll(".recargaurgencia");
 
+//escribir si está disponible o no y recargas por nivel de urgencia
 for (let i = 0; i < disponibles.length; i++) {
     disponibles[i].textContent = "Disponible";
 }
