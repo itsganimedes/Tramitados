@@ -8,7 +8,7 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 2rem;
-    background: linear-gradient(135deg, #e0fcfa, #e5f7f6);
+    background: linear-gradient(135deg, #39c299, #10474b);
     }
 
 h1 {
@@ -25,14 +25,35 @@ h1 {
     justify-content: center;
 }
 
+nav{
+    width: calc(100% + 4rem);
+    margin: -2rem -2rem 0 -2rem;
+    background-color: #0b4244;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav p{
+    color: aliceblue;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
 #logout {
-    float: right;
     background: #e74c3c;
     color: white;
-    border: none;
+    border: 1px solid #ccc;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+#logout:hover{
+    background: #c21e0c;
 }
         
 .label {
@@ -67,9 +88,7 @@ span{
 }
 
 .servicio-title{
-    position: absolute;
-    width: calc(100% - 2rem);
-    top: 60px;
+    width: 100%;
 }
 
 .servicio{
@@ -83,4 +102,26 @@ span{
 
 .solicitud-box:hover{
     transform: scale(1.05);
+}
+
+@media (max-width: 600px){
+
+    body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    #solicitudes-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
+    .solicitud-box{
+        width: 90%;
+    }
 }
