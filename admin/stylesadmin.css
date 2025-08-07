@@ -73,6 +73,19 @@ nav button {
 #logout:hover{
     background: #c21e0c;
 }
+
+#eliminarSolicitud{
+    background: #e74c3c;
+    color: white;
+    width: 30%;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+#eliminarSolicitud:hover{
+    background: #c21e0c;
+    cursor: pointer;
+}
         
 .label {
     font-weight: bold;
@@ -107,6 +120,7 @@ span{
 
 .servicio-title{
     width: 100%;
+    margin: 3rem 0 1rem 0;
 }
 
 .servicio{

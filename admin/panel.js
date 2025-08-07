@@ -78,7 +78,6 @@ import {
     const querySnapshot = await getDocs(collection(db, "solicitudes"));
     querySnapshot.forEach((doc) => {
         const data = doc.data();
-
         const div = document.createElement("div");
         div.className = "solicitud";
         div.innerHTML = `
@@ -92,7 +91,7 @@ import {
             <div><span class="label">Urgencia:</span> ${data.urgencia}</div>
             <div><span class="label">Hora:</span> ${data.hora}</div>
             <div><span class="label">Comentario:</span> ${data.comentario}</div>
-            <button onclick="eliminarSolicitud('${doc.id}')">Borrar</button>
+            <button id="eliminarSolicitud" onclick="eliminarSolicitud('${doc.id}')">Borrar</button>
         </div>
         `;
         container.appendChild(div);
