@@ -848,6 +848,19 @@ footer ul{
     color: white;
 }
 
+.img-text-footer{
+    display: flex;
+    flex-direction: row;
+    p{
+        margin: auto 1rem;
+    }
+}
+
+footer img{
+    width: 3%;
+    margin: 1rem 0;
+}
+
 @media (max-width: 600px) {
 
     header{
