@@ -916,4 +916,9 @@ footer img{
         width: calc(100% + 4rem);
         margin: 0 -2rem;
     }
+
+    footer img{
+    width: 10%;
+    margin: 1rem 0;
+}
 }
