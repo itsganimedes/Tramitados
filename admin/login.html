@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Panel Tramitados</title>
+    <script type="module" src="login.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <style>
+    body {
+        font-family: sans-serif;
+        background: linear-gradient(145deg, rgb(0, 255, 191), rgb(7, 32, 49));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #ccc;
+        display: flex;
+        flex-direction: column;
+        }
+        h1{
+            margin: 1rem auto;
+        }
+        form {
+        background: linear-gradient(145deg,rgba(40, 139, 115, 0.8),rgba(27, 57, 77, 0.5));
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 27%;
+        }
+        input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: #ccc;
+        border-bottom: 1px solid #ccc;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        }
+        input::placeholder{
+            color: #929292;
+        }
+        button {
+        width: 100%;
+        background: transparent;
+        border: none;
+        color: #ccc;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        cursor: pointer;
+        }
+        p{
+            margin-top: 1rem;
+            color: #ccc;
+            text-align: center;
+            width: 40%;
+        }
+        .oculto{
+            display: none;
+        }
+        #error{
+            color: rgb(255, 0, 0);
+            font-weight: bold;
+            background: #c28a8a;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            input, button {
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-size: 1rem;
+                width: 90%; /* Que ocupe casi todo el ancho en móvil */
+            }
+        }
+
+    </style>
+    </head>
+    <body>
+        <h1>Tramitados</h1>
+    <form id="login-form">
+        <h2>Iniciar sesión</h2>
+        <input type="email" id="email" placeholder="Correo" required />
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <button type="submit">Ingresar</button>
+    </form>
+    <p id="error" class="oculto">Error: parece que no estás registrado. Si esto es un error, comunicate con nosotros.</p>
+    <p><b>Introducí tus credenciales propias. <br>Nota: </b>debes ser parte del equipo de moderadores y/o administradores de Tramitados para acceder al panel de solicitudes.</p>
+</body>
+</html>
