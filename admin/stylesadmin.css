@@ -9,6 +9,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 2rem;
     background: linear-gradient(135deg, #39c299, #10474b);
+    min-height: 40rem;
     }
 
 h1 {
@@ -42,14 +43,31 @@ nav p{
     font-size: 1.2rem;
 }
 
-#logout {
-    background: #e74c3c;
-    color: white;
+nav button {
     border: 1px solid #ccc;
     padding: 0.5rem 1rem;
     cursor: pointer;
     font-weight: bold;
     margin-right: 1rem;
+}
+
+.nav-botones{
+    display: flex;
+    flex-direction: row;
+}
+
+#eliminarTodo{
+    background: #e74c3c;
+    color: white;
+}
+
+#eliminarTodo:hover{
+    background: #c21e0c;
+}
+
+#logout{
+    background: #e74c3c;
+    color: white;
 }
 
 #logout:hover{
@@ -104,12 +122,17 @@ span{
     transform: scale(1.05);
 }
 
+.oculto{
+    display: none;
+}
+
 @media (max-width: 600px){
 
     body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    min-height: 40rem;
     }
 
     #solicitudes-container {
