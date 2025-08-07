@@ -46,6 +46,7 @@ import {
     container.innerHTML = "";
 
     const user = auth.currentUser;
+    
     if (!user) {
         alert("No estás logueado.");
         return;
