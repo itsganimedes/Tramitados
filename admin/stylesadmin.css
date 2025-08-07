@@ -38,7 +38,7 @@ nav{
 }
 
 nav p{
-    color: aliceblue;
+    color: rgb(241, 248, 255);
     margin: 1rem;
     font-size: 1.2rem;
 }
@@ -54,6 +54,12 @@ nav button {
 .nav-botones{
     display: flex;
     flex-direction: row;
+}
+
+#totalSolicitudes{
+    color: rgb(5, 44, 36);
+    margin: 1rem auto;
+    font-size: 1.1rem;
 }
 
 #eliminarTodo{

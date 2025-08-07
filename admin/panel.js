@@ -96,6 +96,8 @@ import {
         `;
         container.appendChild(div);
     });
+    const totalSolicitudes = querySnapshot.size;
+    document.getElementById("totalSolicitudes").textContent = `Total de solicitudes: ${totalSolicitudes}`;
     }
 
     // Eliminar TODAS las solicitudes
