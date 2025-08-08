@@ -20,7 +20,8 @@ import {
         ubicacion: form.ubicacion.value,
         urgencia: form.urgencia.value,
         hora: form.hora.value,
-        comentario: form.comentario.value || "(Sin comentario)"
+        comentario: form.comentario.value || "(Sin comentario)",
+        realizado: 0
     };
 
     try {
