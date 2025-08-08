@@ -90,8 +90,11 @@ import {
         }else{
             realizadotext="TOMADO";
         }
+
+        const urgenciaClase = data.urgencia.toLowerCase();
+
         div.innerHTML = `
-        <div class="solicitud-box">
+        <div class="solicitud-box ${urgenciaClase}";>
             <div class="servicio-title">
                 <p class="servicio">${data.servicio}</p>
                 <button class="eliminarSolicitud oculto" onclick="eliminarSolicitud('${doc.id}')">Borrar</button>

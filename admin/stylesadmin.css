@@ -9,7 +9,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #39c299, #10474b);
     padding: 2rem;
-    min-height: 40rem;
+    min-height: 60rem;
     }
 
 h1 {
@@ -142,6 +142,22 @@ span{
     overflow: hidden; /* evita que se salga */
 }
 
+.emergencia{
+    background-color: #c21e0c;
+    color: white;
+    span{
+        color: #ccc;
+    }
+}
+.emergencia .estado{
+    font-weight: bold;
+    color: rgb(217, 255, 0);
+}
+
+.urgente{
+    background-color: #c2b90c;
+}
+
 .comentario {
     max-height: 6rem; /* altura máxima visible */
     overflow-y: auto; /* scroll vertical */
@@ -208,6 +224,22 @@ span{
     justify-content: flex-start; /* para que empiece desde arriba */
     position: relative;
     overflow: hidden; /* evita que se salga */
+    }
+
+    .emergencia{
+    background-color: #c21e0c;
+    color: white;
+    span{
+        color: #ccc;
+    }
+    }
+    .emergencia .estado{
+        font-weight: bold;
+        color: rgb(217, 255, 0);
+    }
+
+    .urgente{
+        background-color: #c2b90c;
     }
 
     #cambiarEstado{
