@@ -26,18 +26,23 @@ import {
 
     let prioridad=0;
 
-    if (data.urgencia.value==="tomado"){
-        prioridad=4;
+    switch(data.urgencia) {
+    case "tomado":
+        prioridad = 4;
+        break;
+    case "normal":
+        prioridad = 3;
+        break;
+    case "urgente":
+        prioridad = 2;
+        break;
+    case "emergencia":
+        prioridad = 1;
+        break;
+    default:
+        prioridad = 0;
     }
-    if (data.urgencia.value==="normal"){
-        prioridad=3;
-    }
-    if (data.urgencia.value==="urgente"){
-        prioridad=2;
-    }
-    if (data.urgencia.value==="emergencia"){
-        prioridad=1;
-    }
+
 
     data.prioridad=prioridad;
 
