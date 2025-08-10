@@ -246,6 +246,10 @@ span{
         background-color: #c2b90c;
     }
 
+    .cambiarcolor{
+    background-color: #939393ff;
+    }
+
     #cambiarEstado{
         width: auto;
     }

@@ -12,6 +12,7 @@ import {
     deleteDoc,
     orderBy,
     query,
+    deleteField
     } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
     // Verifica si el usuario está logueado
@@ -171,23 +172,46 @@ window.cambiarEstado = async function (docId) {
         }
 
         const data = solicitudSnap.data();
+
         const nuevoEstado = data.realizado === 0 ? 1 : 0; // Alternar entre 0 y 1
 
-        // Actualizar solo el campo "realizado"
-        await updateDoc(solicitudRef, {
-            realizado: nuevoEstado
-        });
+        // Lógica para prioridad:
+        // Si prioridad actual es distinto de 0, la pongo a 0 y guardo original en prioridadOriginal
+        // Si prioridad es 0, la vuelvo a prioridadOriginal y elimino prioridadOriginal
+        let nuevaPrioridad = data.prioridad;
+        let updates = { realizado: nuevoEstado };
 
-        console.log(`✅ Estado cambiado a ${nuevoEstado}`);
-        // Opcional: recargar la lista para ver el cambio
+        if (data.prioridad !== 0) {
+            // Guardar el valor actual en prioridadOriginal
+            updates.prioridadOriginal = data.prioridad;
+            // Poner prioridad a 0
+            updates.prioridad = 0;
+        } else {
+            // Restaurar prioridad desde prioridadOriginal si existe
+            if (data.prioridadOriginal !== undefined) {
+                updates.prioridad = data.prioridadOriginal;
+                // Opcional: eliminar prioridadOriginal para no guardar datos viejos
+                updates.prioridadOriginal = deleteField();
+            } else {
+                // Si no existe prioridadOriginal, dejamos prioridad como está
+                updates.prioridad = 0;
+            }
+        }
+
+        // Actualizar documento con los cambios
+        await updateDoc(solicitudRef, updates);
+
+        console.log(`✅ Estado cambiado a ${nuevoEstado}, prioridad actualizada.`);
         await cargarSolicitudes();
-        
+
     } catch (error) {
         console.error("Error al cambiar estado:", error);
         alert("Error al cambiar estado.");
     }
+
 }
 
+// Eliminar una solicitud
 window.eliminarSolicitud = async function(docId) {
     const user = auth.currentUser;
     if (!user) {

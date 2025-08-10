@@ -25,26 +25,33 @@ import {
     };
 
     let prioridad=0;
+    let prioridadOriginal = 0;
 
     switch(data.urgencia) {
     case "tomado":
         prioridad = 4;
+        prioridadOriginal = 4;
         break;
     case "normal":
         prioridad = 3;
+        prioridadOriginal = 3;
         break;
     case "urgente":
         prioridad = 2;
+        prioridadOriginal = 2;
         break;
     case "emergencia":
         prioridad = 1;
+        prioridadOriginal = 1;
         break;
     default:
         prioridad = 0;
+        prioridadOriginal = 0;
     }
 
 
     data.prioridad=prioridad;
+    data.prioridadOriginal=prioridadOriginal;
 
     try {
         const docId = `${servicio}-${Date.now()}`;
