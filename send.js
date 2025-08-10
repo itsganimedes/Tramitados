@@ -24,6 +24,23 @@ import {
         realizado: 0
     };
 
+    let prioridad=0;
+
+    if (data.urgencia==="tomado"){
+        prioridad=4;
+    }
+    if (data.urgencia==="normal"){
+        prioridad=3;
+    }
+    if (data.urgencia==="urgente"){
+        prioridad=4;
+    }
+    if (data.urgencia==="emergencia"){
+        prioridad=4;
+    }
+
+    data.prioridad=prioridad;
+
     try {
         const docId = `${servicio}-${Date.now()}`;
         await setDoc(doc(db, "solicitudes", docId), data);

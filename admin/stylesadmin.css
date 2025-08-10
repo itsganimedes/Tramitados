@@ -158,6 +158,10 @@ span{
     background-color: #c2b90c;
 }
 
+.cambiarcolor{
+    background-color: #939393ff;
+}
+
 .comentario {
     max-height: 6rem; /* altura máxima visible */
     overflow-y: auto; /* scroll vertical */

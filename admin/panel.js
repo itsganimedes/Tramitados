@@ -78,23 +78,24 @@ import {
         return
     }
 
-    const q = query(collection(db, "solicitudes"), orderBy("urgencia", "asc"));
+    const q = query(collection(db, "solicitudes"), orderBy("prioridad", "asc"));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
         const data = doc.data();
         const div = document.createElement("div");
         div.className = "solicitud";
         let realizadotext="INDEFINIDO";
+        let estadocolor = "none";
         if (data.realizado===0){
             realizadotext="VIGENTE";
         }else{
             realizadotext="TOMADO";
+            estadocolor = "cambiarcolor"; // ahora es un color
         }
-
         const urgenciaClase = data.urgencia.toLowerCase();
 
         div.innerHTML = `
-        <div class="solicitud-box ${urgenciaClase}";>
+        <div class="solicitud-box ${urgenciaClase} ${estadocolor}">
             <div class="servicio-title">
                 <p class="servicio">${data.servicio}</p>
                 <button class="eliminarSolicitud oculto" onclick="eliminarSolicitud('${doc.id}')">Borrar</button>
