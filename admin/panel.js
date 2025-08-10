@@ -181,17 +181,13 @@ window.cambiarEstado = async function (docId) {
         let nuevaPrioridad = data.prioridad;
         let updates = { realizado: nuevoEstado };
 
-        if (data.prioridad !== 0) {
-            // Guardar el valor actual en prioridadOriginal
-            updates.prioridadOriginal = data.prioridad;
-            // Poner prioridad a 0
-            updates.prioridad = 0;
+        if (data.prioridad !== 4) {
+            // Poner prioridad a 4
+            updates.prioridad = 4;
         } else {
             // Restaurar prioridad desde prioridadOriginal si existe
             if (data.prioridadOriginal !== undefined) {
                 updates.prioridad = data.prioridadOriginal;
-                // Opcional: eliminar prioridadOriginal para no guardar datos viejos
-                updates.prioridadOriginal = deleteField();
             } else {
                 // Si no existe prioridadOriginal, dejamos prioridad como está
                 updates.prioridad = 0;
