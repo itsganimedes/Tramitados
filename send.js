@@ -26,17 +26,17 @@ import {
 
     let prioridad=0;
 
-    if (data.urgencia==="tomado"){
+    if (data.urgencia.value==="tomado"){
         prioridad=4;
     }
-    if (data.urgencia==="normal"){
+    if (data.urgencia.value==="normal"){
         prioridad=3;
     }
-    if (data.urgencia==="urgente"){
-        prioridad=4;
+    if (data.urgencia.value==="urgente"){
+        prioridad=2;
     }
-    if (data.urgencia==="emergencia"){
-        prioridad=4;
+    if (data.urgencia.value==="emergencia"){
+        prioridad=1;
     }
 
     data.prioridad=prioridad;
