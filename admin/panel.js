@@ -11,8 +11,9 @@ import {
     getDoc,
     deleteDoc,
     orderBy,
+    onSnapshot,
     query,
-    deleteField
+    deleteField,
     } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
     // Verifica si el usuario está logueado
@@ -90,9 +91,13 @@ import {
     }
 
     const q = query(collection(db, "solicitudes"), orderBy("prioridad", "asc"));
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-        const data = doc.data();
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        container.innerHTML = "";
+
+        querySnapshot.forEach((docSnap) => {
+
+        const data = docSnap.data();
+        const id = docSnap.id;
         const div = document.createElement("div");
         div.className = "solicitud";
         let realizadotext="INDEFINIDO";
@@ -109,8 +114,8 @@ import {
         <div class="solicitud-box ${urgenciaClase} ${estadocolor}">
             <div class="servicio-title">
                 <p class="servicio ${data.urgencia}">${data.servicio}</p>
-                <button class="eliminarSolicitud oculto" onclick="eliminarSolicitud('${doc.id}')">Borrar</button>
-                <button id="cambiarEstado" onclick="cambiarEstado('${doc.id}')">Cambiar Estado</button>
+                <button class="eliminarSolicitud oculto" onclick="eliminarSolicitud('${docSnap.id}')">Borrar</button>
+                <button id="cambiarEstado" onclick="cambiarEstado('${docSnap.id}')">Cambiar Estado</button>
             </div>
             <div><span class="label estado">Estado:</span> ${realizadotext}</div>
             <div><span class="label">Nombre:</span> ${data.nombre}</div>
@@ -133,7 +138,7 @@ import {
     });
     const totalSolicitudes = querySnapshot.size;
     document.getElementById("totalSolicitudes").textContent = `Total de solicitudes: ${totalSolicitudes}`;
-    }
+    })};
 
     // Eliminar TODAS las solicitudes
     async function eliminarSolicitudes() {
@@ -245,6 +250,7 @@ window.eliminarSolicitud = async function(docId) {
 
     // Si pasó todas las validaciones, eliminamos la solicitud
     try {
+        console.log(docId);
         await deleteDoc(doc(db, "solicitudes", docId));
         alert("Solicitud eliminada correctamente.");
         cargarSolicitudes(); // recargar la lista
