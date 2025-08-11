@@ -23,6 +23,9 @@ import {
         // Verificamos el rol en la colección "usuarios"
         const docRef = doc(db, "usuarios", uid);
         const docSnap = await getDoc(docRef);
+        const data = docSnap.data();
+        const p = document.getElementById("username");
+        p.textContent = data.nombre;
 
         if (docSnap.exists()) {
         const data = docSnap.data();
@@ -118,6 +121,7 @@ import {
             const btnEliminar = div.querySelector(".eliminarSolicitud");
             btnEliminar.classList.remove("oculto");
         }
+        
         container.appendChild(div);
     });
     const totalSolicitudes = querySnapshot.size;
