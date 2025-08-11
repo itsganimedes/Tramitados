@@ -101,7 +101,7 @@ import {
         div.innerHTML = `
         <div class="solicitud-box ${urgenciaClase} ${estadocolor}">
             <div class="servicio-title">
-                <p class="servicio">${data.servicio}</p>
+                <p class="servicio ${data.urgencia}">${data.servicio}</p>
                 <button class="eliminarSolicitud oculto" onclick="eliminarSolicitud('${doc.id}')">Borrar</button>
                 <button id="cambiarEstado" onclick="cambiarEstado('${doc.id}')">Cambiar Estado</button>
             </div>

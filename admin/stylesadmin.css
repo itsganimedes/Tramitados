@@ -116,7 +116,7 @@ nav button {
 }
 
 span{
-    color: #0b4244;
+    color: #1ab5b2;
 }
 
 .line{
@@ -126,8 +126,9 @@ span{
 }
 
 .solicitud-box {
-    border: 2px solid rgb(155, 219, 221);
-    background: rgb(188, 226, 226);
+    border: 2px solid rgb(231, 231, 231);
+    background: rgb(1, 22, 18);
+    color: rgb(239, 239, 239);
     width: 25rem;
     height: 20rem; /* altura fija */
     border-radius: 10px;
@@ -140,22 +141,6 @@ span{
     justify-content: flex-start; /* para que empiece desde arriba */
     position: relative;
     overflow: hidden; /* evita que se salga */
-}
-
-.emergencia{
-    background-color: #c21e0c;
-    color: white;
-    span{
-        color: #ccc;
-    }
-}
-.emergencia .estado{
-    font-weight: bold;
-    color: rgb(217, 255, 0);
-}
-
-.urgente{
-    background-color: #c2b90c;
 }
 
 .cambiarcolor{
@@ -180,16 +165,27 @@ span{
 
 .servicio{
     background: #0b4244;
-    margin: -3rem -1rem 1rem -1rem;
-    padding: 1rem;
-    color: #ccc;
+    margin: -4rem -1rem 1rem -1rem;
+    padding: 2rem 1rem;
+    color: #000000;
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+.emergencia p{
+    background-color: #ea240e;
+}
+.urgente p{
+    background-color: #ffda20;
+}
+.normal p{
+    background-color: #20ffde;
 }
 
 .solicitud-box:hover{
     transform: scale(1.05);
 }
+
 
 .oculto{
     display: none;
@@ -214,8 +210,6 @@ span{
     }
     
     .solicitud-box {
-    border: 2px solid rgb(155, 219, 221);
-    background: rgb(188, 226, 226);
     width: 100%;
     height: 25rem; /* altura fija */
     border-radius: 10px;
@@ -228,22 +222,6 @@ span{
     justify-content: flex-start; /* para que empiece desde arriba */
     position: relative;
     overflow: hidden; /* evita que se salga */
-    }
-
-    .emergencia{
-    background-color: #c21e0c;
-    color: white;
-    span{
-        color: #ccc;
-    }
-    }
-    .emergencia .estado{
-        font-weight: bold;
-        color: rgb(217, 255, 0);
-    }
-
-    .urgente{
-        background-color: #c2b90c;
     }
 
     .cambiarcolor{
