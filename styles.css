@@ -970,6 +970,10 @@ footer img{
         margin: 0 -2rem;
     }
 
+    .upload-file{
+        margin: 1rem auto;
+    }
+
     footer img{
     width: 10%;
     margin: 1rem 0;
