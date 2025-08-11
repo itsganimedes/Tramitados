@@ -47,9 +47,10 @@
     <section id="container-2">
         <p class="title-2">Trabajá con Nosotros</p>
         <a href="#tramitador-oficial-title">Como Tramitador Oficial</a><br>
-        <a href="#tramitador-independiente-title">Como Tramitador Independiente</a><br><br>
-        <p>¿Necesitas un empleo? Aprovechá nuestra oportunidad.</p>
+        <a href="#tramitador-independiente-title">Como Tramitador Independiente</a><br>
+        <a href="#tramitados-equipo-title">Como Equipo de Tramitados</a><br><br>
         <p id="tramitador-oficial-title" style="text-align: left; font-size: 1.7rem;font-weight: bold; margin: 2rem 0;">Como Tramitador Oficial</p>
+        <p>¿Necesitas un empleo? Aprovechá nuestra oportunidad.</p>
         <p>En Tramitados ofrecemos empleo para personas de <b>todas las edades, géneros y gustos.</b></p>
         <p style="text-align: left; font-size: 1.5rem; margin: 1rem 0;">¿Cómo funciona?</p>
         <p>Vos envías tu solicitud de ingreso como Tramitador. En ese momento, te convertís en un Ingreso Pendiente dentro de nuesto sistema.</p>
@@ -128,8 +129,43 @@
         <p>Luego, vamos a <b>corroborar tus datos y certificados</b>.</p>
         <p>Una vez aprobados, ¡felicidades! ahora sos un Tramitador Independiente. Tu participación en el servicio en cuestión ya estará vigente y abierta al público. Te ingresaremos en el/los grupos correspondientes, en los cuales te vamos a informar cada vez que haya una solicitud de servicio.</p>
 
+        <p id="tramitados-equipo-title" style="text-align: left; font-size: 1.7rem;font-weight: bold; margin: 2rem 0;">Como Equipo de Tramitados</p>
+        <p>¿Te gustaría ayudarnos en la gestión y dirección de Tramitados?</p>
+        <p>En nuestro equipo, muchas veces necesitamos algo de ayuda en varias áreas: logística, dirección, moderación, administración, distribución y más.</p>
+        <b>Envíanos tu currículum y dejanos analizar tu información.</b>
+        <p>Te contactaremos <b>a través de los medios de contacto que proporciones en tu CV.</b></p>
+        <form action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" enctype="multipart/form-data" class="upload-file" id="formUpload">
+            <label for="archivo" class="btn-archivo">Seleccionar archivo(s)</label>
+            <input type="file" id="archivo" name="archivo" accept=".jpg, .png, .pdf" style="display: none;">
+            <input type="hidden" name="_next" value="https://https://itsganimedes.github.io/Tramitados/index.html.com/index.html">
+            <p id="lista-archivos" style="margin-top: 1rem; font-family: monospace; font-size: 0.9rem; text-wrap: wrap;"></p>
+            <p style="color: rgb(26, 26, 26);">Hasta 5mb</p>
+            <p style="margin: -0.5rem 0; color: rgb(26, 26, 26);">.jpg, .png, .pdf</p>
+            <button type="submit">Subir</button>
+        </form>
+
 
     </section>
+
+        <script>
+    const inputArchivo = document.getElementById('archivo');
+    const listaArchivos = document.getElementById('lista-archivos');
+
+    inputArchivo.addEventListener('change', () => {
+        const archivos = inputArchivo.files;
+        if (archivos.length === 0) {
+        listaArchivos.textContent = "No se seleccionó ningún archivo";
+        return;
+        }
+
+        // Crear listado con los nombres
+        let texto = "";
+        for (let i = 0; i < archivos.length; i++) {
+        texto += "- " + archivos[i].name + "\n";
+        }
+        listaArchivos.textContent = texto;
+    });
+    </script>
 
     <footer>
 

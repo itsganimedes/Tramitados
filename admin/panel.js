@@ -24,15 +24,22 @@ import {
         const docRef = doc(db, "usuarios", uid);
         const docSnap = await getDoc(docRef);
         const data = docSnap.data();
-        const p = document.getElementById("username");
-        p.textContent = data.nombre;
 
-        if (docSnap.exists()) {
-        const data = docSnap.data();
-        if (data.rol === "admin") {
-            document.getElementById("eliminarTodo").style.display = "inline-block";
-            document.getElementById("eliminarTodo").addEventListener("click", eliminarSolicitudes);
-        }
+        const pfecha = document.getElementById("fechaactual");
+        const fechaActual = new Date();
+        const dia = String(fechaActual.getDate()).padStart(2, '0');
+        const mes = String(fechaActual.getMonth() + 1).padStart(2, '0'); // +1 porque enero es 0
+        const año = fechaActual.getFullYear();
+        const fechaFormateada = `${dia}/${mes}/${año}`;
+        pfecha.textContent = fechaFormateada;
+
+        if (docSnap.exists()) {            
+            if (data.rol === "admin") {
+                document.getElementById("eliminarTodo").style.display = "inline-block";
+                document.getElementById("eliminarTodo").addEventListener("click", eliminarSolicitudes);
+            }
+            const p = document.getElementById("username");
+            p.textContent = data.nombre;
         }
 
         cargarSolicitudes();

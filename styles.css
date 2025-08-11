@@ -766,6 +766,54 @@ input[type="time"] {
     transform: scale(1.05);
 }
 
+.upload-file{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 20rem;
+    background: rgb(131, 190, 190);
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: rgb(24, 24, 24);
+    padding: 1rem;
+    text-wrap: nowrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.upload-file button{
+    width: 10rem;
+    max-width: 10rem;
+    margin: 2rem 0 0 0;
+    padding: 0.3rem;
+    background: rgb(62, 97, 97);
+    border: none;
+    color: rgb(224, 224, 224);
+}
+
+.upload-file button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.btn-archivo {
+    padding: 0.5rem 1rem;
+    background: rgb(77, 141, 141);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+.btn-archivo:hover {
+    background-color: #357abd;
+}
+
 
 .text{
     text-align: justify;
