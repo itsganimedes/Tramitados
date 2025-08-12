@@ -45,26 +45,26 @@
         }
     });
 
-    // --- Google popup ---
-    document.getElementById('btnGoogle').addEventListener('click', () => {
-        signInWithPopup(auth, provider)
-        .then(() => (window.location.href = "panel.html"))
-        .catch((err) => {
-            console.error(err.code, err.message);
-        });
-    });
+    // // --- Google popup ---
+    // document.getElementById('btnGoogle').addEventListener('click', () => {
+    //     signInWithPopup(auth, provider)
+    //     .then(() => (window.location.href = "panel.html"))
+    //     .catch((err) => {
+    //         console.error(err.code, err.message);
+    //     });
+    // });
 
-    // --- Logout ---
-    document.getElementById('btnLogout')?.addEventListener('click', () => signOut(auth));
+    // // --- Logout ---
+    // document.getElementById('btnLogout')?.addEventListener('click', () => signOut(auth));
 
-    // --- Estado de sesión ---
-    onAuthStateChanged(auth, (user) => {
-        const info = document.getElementById('info');
-        if (user) {
-        info.textContent = `Hola, ${user.displayName} (${user.email})`;
-        document.getElementById('btnLogout').style.display = 'inline-block';
-        } else {
-        info.textContent = 'No estás logueado';
-        document.getElementById('btnLogout').style.display = 'none';
-        }
-    });
+    // // --- Estado de sesión ---
+    // onAuthStateChanged(auth, (user) => {
+    //     const info = document.getElementById('info');
+    //     if (user) {
+    //     info.textContent = `Hola, ${user.displayName} (${user.email})`;
+    //     document.getElementById('btnLogout').style.display = 'inline-block';
+    //     } else {
+    //     info.textContent = 'No estás logueado';
+    //     document.getElementById('btnLogout').style.display = 'none';
+    //     }
+    // });
