@@ -23,7 +23,7 @@
         }
         form {
         background: linear-gradient(145deg,rgba(40, 139, 115, 0.8),rgba(27, 57, 77, 0.5));
-        padding: 2rem;
+        padding: 3rem;
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         width: 27%;
@@ -45,12 +45,12 @@
         background: transparent;
         border: none;
         color: #ccc;
-        margin: 0.5rem 0;
-        padding: 0.5rem;
+        margin: 2rem 0 0 0;
+        padding: 0.1rem;
         cursor: pointer;
         }
         p{
-            margin-top: 1rem;
+            margin-top: 2rem;
             color: #ccc;
             text-align: center;
             width: 40%;
@@ -85,6 +85,7 @@
                 font-size: 1rem;
                 width: 90%;
             }
+
         }
 
     </style>
@@ -93,12 +94,12 @@
         <h1>Tramitados</h1>
     <form id="login-form">
         <h2>Iniciar sesión</h2>
-        <input type="email" id="email" placeholder="Correo" />
-        <input type="password" id="password" placeholder="Contraseña" />
+        <input type="email" id="email" placeholder="Correo" required/>
+        <input type="password" id="password" placeholder="Contraseña" required/>
         <button type="submit">Ingresar</button>
-        <button id="btnGoogle">Ingresar con Google</button>
+        <!-- <button id="btnGoogle">Ingresar con Google</button>
         <button id="btnLogout" style="display:none">Salir</button>
-        <p id="info">No estás logueado</p>
+        <p id="info">No estás logueado</p> -->
     </form>
     <p id="error" class="oculto">Error: parece que no estás registrado. Si esto es un error, comunicate con nosotros.</p>
     <p><b>Introducí tus credenciales propias. <br>Nota: </b>debes ser parte del equipo de moderadores y/o administradores de Tramitados para acceder al panel de solicitudes.</p>

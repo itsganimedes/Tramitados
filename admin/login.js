@@ -1,4 +1,4 @@
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import { auth, db } from './firebaselogin.js';
     import {
         getAuth,
         GoogleAuthProvider,
@@ -18,10 +18,6 @@
     appId: "1:642561222614:web:eba3fb0711da8c1e222677",
     measurementId: "G-WTHP4FXM8N"
     };
-
-    // --- init ---
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
 
     // --- Google provider (fuerza selector de cuenta) ---
     const provider = new GoogleAuthProvider();
