@@ -93,12 +93,16 @@
         <h1>Tramitados</h1>
     <form id="login-form">
         <h2>Iniciar sesión</h2>
-        <input type="email" id="email" placeholder="Correo" required />
-        <input type="password" id="password" placeholder="Contraseña" required />
+        <input type="email" id="email" placeholder="Correo" />
+        <input type="password" id="password" placeholder="Contraseña" />
         <button type="submit">Ingresar</button>
+        <button id="btnGoogle">Ingresar con Google</button>
+        <button id="btnLogout" style="display:none">Salir</button>
+        <p id="info">No estás logueado</p>
     </form>
     <p id="error" class="oculto">Error: parece que no estás registrado. Si esto es un error, comunicate con nosotros.</p>
     <p><b>Introducí tus credenciales propias. <br>Nota: </b>debes ser parte del equipo de moderadores y/o administradores de Tramitados para acceder al panel de solicitudes.</p>
     <a href="../index.html">Volver</a>
+
 </body>
 </html>
