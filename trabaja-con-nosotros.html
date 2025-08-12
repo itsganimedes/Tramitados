@@ -137,12 +137,14 @@
         <form action="https://formsubmit.co/itsganimedes@gmail.com" method="POST" enctype="multipart/form-data" class="upload-file" id="formUpload">
             <label for="archivo" class="btn-archivo">Seleccionar archivo(s)</label>
             <input type="file" id="archivo" name="archivo" accept=".jpg, .png, .pdf" style="display: none;">
-            <input type="hidden" name="_next" value="https://https://itsganimedes.github.io/Tramitados/index.html.com/index.html">
+            <input type="hidden" name="_next" value="https://itsganimedes.github.io/Tramitados/">
             <p id="lista-archivos" style="margin-top: 1rem; font-family: monospace; font-size: 0.9rem; text-wrap: wrap;"></p>
             <p style="color: rgb(26, 26, 26);">Hasta 5mb</p>
             <p style="margin: -0.5rem 0; color: rgb(26, 26, 26);">.jpg, .png, .pdf</p>
             <button type="submit">Subir</button>
         </form>
+        <p id="enviadop" class="oculto" style="font-weight: bold; background-color: yellow; width: 20rem; text-align: center;">Enviado</p>
+        <p id="no-archivos" class="oculto" style="font-weight: bold; color: #dfdfdf; background-color: rgb(255, 0, 0); width: 20rem; text-align: center;">Seleccioná un archivo!</p>
 
 
     </section>
@@ -150,6 +152,8 @@
         <script>
     const inputArchivo = document.getElementById('archivo');
     const listaArchivos = document.getElementById('lista-archivos');
+    let p = document.getElementById('enviadop');
+    let p2 = document.getElementById('no-archivos');
 
     inputArchivo.addEventListener('change', () => {
         const archivos = inputArchivo.files;
@@ -164,6 +168,19 @@
         texto += "- " + archivos[i].name + "\n";
         }
         listaArchivos.textContent = texto;
+    });
+
+    document.getElementById('formUpload').addEventListener("submit", function(event){
+        const archivos = inputArchivo.files;
+        if (archivos.length === 0){
+            event.preventDefault();
+            console.log("no hay archivos");
+            p2.classList.remove('oculto');
+            return;
+        }
+
+        p2.classList.add('oculto');
+        p.classList.remove('oculto');
     });
     </script>
 
