@@ -55,6 +55,12 @@ import {
     window.location.href = "login.html";
     });
 
+
+
+
+
+
+    
     // Cargar solicitudes desde Firestore
     async function cargarSolicitudes() {
     const container = document.getElementById("solicitudes-container");
@@ -113,7 +119,9 @@ import {
         div.innerHTML = `
         <div class="solicitud-box ${urgenciaClase} ${estadocolor}">
             <div class="servicio-title">
-                <p class="servicio ${data.urgencia}">${data.servicio}</p>
+                <p class="servicio ${data.urgencia}">
+                    ${data.servicio}${data.servicio === "Servicio Técnico" && data.servicio_esp ? " - " + data.servicio_esp : ""}
+                </p>
                 <button class="eliminarSolicitud oculto" onclick="eliminarSolicitud('${docSnap.id}')">Borrar</button>
                 <button id="cambiarEstado" onclick="cambiarEstado('${docSnap.id}')">Cambiar Estado</button>
             </div>
@@ -139,6 +147,13 @@ import {
     const totalSolicitudes = querySnapshot.size;
     document.getElementById("totalSolicitudes").textContent = `Total de solicitudes: ${totalSolicitudes}`;
     })};
+
+
+
+
+
+
+
 
     // Eliminar TODAS las solicitudes
     async function eliminarSolicitudes() {

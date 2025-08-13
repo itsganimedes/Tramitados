@@ -12,8 +12,11 @@ import {
 
     // Obtener nombre del servicio desde el atributo del formulario
     const servicio = form.dataset.servicio || "Servicio desconocido";
+    let data;
 
-    const data = {
+    if (servicio != "Servicio Técnico") {
+
+    data = {
         servicio: servicio,
         nombre: form.nombre.value,
         telefono: form.telefono.value,
@@ -23,6 +26,22 @@ import {
         comentario: form.comentario.value || "(Sin comentario)",
         realizado: 0
     };
+
+    } else {
+
+        data = {
+        servicio: servicio,
+        nombre: form.nombre.value,
+        telefono: form.telefono.value,
+        ubicacion: form.ubicacion.value,
+        urgencia: form.urgencia.value,
+        hora: form.hora.value,
+        comentario: form.comentario.value || "(Sin comentario)",
+        realizado: 0,
+        servicio_esp: form.servicio_tecnico.value
+    };
+
+    }
 
     let prioridad=0;
     let prioridadOriginal = 0;
