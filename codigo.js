@@ -1,26 +1,29 @@
 //variables
 let str=" responsables inscriptos.";
 
-let total=16;
+let total=20;
 
 //cantidad de inscriptos por servicio
 let inscriptos=[
     0,              //1 ASISTENCIA FÍSICA
-    0,              //2 CUIDADO DE MAYORES
-    0,              //3 CUIDADO DE NIÑOS
-    0,              //4 CUIDADO DEL HOGAR
-    0,              //5 ELECTRICISTA 
-    0,              //6 FLETES
-    0,              //7 FOTOGRAFÍA
-    0,              //8 GASISTA 
-    0,              //9 JARDINERÍA
-    0,              //10 MÚSICA
-    0,              //11 ORGANIZACIÓN
-    0,              //12 PLOMERÍA 
-    0,              //13 PROFESORES
-    0,              //14 RECADOS
-    0,              //15 SERVICIO TECNICO 
-    0               //16 TRÁMITES LEGALES
+    0,              //2 CADENA DE ORACIÓN
+    0,              //3 CERRAJERÍA
+    0,              //4 CUIDADO DEL MAYORES
+    0,              //5 CUIDADO DE NIÑOS
+    0,              //6 CUIDADO DEL HOGAR
+    0,              //7 DJ
+    0,              //8 ELECTRICISTA 
+    0,              //9 FLETES
+    0,              //10 FOTOGRAFÍA
+    0,              //11 GASISTA
+    0,              //12 JARDINERÍA 
+    0,              //13 MÚSICA
+    0,              //14 ORGANIZACIÓN
+    0,              //15 PLOMERÍA 
+    0,               //16 PROFESORES
+    0,               //17 RECADOS
+    0,               //18 SERVICIO TÉCNICO
+    0               //19 TRÁMITES LEGALES
 ];
 
 let recarga_emergencias=10;
@@ -46,12 +49,17 @@ for (let i = 0; i < parrafo_recarga_u.length; i++) {
     parrafo_recarga_u[i].textContent = String("(+")+String(recarga_urgencias)+String("%)");
 }
 
-//escribir cuantos responsables inscriptos hay
-for(let i = 0 ; i < total; i++)
-{
-    const parrafo=document.getElementById("res-ins-" + i)
-    parrafo.textContent=inscriptos[i] + String(str);
-}
+//escribir cantidad de responsables y asignar ID único a cada servicio
+let serviciostotal = document.querySelectorAll(".servicevig");
+
+serviciostotal.forEach((servicio, index) => {
+    const p = servicio.querySelector(".res-ins"); // usamos clase
+    if (p) {
+        p.id = `res-ins-${index}`;
+        p.textContent = `${inscriptos[index]} responsables inscriptos.`;
+    }
+});
+
 
 //evitar funcion al clickear el formulario del servicio 
 document.querySelectorAll('.formulario-servicio').forEach(form => {

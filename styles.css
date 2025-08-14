@@ -844,6 +844,22 @@ input[type="time"] {
     text-align: center;
 }
 
+.sincosto-box{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.sincosto{
+    background-color: rgb(203, 224, 203); 
+    color: rgb(77, 172, 0); 
+    padding: 0 1rem; 
+    font-weight: bold; 
+    max-width: 8rem; 
+    border-radius: 4px; 
+    text-align: center;
+}
+
 .p-center{
     font-style: italic;
     text-align: center;

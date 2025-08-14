@@ -67,9 +67,9 @@
             <div class="servicevig" onclick="mostrarFormulario('fisica')">
                 <b class="title-2"><i class="fa-solid fa-handshake-angle"></i> Asistencia Física</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-0"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Movimiento de objetos pesados, ayuda para caminar y/o moverse, y más</p>
+                <p class="descripcion">Para personas que requieren apoyo en movilidad, traslado, ejercicios adaptados y acompañamiento en actividades diarias, con atención personalizada y segura.</p>
                 <form 
                 id="form-fisica" 
                 method="POST"
@@ -126,7 +126,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -148,13 +148,182 @@
                 </form>
             </div>
 
+            <!--oracion-->
+            <div class="servicevig col2" onclick="mostrarFormulario('oracion')">
+                <b class="title-2"><i class="fa-solid fa-cross"></i> Cadena de Oración</b>
+                <div class="sincosto-box">
+                    <p>Tramitador Oficial</p>
+                    <p class="sincosto">Sin costo</p>
+                </div>
+                <p class="res-ins"> responsables inscriptos.</p>
+                <p class="unavailable">Disponible</p>
+                <p class="descripcion">Para interceder por tus necesidades y las de tus seres queridos. Unimos corazones y fe para orar por sanidad, protección, fortaleza y bendición.</p>
+
+                <form 
+                id="form-oracion"
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="Cadena de Oración"
+                class="formulario-servicio oculto"
+                >
+                    <input type="hidden" name="_subject" value="Solicitud de Oración">
+                    
+                    <input type="hidden" name="_next" value="">
+
+                    <p>Nombre Completo</p>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos y con 54)"
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+                    <p>Región/Localidad</p>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9 de Julio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="San Martín">San Martín</option>
+                    <option value="Santa Lucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25 de Mayo">25 de Mayo</option>
+                    </select>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
+                    <textarea name="comentario" placeholder="¿Cuál es la causa por la cual pedir en oración?" required></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--cerrajeria-->
+            <div class="servicevig" onclick="mostrarFormulario('cerrajeria')">
+                <b class="title-2"><i class="fa-solid fa-key"></i> Cerrajería</b>
+                <p>Tramitador Independiente</p>
+                <p class="res-ins"> responsables inscriptos.</p>
+                <p class="unavailable">Disponible</p>
+                <p class="descripcion">Apertura de puertas, cambio de cerraduras, duplicado de llaves y soluciones de seguridad para tu hogar, negocio o vehículo.</p>
+
+                <form 
+                id="form-cerrajeria"
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="Cerrajería"
+                class="formulario-servicio oculto"
+                >
+                    <input type="hidden" name="_subject" value="Solicitud de Cerrajería">
+                    
+                    <input type="hidden" name="_next" value="">
+
+                    <p>Nombre Completo</p>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos y con 54)"
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+                    <p>Región/Localidad</p>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9 de Julio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="San Martín">San Martín</option>
+                    <option value="Santa Lucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25 de Mayo">25 de Mayo</option>
+                    </select>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
             <!--cuidadoadultos-->
             <div class="servicevig col2" onclick="mostrarFormulario('cuidadoadultos')">
                 <b class="title-2"><i class="fa-solid fa-person-cane"></i> Cuidado de Mayores</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-1"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Acompañamiento, guía, asistencia y ayuda en ámbitos cotidianos</p>
+                <p class="descripcion">Con atención respetuosa y cercana. Asistencia en tareas diarias, compañía, control de medicamentos y apoyo en su bienestar físico y emocional.</p>
 
                 <form 
                 id="form-cuidadoadultos" 
@@ -211,7 +380,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -232,15 +401,13 @@
                 </form>
             </div>
 
-            
-
             <!--ninera-->
             <div class="servicevig" onclick="mostrarFormulario('ninera')">
                 <b class="title-2"><i class="fa-solid fa-baby-carriage"></i> Cuidado de Niños</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-2"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Alimentarlos, acompañarlos y hacerlos jugar</p>
+                <p class="descripcion">Atención segura, actividades recreativas y apoyo en tareas escolares para que tus hijos estén en buenas manos mientras vos no estás.</p>
 
                 <form 
                 id="form-ninera"
@@ -296,7 +463,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -317,14 +484,13 @@
                 </form>
             </div>
 
-
             <!--hogar-->
             <div class="servicevig col2" onclick="mostrarFormulario('hogar')">
                 <b class="title-2"><i class="fa-solid fa-broom"></i> Cuidado del Hogar</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-3"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Limpieza y mantenimiento</p>
+                <p class="descripcion">Confiable y profesional. Limpieza, mantenimiento y organización para que tu casa esté siempre segura, limpia y en perfecto estado.</p>
 
                 <form 
                 id="form-hogar"
@@ -380,7 +546,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -401,14 +567,96 @@
                 </form>
             </div>
 
+            <!--dj-->
+            <div class="servicevig" onclick="mostrarFormulario('dj')">
+                <b class="title-2"><i class="fa-solid fa-headphones"></i> DJ</b>
+                <p>Tramitador Independiente</p>
+                <p class="res-ins"> responsables inscriptos.</p>
+                <p class="unavailable">Disponible</p>
+                <p class="descripcion">Para fiestas y eventos. Música personalizada, sonido de alta calidad y la mejor energía para que tu celebración sea inolvidable.</p>
+
+                <form 
+                id="form-dj"
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="DJ"
+                class="formulario-servicio oculto"
+                >
+                    <input type="hidden" name="_subject" value="Solicitud de DJ">
+                    
+                    <input type="hidden" name="_next" value="">
+
+                    <p>Nombre Completo</p>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (sin signos y con 54)"
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+                    <p>Región/Localidad</p>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9 de Julio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="San Martín">San Martín</option>
+                    <option value="Santa Lucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25 de Mayo">25 de Mayo</option>
+                    </select>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
 
             <!--electricista-->
             <div class="servicevig" onclick="mostrarFormulario('electricista')">
                 <b class="title-2"><i class="fa-solid fa-bolt"></i> Electricista</b>
                 <p>Tramitador Independiente</p>
-                <p id="res-ins-4"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Instalaciones, reparaciones y mantenimiento eléctrico para el hogar o comercio</p>
+                <p class="descripcion">Instalaciones, reparaciones y mantenimiento eléctrico para el hogar o comercio.</p>
 
                 <form 
                 id="form-electricista"
@@ -464,7 +712,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -485,14 +733,13 @@
                 </form>
             </div>
 
-
             <!--fletes-->
             <div class="servicevig col2" onclick="mostrarFormulario('fletes')">
                 <b class="title-2"><i class="fa-solid fa-cart-flatbed"></i> Fletes</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-5"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Traslado de muebles, electrodomésticos, cajas u objetos grandes dentro de la ciudad o hacia otras localidades</p>
+                <p class="descripcion">Traslado de muebles, electrodomésticos, cajas u objetos grandes dentro de la ciudad o hacia otras localidades.</p>
 
                 <form 
                 id="form-fletes"
@@ -548,7 +795,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -572,14 +819,13 @@
                 </form>
             </div>
 
-
             <!--fotografía-->
             <div class="servicevig" onclick="mostrarFormulario('fotografia')">
                 <b class="title-2"><i class="fa-solid fa-camera"></i> Fotografía</b>
                 <p>Tramitador Independiente</p>
-                <p id="res-ins-6"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Captura profesional de momentos especiales, productos, retratos o eventos</p>
+                <p class="descripcion">Captura profesional de momentos especiales, productos, retratos o eventos.</p>
 
                 <form 
                 id="form-fotografia"
@@ -635,7 +881,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -655,15 +901,14 @@
                     <button type="submit">Enviar solicitud</button>
                 </form>
             </div>
-
             
             <!--gasista-->
             <div class="servicevig col2" onclick="mostrarFormulario('gasista')">
                 <b class="title-2"><i class="fa-solid fa-fire"></i> Gasista</b>
                 <p>Tramitador Independiente</p>
-                <p id="res-ins-7"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Instalación, revisión y reparación de sistemas de gas domiciliarios o comerciales</p>
+                <p class="descripcion">Instalación, revisión y reparación de sistemas de gas domiciliarios o comerciales.</p>
 
                 <form 
                 id="form-gasista"
@@ -719,7 +964,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -740,15 +985,13 @@
                 </form>
             </div>
 
-
-
             <!--jardinería-->
             <div class="servicevig" onclick="mostrarFormulario('jardineria')">
                 <b class="title-2"><i class="fa-solid fa-seedling"></i> Jardinería</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-8"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Mantenimiento y diseño de jardines, corte de césped, poda, riego y embellecimiento de espacios verdes</p>
+                <p class="descripcion">Mantenimiento y diseño de jardines, corte de césped, poda, riego y embellecimiento de espacios verdes.</p>
 
                 <form 
                 id="form-jardineria"
@@ -804,7 +1047,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -825,14 +1068,13 @@
                 </form>
             </div>
 
-
             <!--musica-->
             <div class="servicevig col2" onclick="mostrarFormulario('musica')">
                 <b class="title-2"><i class="fa-solid fa-guitar"></i> Música</b>
                 <p>Tramitador Independiente</p>
-                <p id="res-ins-9"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Clases particulares de instrumentos o canto, presentaciones en vivo y servicios musicales para eventos</p>
+                <p class="descripcion">Clases particulares de instrumentos o canto, presentaciones en vivo y servicios musicales para eventos.</p>
 
                 <form 
                 id="form-musica"
@@ -888,7 +1130,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -909,15 +1151,13 @@
                 </form>
             </div>
 
-
-
             <!--organizacion-->
             <div class="servicevig" onclick="mostrarFormulario('organizacion')">
                 <b class="title-2"><i class="fa-solid fa-calendar-days"></i> Organización</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-10"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
-                <p class="descripcion">Coordinación y planificación de eventos sociales o corporativos</p>
+                <p class="descripcion">Coordinación y planificación de eventos sociales o corporativos.</p>
 
                 <form 
                 id="form-organizacion"
@@ -973,7 +1213,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -994,12 +1234,11 @@
                 </form>
             </div>
 
-
             <!--plomería-->
             <div class="servicevig col2" onclick="mostrarFormulario('plomeria')">
                 <b class="title-2"><i class="fa-solid fa-wrench"></i> Plomería</b>
                 <p>Tramitador Independiente</p>
-                <p id="res-ins-11"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Instalación, reparación y mantenimiento de sistemas de agua potable, desagües y calefacción.</p>
 
@@ -1057,7 +1296,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -1078,12 +1317,11 @@
                 </form>
             </div>
 
-
             <!--profesores-->
             <div class="servicevig" onclick="mostrarFormulario('profesores')">
                 <b class="title-2"><i class="fa-solid fa-chalkboard-user"></i> Profesores</b>
                 <p>Tramitador Independiente</p>
-                <p  id="res-ins-12"> responsables inscriptos.</p>
+                <p  class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Clases personalizadas y adaptadas a las necesidades de cada estudiante para reforzar materias escolares, preparar exámenes o aprender nuevos conocimientos.</p>
 
@@ -1141,7 +1379,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -1162,13 +1400,11 @@
                 </form>
             </div>
 
-
-
             <!--recados-->
             <div class="servicevig col2" onclick="mostrarFormulario('recados')">
                 <b class="title-2"><i class="fa-solid fa-store"></i></i> Recados</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-13"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Realizar encargos o compras básicas en nombre del cliente, como trámites simples, pagos, compras o entregas.</p>
 
@@ -1226,7 +1462,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -1251,7 +1487,7 @@
             <div class="servicevig" onclick="mostrarFormulario('servtecnico')">
                 <b class="title-2"><i class="fa-solid fa-screwdriver-wrench"></i> Servicio Técnico</b>
                 <p>Tramitador Independiente</p>
-                <p id="res-ins-14"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Atención profesional para diagnóstico, reparación y mantenimiento de equipos electrónicos, electrodomésticos o tecnología.</p>
 
@@ -1309,7 +1545,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
@@ -1345,7 +1581,7 @@
             <div class="servicevig col2" onclick="mostrarFormulario('legales')">
                 <b class="title-2"><i class="fa-solid fa-gavel"></i> Trámites Legales</b>
                 <p>Tramitador Oficial</p>
-                <p id="res-ins-15"> responsables inscriptos.</p>
+                <p class="res-ins"> responsables inscriptos.</p>
                 <p class="unavailable">Disponible</p>
                 <p class="descripcion">Asistencia experta para gestionar y realizar procedimientos jurídicos, como contratos, registros, certificaciones o gestiones ante organismos públicos.</p>
 
@@ -1403,7 +1639,7 @@
                         </div>
                         <div class="fecha-opcion">
                             <input type="radio" id="normal" name="urgencia" value="normal">
-                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 2-3 días)</label>
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
                         </div>
 
                     </div>
