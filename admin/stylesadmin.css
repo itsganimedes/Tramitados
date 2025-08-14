@@ -102,6 +102,7 @@ nav button {
     width: 1rem; 
     height: 1rem; 
     margin: 0.2rem 0.5rem;
+    border-radius: 2px;
 }
 
 .eliminarSolicitud{
