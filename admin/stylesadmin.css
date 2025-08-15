@@ -150,7 +150,7 @@ span{
     background: rgb(1, 22, 18);
     color: rgb(239, 239, 239);
     width: 25rem;
-    height: 22rem; /* altura fija */
+    height: 24rem; /* altura fija */
     border-radius: 5px;
     margin: 1rem auto;
     padding: 1rem;

@@ -14,6 +14,12 @@ import {
     const servicio = form.dataset.servicio || "Servicio desconocido";
     let data;
 
+    const fechaActual = new Date();
+        const dia = String(fechaActual.getDate()).padStart(2, '0');
+        const mes = String(fechaActual.getMonth() + 1).padStart(2, '0'); // +1 porque enero es 0
+        const año = fechaActual.getFullYear();
+        const fechaFormateada = `${dia}/${mes}/${año}`;
+
     if (servicio != "Servicio Técnico") {
 
     data = {
@@ -24,7 +30,9 @@ import {
         urgencia: form.urgencia.value,
         hora: form.hora.value,
         comentario: form.comentario.value || "(Sin comentario)",
-        realizado: 0
+        realizado: 0,
+        terminosycondiciones: form.terminosycondiciones.value,
+        fecha: fechaFormateada
     };
 
     } else {
@@ -38,6 +46,8 @@ import {
         hora: form.hora.value,
         comentario: form.comentario.value || "(Sin comentario)",
         realizado: 0,
+        terminosycondiciones: form.terminosycondiciones.value,
+        fecha: fechaFormateada,
         servicio_esp: form.servicio_tecnico.value
     };
 

@@ -108,11 +108,17 @@ import {
         div.className = "solicitud";
         let realizadotext="INDEFINIDO";
         let estadocolor = "none";
+        let terminosycondiciones_aceptado = "undefined";
         if (data.realizado===0){
             realizadotext="VIGENTE";
         }else{
             realizadotext="TOMADO";
             estadocolor = "cambiarcolor"; // ahora es un color
+        }
+        if (data.terminosycondiciones === "on"){
+            terminosycondiciones_aceptado = "Aceptadas";
+        } else {
+            terminosycondiciones_aceptado = "No aceptadas";
         }
         const urgenciaClase = data.urgencia.toLowerCase();
 
@@ -131,6 +137,8 @@ import {
             <div><span class="label">Ubicación:</span> ${data.ubicacion}</div>
             <div><span class="label">Urgencia:</span> ${data.urgencia}</div>
             <div><span class="label">Hora:</span> ${data.hora}</div>
+            <div><span class="label">Términos y Condiciones: </span>${terminosycondiciones_aceptado}</div>
+            <div><span class="label">Fecha:</span> ${data.fecha}</div>
             <div>
                 <span class="label">Comentario:</span>
                 <div class="comentario">${data.comentario}</div>
