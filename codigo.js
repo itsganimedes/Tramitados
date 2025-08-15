@@ -1,7 +1,7 @@
 //variables
 let str=" responsables inscriptos.";
 
-let total=20;
+let total=21;
 
 //cantidad de inscriptos por servicio
 let inscriptos=[
@@ -19,11 +19,12 @@ let inscriptos=[
     0,              //12 JARDINERÍA 
     0,              //13 MÚSICA
     0,              //14 ORGANIZACIÓN
-    0,              //15 PLOMERÍA 
-    0,               //16 PROFESORES
-    0,               //17 RECADOS
-    0,               //18 SERVICIO TÉCNICO
-    0               //19 TRÁMITES LEGALES
+    0,              //15 PINTOR
+    0,              //16 PLOMERÍA 
+    0,               //17 PROFESORES
+    0,               //18 RECADOS
+    0,               //19 SERVICIO TÉCNICO
+    0               //20 TRÁMITES LEGALES
 ];
 
 let recarga_emergencias=10;

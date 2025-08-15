@@ -59,7 +59,6 @@ import {
 
 
 
-
     
     // Cargar solicitudes desde Firestore
     async function cargarSolicitudes() {
@@ -160,6 +159,7 @@ import {
 
 
 
+    
 
 
 
