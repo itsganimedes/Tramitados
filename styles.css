@@ -551,6 +551,7 @@ a:hover {
     color: #0d5e5a;
     font-size: 1.5rem;
     text-decoration: none;
+    padding: 0 2rem;
 }
 
 .service{
@@ -1342,7 +1343,7 @@ footer img{
 
     .inicio-info-img-img {
         width: 100%;
-        height: 12rem;
+        height: 20rem;
         background-size: cover;
         background-position: top;
         border-top: 2px solid #ccc;
@@ -1350,7 +1351,7 @@ footer img{
 
     .inicio-info-img-img-2 {
         width: 100%;
-        height: 12rem;
+        height: 20rem;
         background-size: cover;
         background-position: center;
         border-top: 2px solid #ccc;
