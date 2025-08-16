@@ -138,6 +138,7 @@ import {
             <div><span class="label">Hora:</span> ${data.hora}</div>
             <div><span class="label">Términos y Condiciones: </span>${terminosycondiciones_aceptado}</div>
             <div><span class="label">Fecha:</span> ${data.fecha}</div>
+            <div><span class="label">Hora:</span> ${data.horario_solicitud}</div>
             <div>
                 <span class="label">Comentario:</span>
                 <div class="comentario">${data.comentario}</div>

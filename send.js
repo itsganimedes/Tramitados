@@ -20,6 +20,14 @@ import {
         const año = fechaActual.getFullYear();
         const fechaFormateada = `${dia}/${mes}/${año}`;
 
+        let hours = fechaActual.getHours();
+        let minutes = fechaActual.getMinutes();
+
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+
+        const horario = `${hours}:${minutes}`;
+
     if (servicio != "Servicio Técnico") {
 
     data = {
@@ -32,7 +40,8 @@ import {
         comentario: form.comentario.value || "(Sin comentario)",
         realizado: 0,
         terminosycondiciones: form.terminosycondiciones.value,
-        fecha: fechaFormateada
+        fecha: fechaFormateada,
+        horario_solicitud: horario
     };
 
     } else {
@@ -48,6 +57,7 @@ import {
         realizado: 0,
         terminosycondiciones: form.terminosycondiciones.value,
         fecha: fechaFormateada,
+        horario_solicitud: horario,
         servicio_esp: form.servicio_tecnico.value
     };
 
