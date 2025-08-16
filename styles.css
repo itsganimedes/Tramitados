@@ -1140,6 +1140,9 @@ footer img{
 
 @media (max-width: 600px) {
 
+    #container-2{
+        width: 100%;
+    }
     header{
         display: flex;
         flex-direction: column;
