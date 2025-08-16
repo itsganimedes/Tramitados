@@ -105,7 +105,7 @@
     header h3{
         font-size: 3rem;
         margin-left: 1rem;
-        background: linear-gradient(to right, rgb(55, 168, 172), rgb(23, 134, 138), rgb(30, 111, 112), rgb(66, 189, 172), rgb(142, 191, 199));
+        background: linear-gradient(to right, rgb(55, 168, 172), rgb(23, 134, 138), rgb(119, 196, 170), rgb(66, 189, 172), rgb(55, 168, 172));
         background-size: 200%;
         background-clip: text;
         -webkit-background-clip: text;
