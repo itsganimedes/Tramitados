@@ -534,15 +534,19 @@ a:hover {
 }
 
 .service i{
-    background-color: #c1dde9;
     width: 4rem;
     height: 4rem;
-    border-radius: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(#c1dde9, #c1dde9)
+    padding-box,
+    linear-gradient(45deg, rgb(0, 255, 255), #20b85f)
+    border-box;
+    border-radius: 50%;
+    border: 2px solid transparent;
 }
 
 .service:hover{
