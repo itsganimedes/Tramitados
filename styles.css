@@ -279,6 +279,7 @@
 .caracteristicas{
     display: flex;
     flex-direction: row;
+    text-align: left;
     gap: 20px;
     justify-content: left;
     color:#686868;
