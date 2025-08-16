@@ -1187,20 +1187,14 @@ footer img{
         flex-direction: column;
     }
 
-
-    .inicio-img{
-    width: 18rem;
-    height: 30rem;
+.inicio-img {
     width: 100%;
     margin: 0;
-    background-color: #000000;
-    background-image: url(img/Inicio6.png);
-    background-repeat: no-repeat;
+    height: 30rem;
+    background-position: bottom;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    }
-
+    background-attachment: local;
+}
 
     .inicio-info-img{
     display: flex;
