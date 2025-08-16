@@ -23,8 +23,8 @@
 
 
     header{
-        background: #f1f1f1;
-        padding: 2rem 0;
+        background: transparent;
+        padding: 3rem 0;
         display: flex;
         color: rgb(26, 26, 26);
         position: relative;
@@ -41,6 +41,18 @@
     header h3{
         font-size: 3rem;
         margin-left: 1rem;
+        background: linear-gradient(to right, rgb(26, 85, 87), rgb(23, 134, 138), rgb(19, 70, 71), rgb(36, 114, 104), rgb(8, 71, 80));
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+    }
+
+    @keyframes animate-gradient{
+        to {
+            background-position: 200%;
+        }
     }
 
     header p{
@@ -54,8 +66,7 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
-        background: #f1f1f1;
-        border-bottom: 1px solid #ccc;  
+        background: linear-gradient(135deg, rgb(223, 228, 233), rgb(122, 187, 176)); /* f1f1f1 */
         z-index: 10;
         position: relative;
     }
@@ -80,7 +91,9 @@
     }
 
     nav a:hover{
-        color:rgb(0, 179, 179)
+        color:rgb(3, 107, 107);
+        position: relative;
+        font-size: 1.02rem;
     }
 
 .a-special{
@@ -158,12 +171,65 @@
     width: calc(100% + 4rem);
     margin: 0 -2rem;
     height: 30rem;
-    background-color: #000000;
+    background-color-: #000000;
     background-image: url(img/Inicio6.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-position: top;
+    mask-image: linear-gradient(
+        black 95%,
+        transparent
+    );
+}
+
+.inicio-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7); /* negro con 50% de opacidad */
+    z-index: 1;
+}
+
+.inicio-img p {
+    z-index: 2;
+    color: white;
+    font-size: 3rem;
+}
+
+.inicio-img-buttons{
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.a-special-4{
+    display: block;
+    width: fit-content;
+    margin: 5rem 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(62, 219, 219);
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    width: 30rem;
+}
+
+.a-special-4:hover{
+    background-color: rgb(62, 219, 219);
+    color: rgb(37, 37, 37);
 }
 
 .web-position{
@@ -1162,7 +1228,8 @@ footer img{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        border-top: 2px solid #ccc;
+        border-top: 1px solid #4fc0b1;
+        padding: 1rem 0;
     }
 
     .header-nav{
@@ -1187,14 +1254,29 @@ footer img{
         flex-direction: column;
     }
 
-.inicio-img {
-    width: 100%;
-    margin: 0;
-    height: 30rem;
-    background-position: bottom;
-    background-size: cover;
-    background-attachment: local;
-}
+    .inicio-img {
+        width: 100%;
+        margin: 0;
+        height: 30rem;
+        background-position: bottom;
+        background-size: cover;
+        background-attachment: local;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inicio-img p{
+        font-size: 2rem;
+    }
+
+    .inicio-img-buttons{
+        flex-direction: column;
+    }
+
+    .a-special-4{
+    width: 80%;
+    margin: 1rem auto;
+    }
 
     .inicio-info-img{
     display: flex;
@@ -1232,6 +1314,7 @@ footer img{
         border-top: 2px solid #ccc;
     }
 
+
     .texto-superpuesto {
     font-size: 1rem;
     }
@@ -1265,6 +1348,11 @@ footer img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    }
+
+    .categorias{
+        width: calc(100% + 4rem);
+        margin: 0 -2rem;
     }
 
 
