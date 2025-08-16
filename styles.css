@@ -82,7 +82,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     background: transparent;
     z-index: 10;
     position: relative;
@@ -137,6 +137,7 @@
     nav a{
         color:#09423f;
         text-decoration: none;
+        font-size: 0.9rem;
     }
 
     nav a:hover{
@@ -144,6 +145,37 @@
         position: relative;
         font-size: 1.02rem;
     }
+
+    .social-media-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 3rem;
+    }
+
+    .social-media{
+        font-size: 2rem;
+        color: white;
+    }
+
+    .social-media-box a:nth-child(1):hover {
+    color: #9a26a5;
+    }
+
+    .social-media-box a:nth-child(2):hover {
+        color: #1DA1F2;
+    }
+
+    .social-media-box a:nth-child(3):hover {
+        color: #FF0000;
+    }
+
+    .social-media-box a:nth-child(4):hover {
+        color: #77f258;
+    }
+
 
 .a-special{
     display: block;
