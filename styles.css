@@ -1516,6 +1516,8 @@ footer img{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: calc(100% + 4rem);
+        margin: 0 -2rem;
     }
 
     .search-bar{
