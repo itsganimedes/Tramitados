@@ -135,3 +135,17 @@ function servicesearch() {
             form.classList.remove('oculto');
         }
     }
+
+    //mostrar info
+
+    function mostrarInfo(){
+        const info = document.querySelector(".infoMostrar");
+        const yaEstabaVisible = !info.classList.contains('oculto');
+
+        info.classList.add("oculto");
+
+        // Si no estaba visible, lo mostramos (si ya estaba visible, lo dejamos oculto)
+        if (!yaEstabaVisible) {
+            info.classList.remove('oculto');
+        }
+    }
