@@ -163,8 +163,54 @@ span{
     overflow: hidden; /* evita que se salga */
 }
 
+#busqueda{
+    display: block;
+    width: 20rem;
+    max-width: 25rem;
+    height: 3rem;
+    max-height: 5rem;
+    border: 1px solid #ccc;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(24, 24, 24);
+    font-size: large;
+    z-index: 2;
+}
+
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.search-bar p{
+    text-align: center;
+    margin: 0;
+}
+
+.search-bar button {
+    font-weight: bold;
+    width: 6rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    height: 3rem;
+    z-index: 1;
+    i{
+        font-size: 1rem;
+    }
+}
+
+
 .cambiarcolor{
     background-color: #939393ff;
+}
+
+.cambiarcolor span{
+    color: black;
 }
 
 .comentario {
@@ -242,6 +288,11 @@ span{
     justify-content: flex-start; /* para que empiece desde arriba */
     position: relative;
     overflow: hidden; /* evita que se salga */
+    }
+
+    .referencias{
+        flex-direction: column;
+        justify-content: center;
     }
 
     .cambiarcolor{

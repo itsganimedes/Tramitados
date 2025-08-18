@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="panel.js"></script>
     <link rel="stylesheet" href="stylesadmin.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
     <body>
         <nav>
@@ -21,6 +22,12 @@
         <p id="adminp" class="oculto" style="color: rgb(239, 251, 21); background: #ee9c0e; width: 4rem; text-align: center; border-radius: 5px; font-weight: bold;">ADMIN</p>
         <p id="modp" class="oculto" style="color: rgb(209, 54, 188); background: #4f084a; width: 4rem; text-align: center; border-radius: 5px; font-weight: bold;">MOD</p>
         <p id="totalSolicitudes"></p>
+        <div class="search-bar">
+            <input type="text" id="busqueda" placeholder="Bucar por nombre de Usuario">
+            <button id="btnBuscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <p id="noEncontrado" class="oculto" style="text-align: center; margin: 1rem 0; color: red; background-color: rgb(231, 165, 165);">No se encontró ninguna solicitud.</p>
 
         <div class="referencias">
             <div class="referencia">
@@ -34,6 +41,10 @@
             <div class="referencia">
                 <div class="cuadradoref" style="background: rgb(6, 205, 255)"></div>
                 <p>Normal</p>
+            </div>
+            <div class="referencia">
+                <div class="cuadradoref" style="background: rgb(165, 165, 165)"></div>
+                <p>Tomadas</p>
             </div>
         </div>
         

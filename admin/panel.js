@@ -59,6 +59,10 @@ import {
 
 
 
+
+
+
+
     
     // Cargar solicitudes desde Firestore
     async function cargarSolicitudes() {
@@ -160,9 +164,54 @@ import {
 
 
 
-    
 
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btnBuscar = document.getElementById("btnBuscar");
+    const input = document.getElementById("busqueda");
+
+    btnBuscar.addEventListener("click", buscarSolicitudes);
+
+    // Ejecuta búsqueda al presionar Enter dentro del input
+    input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            buscarSolicitudes();
+        }
+    });
+
+    function buscarSolicitudes(){
+        const input = document.getElementById("busqueda");
+        const filtro = input.value.toLowerCase().trim();
+
+        const solicitudes = document.querySelectorAll(".solicitud-box");
+        let encontrados = 0;
+
+        solicitudes.forEach(solicitud => {
+            // Tomamos el texto del div donde está el nombre (por ejemplo, el <div> con label Nombre)
+            const nombreDiv = solicitud.querySelector("div span.label + div, div:nth-child(3)");
+            // Esto depende de tu estructura, asegurate de seleccionar el texto del nombre
+            const nombre = nombreDiv ? nombreDiv.textContent.toLowerCase() : "";
+
+            if (nombre.includes(filtro)) {
+                solicitud.classList.remove("oculto");
+                encontrados++;
+            } else {
+                solicitud.classList.add("oculto");
+            }
+        });
+
+        // Mostrar mensaje si no se encuentra nada
+        const pNoEncontrado = document.getElementById("noEncontrado");
+        if (encontrados === 0) {
+            pNoEncontrado.classList.remove("oculto");
+        } else {
+            pNoEncontrado.classList.add("oculto");
+        }
+    };
+});
 
     // Eliminar TODAS las solicitudes
     async function eliminarSolicitudes() {
