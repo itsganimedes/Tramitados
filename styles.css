@@ -118,7 +118,8 @@
 
     .user-data{
         position: absolute;
-        right: 50px;
+        right: 40px;
+        top: 30px;
         width: 15rem;
         min-height: 2rem;
         background-color: rgb(224, 224, 224);
@@ -1416,10 +1417,15 @@ footer img{
         padding: 1rem 0;
     }
 
-    .user-data{
-        bottom: 30px;
+    .header-nav-2{
+        position: relative;
     }
 
+    .user-data{
+        position: static;
+        margin: 1rem auto;
+    }
+    
     .header-nav{
         width: 100%;
         display: flex;
