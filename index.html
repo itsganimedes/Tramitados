@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="img/TramitadosLogo.png">
     <script type="module" src="firebase.js"></script>
+    <script type="module" src="mostrardata.js"></script>
 </head>
 <body class="home">
     <div id="content">
@@ -22,6 +23,11 @@
                 <i class="fa-brands fa-servicestack" style="background: blue; color: #dfdfdf; padding: 0.2rem; border-radius: 10px;"></i>
                 <h3> Tramitados</h3>
                 </header>
+
+                <div class="user-data">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="username" style="color: rgb(0, 0, 0);"></p>
+                </div>
                 
                 <nav>
                     <ul>
@@ -48,6 +54,21 @@
                         <li>
                             <a href="trabaja-con-nosotros.html" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-users"></i>
                                 <b>Trabajá con Nosotros</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="signin.html" id="signin-button" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-users"></i>
+                                <b>Registrarse</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="signin.html" class="oculto" id="signout-button" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-users"></i>
+                                <b>Cerrar Sesión</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login2.html" id="login-button" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-users"></i>
+                                <b>Iniciar Sesión</b>
                             </a>
                         </li>
                     </ul>

@@ -31,7 +31,6 @@
         const password = document.getElementById('password').value;
 
         if (!email || !password) {
-        // si no vas a usar email/clave, podés simplemente return;
         document.getElementById('error').classList.remove('oculto');
         return;
         }

@@ -1,12 +1,36 @@
 import { db } from './firebase.js';
+import { auth } from './admin/firebaselogin.js';
 import {
     collection,
     setDoc,
+    getDoc,
     doc
     } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
     window.enviarFormulario = async function(event) {
-    event.preventDefault(); // Evita recargar la página
+    event.preventDefault(); 
+
+    const user = auth.currentUser;
+    if (!user) {
+        alert("Debes estar logueado para enviar una solicitud.");
+        return;
+    }
+
+
+    const userDocRef = doc(db, "usuarios", user.uid);
+    const userDocSnap = await getDoc(userDocRef);
+
+    if (!userDocSnap.exists()) {
+        alert("No tienes permisos. Contacta a un administrador.");
+        return;
+    }
+
+    const userData = userDocSnap.data();
+    
+    if (userData.ban === true) {
+        alert("Tu cuenta está baneada. Si esto es un error, comunicate con nosotros.");
+        return;
+    }
 
     const form = event.target;
 

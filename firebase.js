@@ -12,6 +12,6 @@ const firebaseConfig = {
     measurementId: "G-WTHP4FXM8N"
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-export const db = getFirestore(app); // 💾 Acá conectás tu página a Firestore
+export const db = getFirestore(app);
