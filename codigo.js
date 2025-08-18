@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 //variables
 let str=" responsables inscriptos.";
 
@@ -33,6 +34,8 @@ let recarga_urgencias=5;
 const disponibles = document.querySelectorAll(".available");
 const nodisponibles = document.querySelectorAll(".unavailable");
 
+console.log(nodisponibles.length);
+
 const parrafo_recarga_e=document.querySelectorAll(".recargaemergencia");
 const parrafo_recarga_u=document.querySelectorAll(".recargaurgencia");
 
@@ -50,6 +53,13 @@ for (let i = 0; i < parrafo_recarga_u.length; i++) {
     parrafo_recarga_u[i].textContent = String("(+")+String(recarga_urgencias)+String("%)");
 }
 
+//evitar funcion al clickear el formulario del servicio 
+document.querySelectorAll('.formulario-servicio').forEach(form => {
+    form.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+});
+
 //escribir cantidad de responsables y asignar ID único a cada servicio
 let serviciostotal = document.querySelectorAll(".servicevig");
 
@@ -59,6 +69,8 @@ serviciostotal.forEach((servicio, index) => {
         p.id = `res-ins-${index}`;
         p.textContent = `${inscriptos[index]} responsables inscriptos.`;
     }
+});
+
 });
 
 let filtroactivo = null;
@@ -91,14 +103,6 @@ function filtro(clase){
 
     filtroactivo = clase;
 }
-
-
-//evitar funcion al clickear el formulario del servicio 
-document.querySelectorAll('.formulario-servicio').forEach(form => {
-    form.addEventListener('click', function(event) {
-        event.stopPropagation();
-    });
-});
 
 
 //barra de búsqueda
@@ -139,13 +143,13 @@ function servicesearch() {
     //mostrar info
 
     function mostrarInfo(){
-        const info = document.querySelector(".infoMostrar");
-        const yaEstabaVisible = !info.classList.contains('oculto');
+        const infoo = document.querySelector(".infoMostrar");
+        const yaEstabaVisible = !infoo.classList.contains('oculto');
 
-        info.classList.add("oculto");
+        infoo.classList.add("oculto");
 
         // Si no estaba visible, lo mostramos (si ya estaba visible, lo dejamos oculto)
         if (!yaEstabaVisible) {
-            info.classList.remove('oculto');
+            infoo.classList.remove('oculto');
         }
     }
