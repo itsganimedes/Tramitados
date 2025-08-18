@@ -61,6 +61,37 @@ serviciostotal.forEach((servicio, index) => {
     }
 });
 
+let filtroactivo = null;
+
+function filtro(clase){
+    const serviciostotal2 = document.querySelectorAll(".servicevig");
+    const p = document.getElementById('no-services');
+    let existen = 0;
+    p.classList.add("oculto");
+
+    if (filtroactivo === clase){
+        serviciostotal2.forEach(servicioactual => {
+            servicioactual.classList.remove("oculto");
+        })
+        filtroactivo = null;
+        return;
+    }
+
+    serviciostotal2.forEach(servicioactual => {
+        servicioactual.classList.add("oculto");
+        if (clase==="todos" || servicioactual.classList.contains(clase)){
+            servicioactual.classList.remove("oculto");
+            existen = 1;
+        }
+    })
+
+    if (existen === 0) {
+        p.classList.remove("oculto");
+    }
+
+    filtroactivo = clase;
+}
+
 
 //evitar funcion al clickear el formulario del servicio 
 document.querySelectorAll('.formulario-servicio').forEach(form => {
@@ -74,15 +105,19 @@ document.querySelectorAll('.formulario-servicio').forEach(form => {
 function servicesearch() {
     let nombre = document.getElementById("busqueda").value.toLowerCase();
     let services = document.querySelectorAll(".servicevig"); 
+    const p=document.getElementById("no-encontrado");
             
         for (let prof of services) {
             let servicename = prof.querySelector(".title-2").innerText.toLowerCase();
             if (servicename.includes(nombre)) {
                 prof.scrollIntoView({ behavior: "smooth", block: "start" });
+                if (!p.classList.contains("oculto")){
+                    p.classList.add("oculto");
+                }
                 return;
                 }
             }
-        alert("Servicio no encontrado"); 
+        p.classList.remove("oculto");
         }
 
     //aparecer formulario de contratacion
