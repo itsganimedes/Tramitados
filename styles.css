@@ -1414,12 +1414,13 @@ footer img{
     .inicio-img {
         width: 100%;
         margin: 0;
-        height: 50rem;
+        height: 60rem;
         background-position: bottom;
         background-size: cover;
         background-attachment: local;
         align-items: center;
         justify-content: center;
+        padding: 0.5rem;
     }
 
     .inicio-img p{
