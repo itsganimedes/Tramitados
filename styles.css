@@ -1550,6 +1550,10 @@ footer img{
         text-align: center;
     }
 
+    #container-3 a{
+        margin-left: 2rem;
+    }
+
     #container-3 .button-show{
     margin: 1rem auto;
     border-radius: 0;
