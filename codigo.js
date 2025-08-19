@@ -34,8 +34,6 @@ let recarga_urgencias=5;
 const disponibles = document.querySelectorAll(".available");
 const nodisponibles = document.querySelectorAll(".unavailable");
 
-console.log(nodisponibles.length);
-
 const parrafo_recarga_e=document.querySelectorAll(".recargaemergencia");
 const parrafo_recarga_u=document.querySelectorAll(".recargaurgencia");
 
@@ -104,13 +102,16 @@ function filtro(clase){
     filtroactivo = clase;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    let btn = document.getElementById("btn-search");
+    btn.addEventListener("click", servicesearch);
+});
 
 //barra de búsqueda
 function servicesearch() {
     let nombre = document.getElementById("busqueda").value.toLowerCase();
     let services = document.querySelectorAll(".servicevig"); 
     const p=document.getElementById("no-encontrado");
-            
         for (let prof of services) {
             let servicename = prof.querySelector(".title-2").innerText.toLowerCase();
             if (servicename.includes(nombre)) {
@@ -122,7 +123,7 @@ function servicesearch() {
                 }
             }
         p.classList.remove("oculto");
-        }
+}
 
     //aparecer formulario de contratacion
     function mostrarFormulario(idServicio) {

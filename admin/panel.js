@@ -124,14 +124,16 @@ import {
         }
         const urgenciaClase = data.urgencia.toLowerCase();
 
+        div.className = `solicitud-box ${urgenciaClase} ${estadocolor}`;
+        div.dataset.prioridad = data.prioridad;
+
         div.innerHTML = `
-        <div class="solicitud-box ${urgenciaClase} ${estadocolor}">
             <div class="servicio-title">
                 <p class="servicio ${data.urgencia}">
                     ${data.servicio}${data.servicio === "Servicio Técnico" && data.servicio_esp ? " - " + data.servicio_esp : ""}
                 </p>
                 <button class="eliminarSolicitud oculto" onclick="eliminarSolicitud('${docSnap.id}')">Borrar</button>
-                <button id="cambiarEstado" onclick="cambiarEstado('${docSnap.id}')">Cambiar Estado</button>
+                <button id="cambiarEstado" onclick="cambiarEstado('${docSnap.id}', this)">Cambiar Estado</button>
             </div>
             <div><span class="label estado">Estado:</span> ${realizadotext}</div>
             <div><span class="label">Nombre:</span> ${data.nombre}</div>
@@ -146,7 +148,6 @@ import {
                 <span class="label">Comentario:</span>
                 <div class="comentario">${data.comentario}</div>
             </div>
-        </div>
         `;
         if (rol === "admin"){
             const btnEliminar = div.querySelector(".eliminarSolicitud");
@@ -326,4 +327,38 @@ window.eliminarSolicitud = async function(docId) {
         console.error("Error al eliminar solicitud:", error);
         alert("Error al eliminar solicitud.");
     }
+}
+
+
+//filtros 
+
+let filtroactivo = null;
+
+window.filtro = function(clase) {
+    const cajas = document.querySelectorAll(".solicitud-box");
+    const p = document.getElementById('no-services');
+    let existen = 0;
+    p.classList.add("oculto");
+
+    if (filtroactivo === clase) {
+        cajas.forEach(caja => caja.classList.remove("oculto"));
+        filtroactivo = null;
+        return;
+    }
+
+    cajas.forEach(caja => {
+        caja.classList.add("oculto");
+
+        const prioridad = parseInt(caja.dataset.prioridad, 10);
+
+        // ejemplo: filtrar por prioridad = 1, 2, 3, 4
+        if (clase === "todos" || prioridad === parseInt(clase, 10)) {
+            caja.classList.remove("oculto");
+            existen = 1;
+        }
+    });
+
+    if (!existen) p.classList.remove("oculto");
+
+    filtroactivo = clase;
 }

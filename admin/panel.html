@@ -27,6 +27,16 @@
             <button id="btnBuscar"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
+        <div class="filtros-box">
+            <button onclick="filtro('todos')"># Todos</button>
+            <button onclick="filtro('1')"># Emergencia</button>
+            <button onclick="filtro('2')"># Urgente</button>
+            <button onclick="filtro('3')"># Normal</button>
+            <button onclick="filtro('4')"># Tomados</button>
+        </div>
+
+        <p id="no-services">No hay ninguna solicitud con este estado.</p>
+
         <p id="noEncontrado" class="oculto" style="text-align: center; margin: 1rem 0; color: red; background-color: rgb(231, 165, 165);">No se encontró ninguna solicitud.</p>
 
         <div class="referencias">

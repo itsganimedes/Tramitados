@@ -1150,10 +1150,6 @@ select {
     gap: 0.5rem;
 }
 
-.oculto {
-    display: none;
-}
-
 .formulario-servicio input,
 .formulario-servicio textarea,
 .formulario-servicio select {
@@ -1389,6 +1385,8 @@ footer img{
     width: 3%;
     margin: 1rem 0;
 }
+
+nav ul li.oculto { display: none !important; }
 
 @media (max-width: 600px) {
 
@@ -1645,5 +1643,5 @@ footer img{
     footer img{
     width: 10%;
     margin: 1rem 0;
-}
+    }
 }

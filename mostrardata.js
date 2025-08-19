@@ -44,6 +44,8 @@ onAuthStateChanged(auth, async (user) => {
         }
     } else {
         console.log("No hay usuario autenticado");
+        let button3 = document.getElementById("signout-button");
+        button3.classList.add("oculto");
     }
 });
 
