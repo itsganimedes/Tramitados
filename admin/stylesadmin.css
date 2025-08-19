@@ -302,4 +302,8 @@ span{
     #cambiarEstado{
         width: auto;
     }
+
+    .oculto{
+        display: none;
+    }
 }

@@ -104,6 +104,7 @@
         padding: 3rem;
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        min-width: 27%;
         width: 27%;
         }
         input {
@@ -141,10 +142,17 @@
             font-weight: bold;
             background: #c28a8a;
         }
-        a{
+        #volver{
             color: rgb(8, 55, 63);
             position: absolute;
             bottom: 0;
+        }
+        a{
+            text-decoration: underline;
+            color: #09423f;
+        }
+        #login-error{
+            width: 100%;
         }
         @media (max-width: 600px) {
             h1 {
@@ -180,9 +188,9 @@
         <button id="btnLogout" style="display:none">Salir</button>
         <p id="info">No estás logueado</p> -->
     </form>
-    <p id="error" class="oculto">Error: parece que no estás registrado. Si esto es un error, comunicate con nosotros.</p>
-    <p><b>¡Bienvenid@ a Tramitados! Una vez que te registres, podrás disfrutar de los beneficios.</b></p>
-    <a href="../index.html">Volver</a>
+    <p>¿No tenés una cuenta?</p>
+    <a href="signin.html">Registrate</a>
+    <a id="volver" href="../index.html">Volver</a>
 
 </body>
 </html>

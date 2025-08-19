@@ -45,14 +45,13 @@ import {
 
         cargarSolicitudes();
     } else {
-        window.location.href = "login.html"; // Redirige si no está logueado
+        window.location.href = "../index.html"; // Redirige si no está logueado
     }
     });
 
     // Cerrar sesión
     document.getElementById("logout").addEventListener("click", async () => {
-    await signOut(auth);
-    window.location.href = "login.html";
+    window.location.href = "../index.html";
     });
 
 
@@ -95,7 +94,7 @@ import {
         const p=document.getElementById("modp");
         p.classList.remove('oculto');
     } else {
-        window.location.href="login.html";
+        window.location.href="../index.html";
         return
     }
 
@@ -175,12 +174,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnBuscar.addEventListener("click", buscarSolicitudes);
 
-    // Ejecuta búsqueda al presionar Enter dentro del input
-    input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-            buscarSolicitudes();
-        }
-    });
+    input.addEventListener("input", () => {
+        buscarSolicitudes();
+    })
 
     function buscarSolicitudes(){
         const input = document.getElementById("busqueda");
@@ -190,9 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let encontrados = 0;
 
         solicitudes.forEach(solicitud => {
-            // Tomamos el texto del div donde está el nombre (por ejemplo, el <div> con label Nombre)
             const nombreDiv = solicitud.querySelector("div span.label + div, div:nth-child(3)");
-            // Esto depende de tu estructura, asegurate de seleccionar el texto del nombre
             const nombre = nombreDiv ? nombreDiv.textContent.toLowerCase() : "";
 
             if (nombre.includes(filtro)) {
@@ -200,6 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 encontrados++;
             } else {
                 solicitud.classList.add("oculto");
+                console.log(solicitud.classList);
             }
         });
 

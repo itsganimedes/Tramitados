@@ -130,6 +130,7 @@
         i{
             border-right: 1px solid #ccc;
             padding-right: 1rem;
+            width: 20%;
         }
     }
 
@@ -145,6 +146,7 @@
         font-weight: bold;
         padding-left: 1rem;
         margin: 0;
+        width: 80%;
     }
 
 
@@ -1430,6 +1432,9 @@ footer img{
         width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .caracteristicas{

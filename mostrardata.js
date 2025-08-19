@@ -19,18 +19,19 @@ document.getElementById("signout-button").addEventListener("click", async () => 
 
 // apenas cargue la página
 onAuthStateChanged(auth, async (user) => {
+    const user_data_info = document.querySelector(".user-data");
     if (user) {
         const uid = user.uid;
 
         try {
-            let button = document.getElementById("signin-button");
-            button.classList.add("oculto");
             let button2 = document.getElementById("login-button");
             button2.classList.add("oculto");
             let button3 = document.getElementById("signout-button");
             button3.classList.remove("oculto");
             const userRef = doc(db, "usuarios", uid);
             const userSnap = await getDoc(userRef);
+
+            user_data_info.classList.remove("oculto");
 
             if (userSnap.exists()) {
                 const userData = userSnap.data();
