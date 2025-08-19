@@ -36,10 +36,6 @@
     align-items: center;
     justify-content: space-between;
     background-position: top;
-    mask-image: linear-gradient(
-        black 95%,
-        transparent
-    );
     }
 
 .inicio-img::before {
@@ -94,7 +90,7 @@
         position: relative;
     }
 
-        header i{
+    header i{
         font-size: 3rem;
         margin-left: 1rem;
     }
@@ -114,6 +110,11 @@
         to {
             background-position: 200%;
         }
+    }
+
+    .header-ico-tit{
+        display: flex;
+        flex-direction: row;
     }
 
     .user-data{
@@ -171,10 +172,10 @@
     }
 
     nav a:hover{
-        color:rgb(3, 107, 107);
+        color:rgb(238, 238, 238);
         position: relative;
-        border-bottom: 2px solid #ccc;
         border-radius: 10px;
+        background-color: #0d5e5a;
     }
 
     .social-media-box{
@@ -240,6 +241,25 @@
 }
 .nav-a-special:hover{
     color: rgb(250, 250, 250);
+}
+
+.nav-a-special-2{
+    display: block;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+}
+.nav-a-special-2:hover{
+    color: rgb(250, 250, 250);
+}
+
+.hamburger{
+    display: none;
 }
 
 .inicio-info-img{
@@ -402,7 +422,6 @@ a:hover {
 }
 
 #container ul{
-    margin: 1rem 0 1rem 0;
     list-style: none;
 }
 
@@ -1360,6 +1379,10 @@ input[type="time"] {
     margin: 1rem -2rem;
 }
 
+#cruz{
+        color: rgb(247, 247, 247);
+}
+
 footer{
     background: rgb(12, 77, 97);
     padding: 2rem;
@@ -1386,7 +1409,15 @@ footer img{
     margin: 1rem 0;
 }
 
+.nav-a-special-mobile{
+    display:none;
+}
+
 nav ul li.oculto { display: none !important; }
+
+.oculto {
+    display: none;
+}
 
 @media (max-width: 600px) {
 
@@ -1395,12 +1426,16 @@ nav ul li.oculto { display: none !important; }
     }
     header{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     header h3 {
         font-size: 2rem;
         margin: 1rem auto;
+    }
+
+    header i{
+        font-size: 1.5rem;
     }
 
     header p{
@@ -1409,31 +1444,80 @@ nav ul li.oculto { display: none !important; }
         margin: 0 auto;
     }
 
-    nav {
-        display: flex;
+    nav a{
+    color: rgb(252, 252, 252);
+    }
+
+    .nav-links {
+        display: none;
         flex-direction: column;
         flex-wrap: wrap;
-        border-top: 1px solid #4fc0b1;
         padding: 1rem 0;
+    }
+
+    .nav-links.active{
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        position: fixed;
+        background-color: rgb(0, 0, 0);
+        left: 0;
+        top: 0;
+        align-items: center;
+    }
+
+    .nav-a-special-mobile{
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 1rem auto;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(48, 48, 48);
+        padding: 0.5rem 2rem;
+        background-color: rgb(131, 190, 190);
+        border-radius: 10px;
+    }
+    .nav-a-special-mobile:hover{
+        color: rgb(250, 250, 250);
+    }
+
+    .hamburger{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 24px;
+    }
+
+    .h-line{
+        width: 1.5rem;
+        height: 2px;
+        background: #0d5e5a;
+    }
+
+
+    .header-ico-tit{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header-nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .header-nav-2{
         position: relative;
+        margin-bottom: 7rem;
     }
 
     .user-data{
         position: static;
-        margin: 1rem auto;
     }
-    
-    .header-nav{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+
 
     .caracteristicas{
     display: flex;
@@ -1454,13 +1538,13 @@ nav ul li.oculto { display: none !important; }
     .inicio-img {
         width: 100%;
         margin: 0;
-        height: 60rem;
+        min-height: 50rem;
         background-position: bottom;
         background-size: cover;
         background-attachment: local;
         align-items: center;
-        justify-content: center;
-        padding: 0.5rem;
+        justify-content: space-between;
+        position: relative;
     }
 
     .inicio-img p{

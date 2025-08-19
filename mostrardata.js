@@ -73,3 +73,17 @@ auth.onAuthStateChanged(async (user) => {
         console.log("No hay usuario autenticado");
     }
 });
+
+//hamburguesa 
+const hamburger = document.querySelectorAll(".hamburger");
+const nav = document.querySelector(".nav-links");
+
+document.addEventListener('click', (e) =>{
+    if (e.target.closest(".hamburger")){
+        aparecerNav();
+    }
+})
+
+function aparecerNav(){
+    nav.classList.toggle("active");
+};

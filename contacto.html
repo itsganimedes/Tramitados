@@ -10,41 +10,70 @@
 <body>
     <div id="content">
     <div class="header-nav">
-        <header>
-        <i class="fa-brands fa-servicestack" style="background: blue; color: #dfdfdf; padding: 0.2rem; border-radius: 10px;"></i>
-        <h3> Tramitados</h3>
-        </header>
-        
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" ><i class="fa-solid fa-house"></i>
-                        <b>Inicio</b>
-                    </a>
-                </li>
-                <li>
-                    <a href="servicios.html"><i class="fa-solid fa-cart-shopping"></i>
-                        <b>Servicios</b>
-                    </a>
-                </li>
-                <li>
-                    <a href="quienessomos.html"><i class="fa-solid fa-user"></i>
-                        <b>¿Quiénes somos?</b>
-                    </a>
-                </li>
-                <li>
-                    <a href="contacto.html"><i class="fa-solid fa-phone"></i>
-                        <b>Contacto</b>
-                    </a>
-                </li>
-                <li>
-                    <a href="trabaja-con-nosotros.html"><i class="fa-solid fa-users"></i>
-                        <b>Trabajá con Nosotros</b>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+                <header>
+                    <div class="header-ico-tit">
+                        <i class="fa-brands fa-servicestack" style="background: blue; color: #dfdfdf; padding: 0.2rem; border-radius: 10px;"></i>
+                        <h3> Tramitados</h3>
+                    </div>
+                    <div class="hamburger">
+                        <!-- &#9776; -->
+                        <div class="h-line"></div>
+                        <div class="h-line"></div>
+                        <div class="h-line"></div>
+                    </div>
+                </header>
+                
+                <nav>
+                    <ul class="nav-links">
+                        <li>
+                            <div class="user-data oculto">
+                                <i class="fa-solid fa-user"></i>
+                                <p id="username" style="color: rgb(0, 0, 0);"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="index.html""><i class="fa-solid fa-house"></i>
+                                <b>Inicio</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="servicios.html"><i class="fa-solid fa-cart-shopping"></i>
+                                <b>Servicios</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="quienessomos.html"><i class="fa-solid fa-user"></i>
+                                <b>¿Quiénes somos?</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contacto.html"><i class="fa-solid fa-phone"></i>
+                                <b>Contacto</b>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="trabaja-con-nosotros.html"><i class="fa-solid fa-users"></i>
+                                <b>Trabajá con Nosotros</b>
+                            </a>
+                        </li>
+                        <li id="login-button">
+                            <a class="nav-a-special" href="login2.html""><i class="fa-solid fa-right-to-bracket"></i>
+                                <b>Iniciar Sesión</b>
+                            </a>
+                        </li>
+                        <li id="signout-button">
+                            <a class="nav-a-special-2" href="signin.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <b>Cerrar Sesión</b>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="hamburger" id="cruz">
+                                &#10005;
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
     <section id="container-2">
         <p class="title-2 lineleft">Formas de Contacto</p>
@@ -137,5 +166,7 @@
     </footer>
 
     </div>
+
+    <script type="module" src="mostrardata.js"></script>
 </body>
 </html>

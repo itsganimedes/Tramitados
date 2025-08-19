@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="img/TramitadosLogo.png">
     <script type="module" src="firebase.js"></script>
-    <script type="module" src="mostrardata.js"></script>
 </head>
 <body class="home">
     <div id="content">
@@ -20,19 +19,33 @@
         <div class="inicio-img">
             <div class="header-nav">
                 <header>
-                <i class="fa-brands fa-servicestack" style="background: blue; color: #dfdfdf; padding: 0.2rem; border-radius: 10px;"></i>
-                <h3> Tramitados</h3>
+                    <div class="header-ico-tit">
+                        <i class="fa-brands fa-servicestack" style="background: blue; color: #dfdfdf; padding: 0.2rem; border-radius: 10px;"></i>
+                        <h3> Tramitados</h3>
+                    </div>
+                    <div class="hamburger">
+                        <!-- &#9776; -->
+                        <div class="h-line" style="background: rgb(240, 240, 240);"></div>
+                        <div class="h-line" style="background: rgb(240, 240, 240);"></div>
+                        <div class="h-line" style="background: rgb(240, 240, 240);"></div>
+                    </div>
                 </header>
                 
                 <nav>
-                    <ul>
+                    <ul class="nav-links">
+                        <li>
+                            <div class="user-data oculto">
+                                <i class="fa-solid fa-user"></i>
+                                <p id="username" style="color: rgb(0, 0, 0);"></p>
+                            </div>
+                        </li>
                         <li>
                             <a href="index.html" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-house"></i>
                                 <b>Inicio</b>
                             </a>
                         </li>
                         <li>
-                            <a href="servicios.html" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-cart-shopping"></i>
+                            <a class="nav-a-special" href="servicios.html"><i class="fa-solid fa-cart-shopping"></i>
                                 <b>Servicios</b>
                             </a>
                         </li>
@@ -52,14 +65,19 @@
                             </a>
                         </li>
                         <li id="login-button">
-                            <a href="login2.html" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-right-to-bracket"></i>
+                            <a class="nav-a-special" href="login2.html""><i class="fa-solid fa-right-to-bracket"></i>
                                 <b>Iniciar Sesión</b>
                             </a>
                         </li>
                         <li id="signout-button">
-                            <a href="signin.html" class="oculto" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <a class="nav-a-special-2" href="signin.html" style="color: rgb(240, 240, 240);"><i class="fa-solid fa-arrow-right-from-bracket"></i>
                                 <b>Cerrar Sesión</b>
                             </a>
+                        </li>
+                        <li>
+                            <div class="hamburger" id="cruz">
+                                &#10005;
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -67,10 +85,9 @@
 
             <div class="header-nav-2">
 
-                <div class="user-data oculto">
-                    <i class="fa-solid fa-user"></i>
-                    <p id="username" style="color: rgb(0, 0, 0);"></p>
-                </div>
+                <a class="nav-a-special-mobile" href="servicios.html">
+                    <b>Servicios</b> <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
                 <div class="inicio-img-buttons">
                     <div class="social-media-box">
@@ -273,5 +290,8 @@
     </footer>
 
     </div>
+
+    <script type="module" src="mostrardata.js"></script>
+
 </body>
 </html>

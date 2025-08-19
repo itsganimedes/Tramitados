@@ -69,7 +69,25 @@ serviciostotal.forEach((servicio, index) => {
     }
 });
 
+//barra de busqueda
+let btn = document.getElementById("btn-search");
+btn.addEventListener("click", servicesearch);
+
 });
+
+
+
+
+
+
+//CUANDO CARGUE EL DOM (ARRIBA)
+
+//FUNCIONES (ABAJO)
+
+
+
+
+
 
 let filtroactivo = null;
 
@@ -101,11 +119,6 @@ function filtro(clase){
 
     filtroactivo = clase;
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    let btn = document.getElementById("btn-search");
-    btn.addEventListener("click", servicesearch);
-});
 
 //barra de búsqueda
 function servicesearch() {
