@@ -1323,13 +1323,14 @@ input[type="time"] {
     text-align: center;
 }
 
-.sincosto-box{
+.etiqueta-box{
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
-.sincosto{
+.etiqueta{
     background-color: rgb(203, 224, 203); 
     color: rgb(77, 172, 0); 
     padding: 0 1rem; 
