@@ -66,9 +66,7 @@ auth.onAuthStateChanged(async (user) => {
             sessionStorage.setItem(
                 'userData',
                 JSON.stringify({
-                    uid: user.uid,
                     nombre: userData.nombre,
-                    rol: userData.rol
                 })
             );
         } else {
