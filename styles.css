@@ -1424,10 +1424,15 @@ nav ul li.oculto { display: none !important; }
     #container-2{
         width: 100%;
     }
-    header{
-        display: flex;
-        flex-direction: row;
+    header {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    width: 100%;
     }
+
 
     header h3 {
         font-size: 2rem;
@@ -1485,8 +1490,11 @@ nav ul li.oculto { display: none !important; }
     .hamburger{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
-    font-size: 24px;
+    width: 1.7rem;
+    height: 1rem;
     }
 
     .h-line{
@@ -1504,9 +1512,7 @@ nav ul li.oculto { display: none !important; }
     }
 
     .header-nav{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 1rem 1rem;
     }
 
     .header-nav-2{
