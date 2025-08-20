@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nombre = form.querySelector("input[placeholder='Nombre']").value.trim();
         const email = form.querySelector("input[placeholder='Correo']").value.trim();
         const password = form.querySelector("input[placeholder='Contraseña']").value.trim();
+        const telefono = form.querySelector("input[placeholder='Teléfono (Comenzá con 54)']").value.trim();
 
         if (!nombre || !email || !password) {
             errorP.textContent = "Todos los campos son obligatorios.";
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 nombre: nombre,
                 email: email,
                 rol: "user",
+                telefono: telefono,
                 ban: false
             });
 

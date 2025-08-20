@@ -73,6 +73,20 @@ serviciostotal.forEach((servicio, index) => {
 let btn = document.getElementById("btn-search");
 btn.addEventListener("click", servicesearch);
 
+const inputs = document.querySelectorAll('input[name="nombre"]');
+const inputstel = document.querySelectorAll('input[name="telefono"]');
+
+const cachedUser = JSON.parse(sessionStorage.getItem('userData'));
+
+if (cachedUser) {
+    inputs.forEach(input => {
+        input.value = cachedUser.nombre;
+    });
+    inputstel.forEach(input => {
+        input.value = cachedUser.telefono;
+    })
+}
+
 });
 
 

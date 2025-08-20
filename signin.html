@@ -173,6 +173,13 @@
         <h2>Registrarse</h2>
         <input type="text" id="nombre" placeholder="Nombre" required/>
         <input type="email" id="email" placeholder="Correo" required/>
+        <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Teléfono (Comenzá con 54)"
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
         <input type="password" id="password" placeholder="Contraseña" required/>
         <button type="submit">Ingresar</button>
         <!-- <button id="btnGoogle">Ingresar con Google</button>
