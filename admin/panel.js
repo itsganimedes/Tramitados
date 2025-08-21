@@ -111,12 +111,25 @@ import {
         let realizadotext="INDEFINIDO";
         let estadocolor = "none";
         let terminosycondiciones_aceptado = "undefined";
+        let cambiarestadooculto = "";
+        let enprocesooculto = "";
         if (data.realizado===0){
             realizadotext="VIGENTE";
-        }else{
+        } else if (data.realizado===1) {
             realizadotext="TOMADO";
-            estadocolor = "cambiarcolor"; // ahora es un color
+            estadocolor = "cambiarcolor";
         }
+
+        //desaparecer boton de cambiar estado si está en proceso
+        if (data.prioridad===5) {
+            realizadotext="En Proceso";
+            estadocolor = "cambiarcolor-2";
+            cambiarestadooculto = "oculto";
+        }
+        if (data.prioridad!=4) { //desaparecer boton de en proceso si no está tomada
+            enprocesooculto="oculto";
+        }
+
         if (data.terminosycondiciones === "on"){
             terminosycondiciones_aceptado = "Aceptadas";
         } else {
@@ -133,7 +146,8 @@ import {
                     ${data.servicio}${data.servicio === "Servicio Técnico" && data.servicio_esp ? " - " + data.servicio_esp : ""}
                 </p>
                 <button class="eliminarSolicitud oculto" onclick="eliminarSolicitud('${docSnap.id}')">Borrar</button>
-                <button id="cambiarEstado" onclick="cambiarEstado('${docSnap.id}', this)">Cambiar Estado</button>
+                <button class="cambiarEstado ${cambiarestadooculto}" onclick="cambiarEstado('${docSnap.id}', this)">Cambiar Estado</button>
+                <button class="enProcesoButton ${enprocesooculto}" onclick="cambiarEstado2('${docSnap.id}', this)">En Proceso</button>
             </div>
             <div><span class="label estado">Estado:</span> ${realizadotext}</div>
             <div><span class="label">Nombre:</span> ${data.nombre}</div>
@@ -219,9 +233,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     alert("Todas las solicitudes fueron eliminadas.");
-    cargarSolicitudes(); // Recargar panel vacío
 }
 
+//cambiar estado entre VIGENTE y TOMADO
 window.cambiarEstado = async function (docId) {
     const user = auth.currentUser;
     if (!user) {
@@ -258,6 +272,11 @@ window.cambiarEstado = async function (docId) {
 
         const data = solicitudSnap.data();
 
+        if (data.prioridad === 5){
+            alert("No se ha podido cambiar el estado de la solicitud porque esta ya está En Proceso.");
+            return;
+        }
+
         const nuevoEstado = data.realizado === 0 ? 1 : 0; // Alternar entre 0 y 1
 
         // Lógica para prioridad:
@@ -283,7 +302,74 @@ window.cambiarEstado = async function (docId) {
         await updateDoc(solicitudRef, updates);
 
         console.log(`✅ Estado cambiado a ${nuevoEstado}, prioridad actualizada.`);
-        await cargarSolicitudes();
+
+    } catch (error) {
+        console.error("Error al cambiar estado:", error);
+        alert("Error al cambiar estado.");
+    }
+
+}
+
+//cambiar estado a En Proceso
+
+window.cambiarEstado2 = async function (docId) {
+    const user = auth.currentUser;
+    if (!user) {
+        alert("No estás logueado.");
+        return;
+    }
+
+    const userDocRef = doc(db, "usuarios", user.uid);
+    const userDocSnap = await getDoc(userDocRef);
+
+    if (!userDocSnap.exists()) {
+        alert("Tu usuario no tiene permisos.");
+        return;
+    }
+
+    const userData = userDocSnap.data();
+    const rol = userData.rol;
+
+    if (rol !== "admin" && rol !== "mod") {
+        alert("No tienes permiso para cambiar el estado de solicitudes.");
+        return;
+    }
+
+    try {
+        // Referencia a la solicitud
+        const solicitudRef = doc(db, "solicitudes", docId);
+
+        // Obtener el documento actual
+        const solicitudSnap = await getDoc(solicitudRef);
+        if (!solicitudSnap.exists()) {
+            alert("La solicitud no existe.");
+            return;
+        }
+
+        const data = solicitudSnap.data();
+
+        const nuevoEstado = data.realizado === 3;
+
+        let nuevaPrioridad = data.prioridad;
+        let updates = { realizado: nuevoEstado };
+
+        if (data.prioridad == 4) {
+            // Poner prioridad a 4
+            updates.prioridad = 5;
+        } else if (data.prioridad === 5) {
+            alert("Esta solicitud ya está en proceso.");
+            return;
+        } else {
+            alert("Esta solicitud no ha sido tomada aún.");
+            return;
+        }
+
+        // Actualizar documento con los cambios
+        await updateDoc(solicitudRef, updates);
+
+
+
+        console.log(`✅ Estado cambiado a ${nuevoEstado}, prioridad actualizada.`);
 
     } catch (error) {
         console.error("Error al cambiar estado:", error);
@@ -322,7 +408,6 @@ window.eliminarSolicitud = async function(docId) {
         console.log(docId);
         await deleteDoc(doc(db, "solicitudes", docId));
         alert("Solicitud eliminada correctamente.");
-        cargarSolicitudes(); // recargar la lista
     } catch (error) {
         console.error("Error al eliminar solicitud:", error);
         alert("Error al eliminar solicitud.");
