@@ -28,13 +28,14 @@
         </div>
 
         <div class="filtros-box">
-            <button onclick="filtro('todos')"># Todos</button>
-            <button onclick="filtro('1')"># Emergencia</button>
-            <button onclick="filtro('2')"># Urgente</button>
-            <button onclick="filtro('3')"># Normal</button>
-            <button onclick="filtro('4')"># Tomados</button>
-            <button onclick="filtro('5')"># En Proceso</button>
+            <button data-filtro="todos"># Todos</button>
+            <button data-filtro="1"># Emergencia</button>
+            <button data-filtro="2"># Urgente</button>
+            <button data-filtro="3"># Normal</button>
+            <button data-filtro="4"># Tomados</button>
+            <button id="filtro5" data-filtro="5"># En Proceso</button>
         </div>
+
 
         <p id="no-services" class="oculto">No hay ninguna solicitud con este estado.</p>
 

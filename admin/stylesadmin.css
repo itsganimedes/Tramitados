@@ -184,6 +184,12 @@ span{
     cursor: pointer;
 }
 
+.filtros-box button.activo {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
 #no-services{
     color: rgb(255, 0, 0);
     background: rgb(233, 182, 182);

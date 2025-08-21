@@ -98,6 +98,12 @@ import {
         return
     }
 
+    let filtro5 = document.getElementById("filtro5");
+
+    if (userData.rol != "admin") {
+        filtro5.classList.add("oculto");
+    }
+
     const q = query(collection(db, "solicitudes"), orderBy("prioridad", "asc"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         container.innerHTML = "";
@@ -169,6 +175,11 @@ import {
         }
         
         container.appendChild(div);
+
+        const btnActivo = document.querySelector(".filtros-box button.activo");
+        if (btnActivo) {
+            filtro(btnActivo.dataset.filtro, btnActivo);
+        }
     });
     const totalSolicitudes = querySnapshot.size;
     document.getElementById("totalSolicitudes").textContent = `Total de solicitudes: ${totalSolicitudes}`;
@@ -414,30 +425,35 @@ window.eliminarSolicitud = async function(docId) {
     }
 }
 
+window.addEventListener("DOMContentLoaded", () => {
+    filtro("todos");
+});
+
 
 //filtros 
 
 let filtroactivo = null;
 
-window.filtro = function(clase) {
+function filtro(clase, btn) {
     const cajas = document.querySelectorAll(".solicitud-box");
     const p = document.getElementById('no-services');
     let existen = 0;
     p.classList.add("oculto");
 
-    if (filtroactivo === clase) {
-        cajas.forEach(caja => caja.classList.remove("oculto"));
-        filtroactivo = null;
-        return;
-    }
+    // manejar color de botones
+    document.querySelectorAll(".filtros-box button").forEach(b => b.classList.remove("activo"));
+    btn.classList.add("activo");
 
     cajas.forEach(caja => {
         caja.classList.add("oculto");
-
         const prioridad = parseInt(caja.dataset.prioridad, 10);
 
-        // ejemplo: filtrar por prioridad = 1, 2, 3, 4
-        if (clase === "todos" || prioridad === parseInt(clase, 10)) {
+        if (clase === "todos") {
+            if (prioridad !== 5) {
+                caja.classList.remove("oculto");
+                existen = 1;
+            }
+        } else if (prioridad === parseInt(clase, 10)) {
             caja.classList.remove("oculto");
             existen = 1;
         }
@@ -447,3 +463,14 @@ window.filtro = function(clase) {
 
     filtroactivo = clase;
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    // asignar evento a todos los botones
+    document.querySelectorAll(".filtros-box button").forEach(btn => {
+        btn.addEventListener("click", () => filtro(btn.dataset.filtro, btn));
+    });
+
+    // activar por defecto "todos"
+    const btnTodos = document.querySelector('.filtros-box button[data-filtro="todos"]');
+    if (btnTodos) filtro("todos", btnTodos);
+});
