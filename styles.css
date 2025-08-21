@@ -1331,6 +1331,18 @@ input[type="time"] {
     text-align: center;
 }
 
+.remarcar{
+    background-color: rgb(224, 203, 203); 
+    color: rgb(172, 0, 0); 
+    padding: 0 1rem; 
+    font-weight: bold; 
+    font-size: 1.2rem;
+    max-width: 14rem; 
+    border-radius: 4px; 
+    text-align: center;
+}
+
+
 .p-center{
     font-style: italic;
     text-align: center;

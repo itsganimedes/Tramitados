@@ -154,6 +154,17 @@ function servicesearch() {
 
     //aparecer formulario de contratacion
     function mostrarFormulario(idServicio) {
+        const servicio = document.querySelector(`#form-${idServicio}`).closest(".servicevig");
+        const estado = servicio.querySelector(".unavailable");
+
+        if (estado) {
+            estado.classList.add("remarcar");
+            setTimeout(() => {
+                    estado.classList.remove("remarcar");
+                }, 2000);
+            return;
+        }
+
         const formularios = document.querySelectorAll('.formulario-servicio');
         const form = document.getElementById('form-' + idServicio);
         
