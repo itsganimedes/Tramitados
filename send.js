@@ -12,7 +12,8 @@ import {
 
     const user = auth.currentUser;
     if (!user) {
-        alert("Debes estar logueado para enviar una solicitud.");
+        alert("¡Debes iniciar sesión primero!");
+        window.location.href = "https://itsganimedes.github.io/Tramitados/signin.html";
         return;
     }
 
