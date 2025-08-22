@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const logoutBtn = document.getElementById("signout-button");
         if(loginBtn){
             loginBtn.forEach(a => {
-                style.display = "none";
+                a.classList.add("oculto");
             });
         }
         if(logoutBtn) logoutBtn.style.display = "inline-block";
@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const logoutBtn = document.getElementById("signout-button");
         if (loginBtn) {
             loginBtn.forEach(a => {
-                a.style.display = "inline-block";
+                a.classList.remove("oculto");
             });
         }
-        if(logoutBtn) logoutBtn.style.display = "none";
+        if(logoutBtn) logoutBtn.classList.add("oculto");
     }
 });
 
