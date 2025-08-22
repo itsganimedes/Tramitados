@@ -9,16 +9,24 @@ document.addEventListener("DOMContentLoaded", () => {
         if(usernameP) usernameP.textContent = userData.nombre;
 
         // Mostrar botón de logout y ocultar login
-        const loginBtn = document.getElementById("login-button");
+        const loginBtn = document.querySelectorAll(".login-button");
         const logoutBtn = document.getElementById("signout-button");
-        if(loginBtn) loginBtn.style.display = "none";
+        if(loginBtn){
+            loginBtn.forEach(a => {
+                style.display = "none";
+            });
+        }
         if(logoutBtn) logoutBtn.style.display = "inline-block";
         if(user_data_info) user_data_info.classList.remove("oculto");
     } else {
         // No hay usuario logueado
-        const loginBtn = document.getElementById("login-button");
+        const loginBtn = document.querySelectorAll(".login-button");
         const logoutBtn = document.getElementById("signout-button");
-        if(loginBtn) loginBtn.style.display = "inline-block";
+        if (loginBtn) {
+            loginBtn.forEach(a => {
+                a.style.display = "inline-block";
+            });
+        }
         if(logoutBtn) logoutBtn.style.display = "none";
     }
 });

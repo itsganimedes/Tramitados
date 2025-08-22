@@ -1424,7 +1424,7 @@ footer img{
 nav ul li.oculto { display: none !important; }
 
 .oculto {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 600px) {
