@@ -1578,6 +1578,10 @@ nav ul li.oculto { display: none !important; }
         gap: 1rem;
     }
 
+    .header-ico-tit h3{
+        display: none;
+    }
+
     .header-nav{
         padding: 1rem 1rem;
     }
