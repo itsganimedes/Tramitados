@@ -106,6 +106,7 @@
         animation: animate-gradient 2.5s linear infinite;
     }
 
+
         @keyframes animate-gradient{
         to {
             background-position: 200%;
@@ -115,21 +116,31 @@
     .header-ico-tit{
         display: flex;
         flex-direction: row;
+        align-items: center;
+    }
+
+    .header-logo {
+        max-width: 100%;
+        height: 3.5rem;
+    }
+
+    .nav-links li:first-child {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        list-style: none;
     }
 
     .user-data{
-        position: absolute;
-        right: 40px;
-        top: 30px;
         width: 15rem;
         min-height: 2rem;
-        background-color: rgb(224, 224, 224);
         display: flex;
         flex-direction: row;
         align-items: center;
         padding: 0 1rem;
+        color: #09423f;
         i{
-            border-right: 1px solid #ccc;
+            border-right: 1px solid #09423f;
             padding-right: 1rem;
             width: 20%;
         }
@@ -138,6 +149,12 @@
     .user-data:hover{
         background-color: #94ddcd;
         cursor: pointer;
+        #username{
+            color: #181818;
+        }
+        i{
+            color: #181818;
+        }
     }
 
     #username{
@@ -147,6 +164,7 @@
         font-weight: bold;
         padding-left: 1rem;
         margin: 0;
+        text-align: center;
         width: 80%;
     }
 
@@ -168,14 +186,33 @@
     nav a{
         color:#09423f;
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     nav a:hover{
-        color:rgb(238, 238, 238);
         position: relative;
         border-radius: 10px;
-        background-color: #0d5e5a;
+        color:#09423f;
+    }
+
+    .nav-links a {
+        position: relative;
+        text-decoration: none;
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #45b1a8;
+        transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
     }
 
     .social-media-box{
@@ -235,12 +272,13 @@
     text-decoration: none;
     font-weight: bold;
     color: rgb(48, 48, 48);
-    padding: 0.5rem 2rem;
-    background-color: rgb(131, 190, 190);
+    padding: 0.2rem 2rem;
+    border: 1px solid rgb(131, 190, 190);
     border-radius: 10px;
 }
 .nav-a-special:hover{
     color: rgb(250, 250, 250);
+    background-color: rgb(27, 121, 121);
 }
 
 .nav-a-special-2{
@@ -249,13 +287,14 @@
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    color: rgb(255, 255, 255);
-    padding: 0.5rem 1rem;
-    background-color: rgb(255, 0, 0);
+    color:#09423f;
+    padding: 0.2rem 1rem;
+    border: 1px solid #c00;
     border-radius: 10px;
 }
 .nav-a-special-2:hover{
     color: rgb(250, 250, 250);
+    background-color: #c00;
 }
 
 .hamburger{
@@ -1479,6 +1518,10 @@ nav ul li.oculto { display: none !important; }
         align-items: center;
     }
 
+    .nav-a-special, .nav-a-special-2{
+        font-size: 1rem;
+    }
+
     .nav-a-special-mobile{
         display: block;
         width: fit-content;
@@ -1487,7 +1530,7 @@ nav ul li.oculto { display: none !important; }
         text-decoration: none;
         font-weight: bold;
         color: rgb(0, 255, 242);
-        padding: 0.5rem 2rem;
+        padding: 0.2rem 2rem;
 
         border-radius: 10px;
     }
@@ -1544,7 +1587,7 @@ nav ul li.oculto { display: none !important; }
         margin-bottom: 7rem;
     }
 
-    .user-data{
+    .nav-links li:first-child {
         position: static;
     }
 

@@ -5,174 +5,17 @@
     <title>Registrarse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="signin.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-    <style>
-
-        header p{
-            padding: 0 3rem;
-            margin: auto 0;
-        }
-
-        .header-nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 4rem;
-        background: transparent;
-        z-index: 10;
-        position: relative;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin: 0;
-            padding: 0;
-        }
-
-            header i{
-            font-size: 3rem;
-            margin-left: 1rem;
-        }
-
-        header h3{
-            font-size: 3rem;
-            margin-left: 1rem;
-            background: linear-gradient(to right, rgb(55, 168, 172), rgb(23, 134, 138), rgb(119, 196, 170), rgb(66, 189, 172), rgb(55, 168, 172));
-            background-size: 200%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: animate-gradient 2.5s linear infinite;
-        }
-
-            @keyframes animate-gradient{
-            to {
-                background-position: 200%;
-            }
-        }
-
-
-
-        nav ul{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0.5rem;
-            padding-left: 0.1rem;
-        }
-
-        nav a{
-            color:#09423f;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        nav a:hover{
-            color:rgb(3, 107, 107);
-            position: relative;
-            background-color: rgb(131, 190, 190);
-            border-radius: 10px;
-        }
-
-
-    body {
-        
-        font-family: sans-serif;
-        background: linear-gradient(145deg, rgb(238, 241, 241), rgb(163, 194, 214));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: #1d1d1d;
-        display: flex;
-        flex-direction: column;
-        }
-        h1{
-            margin: 1rem auto;
-        }
-        form {
-        background: linear-gradient(145deg,rgba(40, 138, 155, 0.8),rgba(27, 57, 77, 0.5));
-        padding: 3rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        width: 27%;
-        }
-        input {
-        width: 100%;
-        background: transparent;
-        border: none;
-        color: #1d1d1d;
-        border-bottom: 1px solid #ccc;
-        margin: 0.5rem 0;
-        padding: 0.5rem;
-        }
-        input::placeholder{
-            color: #444444;
-        }
-        button {
-        width: 100%;
-        background: transparent;
-        border: none;
-        color: #1d1d1d;
-        margin: 2rem 0 0 0;
-        padding: 0.1rem;
-        cursor: pointer;
-        }
-        p{
-            margin-top: 2rem;
-            color: #1d1d1d;
-            text-align: center;
-            width: 40%;
-        }
-        .oculto{
-            display: none;
-        }
-        #error{
-            color: rgb(255, 0, 0);
-            font-weight: bold;
-            background: #c28a8a;
-        }
-        a{
-            color: rgb(8, 55, 63);
-            position: absolute;
-            bottom: 0;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 3rem;
-            }
-
-            form{
-                width: 80%;
-            }
-            
-            input, button {
-                font-size: 1.1rem;
-            }
-
-            p {
-                font-size: 1rem;
-                width: 90%;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="styleslogin.css" />
     </head>
     <body>
-        <h1>Tramitados</h1>
+        <img class="logo" src="img/Tramitados-03.png" alt="Logo_Tramitados">
     <form id="login-form">
         <h2>Registrarse</h2>
+        <label for="nombre">Nombre y Apellido</label>
         <input type="text" id="nombre" placeholder="Nombre" required/>
+        <label for="email">Dirección de Correo Electrónico</label>
         <input type="email" id="email" placeholder="Correo" required/>
+        <label for="telefono">Número de Celular (+54...)</label>
         <input 
                     type="tel" 
                     name="telefono" 
@@ -180,6 +23,7 @@
                     required 
                     pattern="^\+?54\d{10}$" 
                     title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+        <label for="password">Contraseña</label>
         <input type="password" id="password" placeholder="Contraseña" required/>
         <button type="submit">Ingresar</button>
         <!-- <button id="btnGoogle">Ingresar con Google</button>
@@ -188,7 +32,7 @@
     </form>
     <p id="error" class="oculto">Error: parece que no estás registrado. Si esto es un error, comunicate con nosotros.</p>
     <p><b>¡Bienvenid@ a Tramitados! Una vez que te registres, podrás disfrutar de los beneficios.</b></p>
-    <a href="https://itsganimedes.github.io/Tramitados/">Volver</a>
+    <a id="volver" href="https://itsganimedes.github.io/Tramitados/">Volver</a>
 
 </body>
 </html>
