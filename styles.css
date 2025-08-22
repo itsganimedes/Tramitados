@@ -1519,7 +1519,7 @@ nav ul li.oculto { display: none !important; }
     }
 
     .nav-a-special, .nav-a-special-2{
-        font-size: 1rem;
+        color: rgb(240, 240, 240);
     }
 
     .nav-a-special-mobile{
@@ -1593,6 +1593,17 @@ nav ul li.oculto { display: none !important; }
 
     .nav-links li:first-child {
         position: static;
+    }
+
+    .user-data{
+        color: rgb(240, 240,240);
+        i{
+            border-right: 1px solid rgb(240, 240,240);
+        }
+    }
+
+    #username{
+        color:rgb(240, 240,240);
     }
 
 
