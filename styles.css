@@ -426,7 +426,7 @@
 
 #container-3{
     background: linear-gradient(135deg, #ecfffe, #e5f7f6);;
-    padding: 2rem;
+    padding: 0.3rem 2rem;
     text-align: justify;
 }
 
@@ -1127,15 +1127,6 @@ a:hover {
     border: 2px solid #8f8f8f;
     cursor: pointer;
 }
-
-.servicevig::after{
-    content: '';
-    position: absolute;
-    inset: -3px;
-    background-color: #000000;
-    z-index: -1;
-}
-
 
 .descripcion{
     color: #686868;
