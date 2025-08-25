@@ -71,9 +71,9 @@
     .header-nav {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 1rem 4rem;
     background: transparent;
     z-index: 10;
@@ -90,13 +90,8 @@
         position: relative;
     }
 
-    header i{
-        font-size: 3rem;
-        margin-left: 1rem;
-    }
-
     header h3{
-        font-size: 3rem;
+        font-size: 1rem;
         margin-left: 1rem;
         background: linear-gradient(to right, rgb(55, 168, 172), rgb(23, 134, 138), rgb(119, 196, 170), rgb(66, 189, 172), rgb(55, 168, 172));
         background-size: 200%;
@@ -115,13 +110,13 @@
 
     .header-ico-tit{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
 
     .header-logo {
         max-width: 100%;
-        height: 3.5rem;
+        height: 2.5rem;
     }
 
     .footer-logo-text{
@@ -138,37 +133,33 @@
         width: 1.2rem;
     }
 
-    .nav-links li:first-child {
-        position: absolute;
-        right: 40px;
-        top: 20px;
-        list-style: none;
-    }
+
 
     .user-data{
-        width: 15rem;
         min-height: 2rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding: 0 1rem;
         color: #09423f;
-        i{
-            border-right: 1px solid #09423f;
-            padding-right: 1rem;
-            width: 20%;
-        }
+        padding: 1rem;
     }
 
-    .user-data:hover{
-        background-color: #94ddcd;
+    .user-data i{
+        color: #1f1f1f;
+        background: #e2e2e2;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .user-data i:hover{
+        background-color: gray;
         cursor: pointer;
-        #username{
-            color: #181818;
-        }
-        i{
-            color: #181818;
-        }
     }
 
     #username{
@@ -176,10 +167,9 @@
         text-decoration: none;
         font-size: 1rem;
         font-weight: bold;
-        padding-left: 1rem;
         margin: 0;
         text-align: center;
-        width: 80%;
+        display: none;
     }
 
 
@@ -631,7 +621,6 @@ a:hover {
     flex-wrap: wrap;
     max-width: 15rem;
     max-height: 15rem;
-    margin: 1rem;
 }
 
 #container p{
@@ -1593,7 +1582,8 @@ input[type="time"] {
 }
 
 #cruz{
-        color: rgb(247, 247, 247);
+    color: rgb(247, 247, 247);
+    font-size: 2rem;
 }
 
 footer{
@@ -1756,6 +1746,7 @@ nav ul li.oculto { display: none !important; }
     }
 
     .header-nav{
+        margin: 0;
         padding: 1rem 1rem;
     }
 
@@ -1770,6 +1761,7 @@ nav ul li.oculto { display: none !important; }
 
     .user-data{
         color: rgb(240, 240,240);
+        display: none;
         i{
             border-right: 1px solid rgb(240, 240,240);
         }
@@ -1777,6 +1769,7 @@ nav ul li.oculto { display: none !important; }
 
     #username{
         color:rgb(240, 240,240);
+        display: flex;
     }
 
     .caracteristicas{
