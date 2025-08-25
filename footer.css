@@ -1,0 +1,53 @@
+    footer{
+    background: rgb(12, 77, 97);
+    padding: 2rem 7rem;
+    text-align: left;
+    line-height: 2rem;
+    color: #ccc;
+    }
+
+    footer ul{
+        list-style: none;
+        color: white;
+    }
+
+    footer img{
+        width: 3%;
+        margin: 1rem 0;
+    }
+
+    /* BANDERA ARGENTINA CON TEXTO */
+    .img-text-footer{
+        display: flex;
+        flex-direction: row;
+        p{
+            margin: auto 1rem;
+        }
+    }
+    
+    .footer-logo-text{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-logo-text p{
+        margin-left: 0.5rem;
+    }
+
+    .footer-logo{
+        width: 1.2rem;
+    } 
+
+    @media (max-width: 600px){
+        footer{
+            text-align: center;
+        }
+        footer img{
+        width: 10%;
+        margin: 1rem 0;
+        }
+        .img-text-footer{
+        justify-content: center;
+        }
+    }
