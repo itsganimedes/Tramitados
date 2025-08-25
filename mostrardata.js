@@ -37,20 +37,6 @@ function ocultarUIUsuario() {
 }
 
 // -------------------------
-// Cerrar sesión
-// -------------------------
-document.getElementById("signout-button").addEventListener("click", async () => {
-    try {
-        await signOut(auth);
-        sessionStorage.removeItem('userData');
-        alert("Has Cerrado Sesión");
-        window.location.href = "index.html";
-    } catch (error) {
-        console.error("Error al cerrar sesión:", error);
-    }
-});
-
-// -------------------------
 // Al cargar la página
 // -------------------------
 document.addEventListener("DOMContentLoaded", () => {
