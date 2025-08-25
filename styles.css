@@ -591,6 +591,8 @@
 
 
 #container-3{
+    width: 90%;
+    margin: 0 auto;
     background: linear-gradient(135deg, #ecfffe, #e5f7f6);;
     padding: 0.3rem 2rem;
     text-align: justify;
@@ -1507,7 +1509,7 @@ input[type="time"] {
 .title-2{
     font-size: 2rem;
     font-weight: bold;
-    padding: 2rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
 }
 
 .title-3{
@@ -1637,6 +1639,9 @@ nav ul li.oculto { display: none !important; }
 @media (max-width: 600px) {
 
     #container-2{
+        width: 100%;
+    }
+    #container-3{
         width: 100%;
     }
     header {
@@ -1911,7 +1916,7 @@ nav ul li.oculto { display: none !important; }
     .lineleft{
         border-left: 0;
         border-bottom: 5px solid rgb(131, 190, 190);
-        padding: 2rem 0;
+        padding: 0 0 2rem 0;
     }
 
 
