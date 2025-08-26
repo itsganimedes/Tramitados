@@ -19,7 +19,7 @@ body {
 /* Logo y título */
 .logo {
     width: 120px;
-    margin-bottom: 1rem;
+    margin: 2rem 0 1rem 0;
     transition: transform 0.3s ease;
 }
 
@@ -150,15 +150,15 @@ label {
     display: none;
 }
 
-#error {
+#login-error {
     color: #fff;
     font-weight: bold;
+    width: 100%;
     background: rgba(194,138,138,0.8);
     padding: 0.5rem;
     border-radius: 5px;
     text-align: center;
     margin-top: 1rem;
-    width: 100%;
 }
 
 /* Responsivo */
