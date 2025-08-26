@@ -14,6 +14,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         window.location.href = "index.html";
     } catch (error) {
         console.error("Error en login:", error);
+        document.getElementById("login-error").classList.remove("oculto");
         document.getElementById("login-error").textContent = "Correo o contraseña incorrectos";
     }
 });
