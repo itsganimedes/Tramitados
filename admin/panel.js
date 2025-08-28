@@ -327,8 +327,6 @@ window.cambiarEstado = async function (docId) {
         // Actualizar documento con los cambios
         await updateDoc(solicitudRef, updates);
 
-        console.log(`✅ Estado cambiado a ${nuevoEstado}, prioridad actualizada.`);
-
     } catch (error) {
         console.error("Error al cambiar estado:", error);
         alert("Error al cambiar estado.");
