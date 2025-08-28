@@ -104,9 +104,20 @@ import {
         filtro5.classList.add("oculto");
     }
 
+    const sonido=new Audio("../sounds/nueva_solicitud.mp3");
+    let primeraVez = true;
+
     const q = query(collection(db, "solicitudes"), orderBy("prioridad", "asc"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         container.innerHTML = "";
+
+        if (!primeraVez) {
+            querySnapshot.docChanges().forEach(change => {
+                if (change.type === "added") {
+                    sonido.play().catch(err => console.log("Autoplay bloqueado:", err));
+                }
+            });
+        }
 
         querySnapshot.forEach((docSnap) => {
 
@@ -173,6 +184,8 @@ import {
             const btnEliminar = div.querySelector(".eliminarSolicitud");
             btnEliminar.classList.remove("oculto");
         }
+
+
         
         container.appendChild(div);
 
@@ -183,6 +196,8 @@ import {
     });
     const totalSolicitudes = querySnapshot.size;
     document.getElementById("totalSolicitudes").textContent = `Total de solicitudes: ${totalSolicitudes}`;
+
+    primeraVez = false;
     })};
 
 
