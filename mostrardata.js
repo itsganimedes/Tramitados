@@ -7,11 +7,13 @@ import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/
 // -------------------------
 function mostrarUIUsuario(nombre) {
     const usernameP = document.getElementById("username");
+    const username2P = document.getElementById("username2");
     const user_data_info = document.querySelector(".user-data");
     const loginBtn = document.querySelectorAll(".login-button");
     const logoutBtn = document.getElementById("signout-button");
 
     if (usernameP) usernameP.textContent = nombre || "Sin nombre";
+    if (username2P) username2P.textContent = nombre || "Sin nombre";
     if(loginBtn){
         loginBtn.forEach(a => {
             a.classList.add("oculto");

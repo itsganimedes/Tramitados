@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if(userData){
         // Por ejemplo, mostrar nombre en el nav
         const usernameP = document.getElementById("username");
+        const username2P = document.getElementById("username2");
         const user_data_info = document.querySelector(".user-data");
 
         if(usernameP) usernameP.textContent = userData.nombre;
+        if(username2P) username2P.textContent = userData.nombre;
 
         // Mostrar botón de logout y ocultar login
         const loginBtn = document.querySelectorAll(".login-button");
