@@ -93,17 +93,24 @@
 
     .advertencia{
         max-width: 50%;
+        margin: 3rem 0;
         padding: 1rem;
         border-radius: 4px;
         border: 1px solid #ccc;
-        color: rgb(6, 36, 26); 
-        background: #ffe600; 
+        color: #ccc;
+        background: rgba(235, 219, 0, 0.2); 
+        backdrop-filter: blur(10px); /* 🔹 Aquí está el blur */
+        -webkit-backdrop-filter: blur(10px); /* Compatibilidad Safari */
         z-index: 10;
     }
 
+    .advertencia b{
+        border-bottom: 1px solid #ccc ;
+    }
+
     .advertencia i{
-        color: #ffee00;
-        background-color: rgb(3, 30, 61);
+        color: #0a042b;
+        background-color: rgb(233, 233, 233);
         padding: 0.2rem;
         border-radius: 50%;
     }
