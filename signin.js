@@ -29,19 +29,26 @@ document.addEventListener("DOMContentLoaded", () => {
             // 1️⃣ Crear usuario en Firebase Auth
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
+            const fecha = new Date();
+            const year = fecha.getFullYear();
+            const month = fecha.getMonth();
+            const day = fecha.getDate();
+            const inscripcion = String(day + '/' + month + '/' + year);
 
             await setDoc(doc(db, "usuarios", user.uid), {
                 nombre: nombre,
                 email: email,
                 rol: "user",
                 telefono: telefono,
-                ban: false
+                ban: false,
+                fecha_inscripcion: inscripcion
             });
 
             // 3️⃣ Opcional: mostrar mensaje o redirigir
             alert("Usuario registrado con éxito!");
             form.reset();
             errorP.classList.add("oculto");
+            window.location.href = "index.html";
 
         } catch (error) {
             errorP.textContent = `Error: ${error.message}`;
