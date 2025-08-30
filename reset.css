@@ -288,9 +288,11 @@
     @media (max-width: 600px) {
         #container-2{
             width: 100%;
+            padding: 2rem;
         }
         #container-3{
             width: 100%;
+            padding: 2rem;
         }
 
         #container-3{
