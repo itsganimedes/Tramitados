@@ -69,6 +69,30 @@
         color: #f1f1f1;
     }
 
+    .avisos-mobile{
+        background-color: #043131;
+        width: 100%;
+        padding: 0 4rem;
+        height: 2.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: #f1f1f1;
+        font-size: 0.9rem;
+        display: none;
+    }
+
+    .social-media-2{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .avisos-mobile a{
+        color: #f1f1f1;
+    }
+
 
     /* HEADER NAV */
 
@@ -471,7 +495,7 @@
         min-height: 50rem;
         background-position: bottom;
         background-size: cover;
-        background-attachment: local;
+        background-attachment: fixed;
         align-items: center;
         justify-content: space-between;
         position: relative;
@@ -533,6 +557,19 @@
             height: auto;
             text-align: center;
             padding: 0.5rem 0.5rem;
+            display: none;
+        }
+
+        .avisos-mobile{
+            flex-direction: column;
+            height: auto;
+            padding: 0.5rem 0.5rem;
+            display: block;
+        }
+
+        .social-media-2{
+            text-align: center;
+            justify-content: center;
         }
 
         #container .avisos p{
