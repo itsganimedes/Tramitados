@@ -8,6 +8,7 @@ document.getElementById("signout-button").addEventListener("click", async () => 
         await signOut(auth);
         sessionStorage.removeItem('userData');
         alert("Has Cerrado Sesión");
+        location.reload();
     } catch (error) {
         console.error("Error al cerrar sesión:", error);
     }
