@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (userSnap.exists()) {
                         const data = userSnap.data();
                         mostrarUIUsuario(data.nombre);
-                        sessionStorage.setItem('userData', JSON.stringify({ nombre: data.nombre, telefono: data.telefono, email: user.email, rol: data.rol, fecha_inscripcion: data.fecha_inscripcion}));
+                        sessionStorage.setItem('userData', JSON.stringify({ nombre: data.nombre, telefono: data.telefono, email: user.email, rol: data.rol, fecha_inscripcion: data.fecha_inscripcion, plan: data.plan}));
                     } else {
                         console.log("No existe el documento del usuario");
                     }

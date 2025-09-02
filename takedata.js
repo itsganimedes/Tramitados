@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let number = document.getElementById("userphone");
     let rol = document.getElementById("userrol");
     let date = document.getElementById("userdate");
+    let plan = document.getElementById("userplan");
 
     if (userData) {
 
@@ -24,6 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
             rolshow = "Tramitador";
         } else {
             rolshow = "Usuario";
+        }
+
+        let planshow = "Indefinido";
+
+        if(userData.plan === "0"){
+            planshow = "Básico";
+        } else if (userData.plan === "1"){
+            planshow = "Premium";
+        } else if (userData.plan === "2"){
+            planshow = "Pro";
         }
 
         name.textContent = 'NOMBRE: ' + userData.nombre;
