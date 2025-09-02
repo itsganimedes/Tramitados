@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         number.textContent = 'CELULAR: ' + userData.telefono;
         rol.textContent = 'ROL: ' + rolshow;
         date.textContent = 'FECHA DE INSCRIPCIÓN: ' + userData.fecha_inscripcion;
+        plan.textContent = 'PLAN: ' + planshow;
     } else {
 
         onAuthStateChanged(auth, async (user) => {
