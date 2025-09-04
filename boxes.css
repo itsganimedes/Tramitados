@@ -571,6 +571,43 @@
     }
 
     /*---------------------*/
+      /* IMAGEN SERVICIOS */
+    /*---------------------*/
+
+    .img-services {
+        width: 100%;
+        height: 8rem;
+        background: url(img/Inicio7.png);
+        background-size: cover;
+        background-position: 0 40rem;
+        animation: cambiar 10s linear infinite alternate-reverse;
+    }
+
+
+    @keyframes cambiar {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 0 100%;
+        }
+    }
+
+    /*---------------------*/
+    /* IMAGEN QUIENES SOMOS */
+    /*---------------------*/
+
+    .img-whoweare {
+        margin: -2rem -5rem 1rem -5rem;
+        width: calc(100% + 10rem);
+        height: 15rem;
+        background: url(img/team.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /*---------------------*/
         /* MI PERFIL */
     /*---------------------*/
 

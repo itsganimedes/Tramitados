@@ -15,7 +15,7 @@
     body {
         width: 100%;
         background: linear-gradient(135deg, #d1e0e0, #e5f7f6);
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: rgb(26, 26, 26);
         transition: 0.5s;
         overflow-x: hidden;
@@ -179,14 +179,7 @@
         color: rgb(27, 83, 156);
     }
 
-    #container-3 img {
-        width: 100%;
-        max-width: 15rem;
-        height: auto;
-        border: 2px solid white;
-        border-radius: 10px;
-        margin: 1rem;
-    }
+
 
     #container-3 img:hover{
         border-color: aquamarine;

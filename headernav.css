@@ -387,8 +387,8 @@
     }
 
     .a-special-2:hover{
-        background: #000000;
-        color: rgb(0, 179, 185);
+        background: rgb(255, 255, 255);
+        color: rgb(96, 145, 145);
     }
 
     .a-special-3{
@@ -405,8 +405,8 @@
     }
 
     .a-special-3:hover{
-        background: #000000;
-        color: rgb(0, 179, 185);
+        background: rgb(96, 145, 145);
+        color: rgb(219, 219, 219);
     }
 
     .a-special-4{
