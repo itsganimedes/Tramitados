@@ -453,6 +453,14 @@
         display: none;
     }
 
+    /* LINEAS HORIZONTALES HAMBURGUESA */
+
+    .h-line{
+        width: 1.5rem;
+        height: 2px;
+        background: #0d5e5a;
+    }
+
 
 
     /* IMAGEN CON INFO */
@@ -493,12 +501,11 @@
         font-style: italic;
     }
 
-
     /* ADAPTADO PARA CELULAR */
 
-    @media (max-width: 600px) {
+    @media (max-width: 1150px){
 
-        /* IMAGEN DEL INICIO */
+                /* IMAGEN DEL INICIO */
 
         .inicio-img {
         width: 100%;
@@ -635,6 +642,23 @@
             margin-bottom: 7rem;
         }
 
+        
+        /* MENU HAMBURGUESA */
+
+        .hamburger{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 1.7rem;
+        height: 1rem;
+        }
+
+        .hamburger:hover{
+            cursor: pointer;
+        }
+
         nav a{
         color: rgb(252, 252, 252);
         }
@@ -693,6 +717,7 @@
             color: rgb(250, 250, 250);
         }
 
+        
         /* USERDATA */
 
         .user-data{
@@ -743,24 +768,5 @@
             text-overflow: ellipsis;
         }
 
-        /* MENU HAMBURGUESA */
-
-        .hamburger{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        width: 1.7rem;
-        height: 1rem;
-        }
-
-        /* LINEA HORIZONTAL*/
-
-        .h-line{
-            width: 1.5rem;
-            height: 2px;
-            background: #0d5e5a;
-        }
 
     }
