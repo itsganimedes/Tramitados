@@ -584,6 +584,15 @@
         animation: cambiar 10s linear infinite alternate-reverse;
     }
 
+    @media (max-width: 600px){
+
+        .img-services {
+            width: calc(100% + 4rem);
+            margin: -2rem -2rem 1rem -2rem;
+        }
+        
+    }
+
 
     @keyframes cambiar {
         0% {
@@ -629,6 +638,15 @@
         background: url(img/team.jpg);
         background-size: cover;
         background-position: center;
+    }
+
+    @media (max-width: 600px){
+
+        .img-whoweare {
+            width: calc(100% + 4rem);
+            margin: -2rem -2rem 1rem -2rem;
+        }
+        
     }
 
 
