@@ -453,13 +453,7 @@
         display: none;
     }
 
-    /* LINEAS HORIZONTALES HAMBURGUESA */
 
-    .h-line{
-        width: 1.5rem;
-        height: 2px;
-        background: #0d5e5a;
-    }
 
 
 
@@ -659,6 +653,28 @@
             cursor: pointer;
         }
 
+        .hamburger.active .h-line:nth-child(1) {
+            position: absolute;
+            top: 18px;
+            transform: rotate(45deg);
+        }
+        .hamburger.active .h-line:nth-child(2) {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .hamburger.active .h-line:nth-child(3) {
+            position: absolute;
+            transform: rotate(-45deg);
+        }
+
+        /* LINEAS HORIZONTALES HAMBURGUESA */
+
+        .h-line{
+            width: 1.5rem;
+            height: 2px;    
+            background: #0d5e5a;
+        }
+
         nav a{
             color: rgb(20, 20, 20);
         }
@@ -667,20 +683,20 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            max-height: 100vh;
+            width: 60%;
+            height: 100vh;
             background: #e0e0e0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding: 2rem;
             transform: translateX(-100%);
             transition: transform 0.3s ease-in-out;
         }
 
         .nav-links.active {
-            transform: translateX(0);
+            transform: translateX(0%);
         }
 
 

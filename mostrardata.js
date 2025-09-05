@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //hamburguesa 
 const nav = document.querySelector(".nav-links");
+const hamb = document.querySelector(".hamburger");
 
 document.addEventListener('click', (e) =>{
     if (e.target.closest(".hamburger")){
@@ -86,4 +87,5 @@ document.addEventListener('click', (e) =>{
 
 function aparecerNav(){
     nav.classList.toggle("active");
+    hamb.classList.toggle("active");
 };
