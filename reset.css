@@ -72,6 +72,12 @@
         margin: 1rem -2rem;
     }
 
+    /* MOVIL NO VISIBLE */
+
+    .mobile{
+        display: none;
+    }
+
 
 
     /* CONTAINER 1 */

@@ -88,4 +88,5 @@ document.addEventListener('click', (e) =>{
 function aparecerNav(){
     nav.classList.toggle("active");
     hamb.classList.toggle("active");
+    document.body.classList.toggle("nav-open");
 };
