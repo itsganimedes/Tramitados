@@ -285,6 +285,11 @@
     /* CELULAR */
 
     @media (max-width: 600px) {
+
+        .mobile{
+            display: block;
+        }
+
         #container-2{
             width: 100%;
             padding: 2rem;
