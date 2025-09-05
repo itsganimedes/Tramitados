@@ -347,7 +347,7 @@
     /* CRUZ DEL NAV*/
 
     #cruz{
-        color: rgb(247, 247, 247);
+        color: rgb(20, 20, 20);
         font-size: 2rem;
     }
 
@@ -660,29 +660,32 @@
         }
 
         nav a{
-        color: rgb(252, 252, 252);
+            color: rgb(20, 20, 20);
         }
 
         .nav-links {
-            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #e0e0e0;
+            display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
-            padding: 1rem 0;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
         }
 
-        .nav-links.active{
-            display: flex;
-            width: 100%;
-            border-bottom: 1px solid #ccc;
-            position: fixed;
-            background-color: rgb(0, 0, 0);
-            left: 0;
-            top: 0;
-            align-items: center;
+        .nav-links.active {
+            transform: translateX(0);
         }
+
 
         .nav-a-special, .nav-a-special-2{
-            color: rgb(240, 240, 240);
+            color: rgb(20, 20, 20);
         }
 
         .nav-a-special-mobile{
@@ -755,7 +758,7 @@
 
         #username2{
             display: flex;
-            color: #ccc;
+            color: rgb(20, 20, 20);
             position: static;
             max-width: fit-content;
             padding: 0 1rem;
