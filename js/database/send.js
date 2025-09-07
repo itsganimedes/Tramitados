@@ -1,5 +1,5 @@
-import { db } from './firebase.js';
-import { auth } from './admin/firebaselogin.js';
+import { db } from '../database/firebase.js';
+import { auth } from '../../admin/firebaselogin.js';
 import {
     collection,
     setDoc,

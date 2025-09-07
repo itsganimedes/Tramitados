@@ -1,6 +1,9 @@
-import { db, auth } from './admin/firebaselogin.js';
+import { db, auth } from '../../admin/firebaselogin.js';
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+/* ESTE JS MUESTRA EL NOMBRE Y BOTONES EN CASO DE ESTAR LOGUEADO */
+
 
 // -------------------------
 // Funciones auxiliares UI

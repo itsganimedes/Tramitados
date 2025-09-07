@@ -1,3 +1,6 @@
+/* ESTE JS GESTIONA LA PÁGINA DE SERVICIOS: FORMULARIOS, FILTROS ETC */
+
+
 document.addEventListener("DOMContentLoaded", () => {
 //variables
 let str=" responsables inscriptos.";

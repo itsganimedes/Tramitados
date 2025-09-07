@@ -1,6 +1,8 @@
-import { db, auth } from './admin/firebaselogin.js';
+import { db, auth } from '../../admin/firebaselogin.js';
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+/* ESTE JS SE ENCARGA DE MOSTRAR LA INFORMACIÓN DEL USUARIO EN LA PESTAÑA "MI PERFIL" */
 
 document.addEventListener("DOMContentLoaded", () => {
 

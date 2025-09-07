@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-import { auth } from "./admin/firebaselogin.js";
+import { auth } from "../../admin/firebaselogin.js";
 
 document.getElementById("login-form").addEventListener("submit", async (e) => {
     e.preventDefault(); // 🚀 evita que se reinicie la página

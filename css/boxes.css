@@ -150,7 +150,7 @@
         content: "Premium";
     }
 
-    .boxes{
+    .top-boxes{
         height: 100%;
         display: flex;
         flex-direction: row;
@@ -578,8 +578,8 @@
         width: calc(100% + 10rem);
         height: 10rem;
         margin: -2rem -5rem 1rem -5rem;
-        background: url(img/Inicio7.png);
-        background-size: cover;
+        background: url(../img/Inicio7.png);
+        background-size: cover; 
         background-position: 0 40rem;
         animation: cambiar 10s linear infinite alternate-reverse;
     }
@@ -608,7 +608,7 @@
     /*---------------------*/
 
     .img-minimalistic-worker{
-        background: url(img/Worker.png);
+        background: url(../img/Worker.png);
         background-repeat: no-repeat;
         background-size: cover;
         width: 10rem;
@@ -635,7 +635,7 @@
         margin: -2rem -5rem 1rem -5rem;
         width: calc(100% + 10rem);
         height: 15rem;
-        background: url(img/team.jpg);
+        background: url(../img/team.jpg);
         background-size: cover;
         background-position: center;
     }
@@ -718,7 +718,7 @@
         margin: 1rem auto;
         border-radius: 50%;
         border: 1px solid #ccc;
-        background: url(img/ManUser.png);
+        background: url(../img/ManUser.png);
         background-size: cover;
         background-position: center;
     }

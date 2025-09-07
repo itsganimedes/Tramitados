@@ -5,7 +5,7 @@
     margin: 0 -2rem;
     height: 41rem;
     background-color: #000000;
-    background-image: url(img/Inicio6.png);
+    background-image: url(../img/Inicio6.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -485,7 +485,7 @@
         width: 48rem;
         height: 42rem;
         background-size: cover;
-        background-image: url(img/Ambicion.png);
+        background-image: url(../img/Ambicion.png);
         background-position: bottom;
     }
 

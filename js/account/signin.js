@@ -1,7 +1,6 @@
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-import { db } from './firebase.js';
+import { db, app } from '../database/firebase.js';
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-import { app } from './firebase.js';
 
 const auth = getAuth(app);
 
