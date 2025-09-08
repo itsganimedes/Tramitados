@@ -1,4 +1,4 @@
-import { auth, db } from './firebase./js/general/basics.js';
+import { auth, db } from './firebaselogin.js';
 import {
     signOut,
     onAuthStateChanged

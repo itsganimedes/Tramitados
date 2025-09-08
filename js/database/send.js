@@ -1,3 +1,5 @@
+/* ESTE JS SE ENCARGA DE GUARDAR LOS DATOS DE LA SOLICITUD EN LA BASE DE DATOS */
+
 import { db } from '../database/firebase.js';
 import { auth } from '../../admin/firebaselogin.js';
 import {
