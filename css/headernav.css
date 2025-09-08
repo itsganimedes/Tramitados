@@ -597,6 +597,7 @@
         padding: 0;
         justify-content: space-between;
         width: 100%;
+        z-index: 10;
         }
 
 
@@ -688,18 +689,22 @@
 
         .nav-links {
             position: fixed;
-            top: 0;
+            top: 70px;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: 90vh;
             background: #e0e0e0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: top;
-            padding: 2rem;
-            transform: translateX(-100%);
+            justify-content: flex-start;
+            padding: 0rem;
+            transform: translateY(-100%);
             transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+
         }
 
         nav .nav-links a{
@@ -707,7 +712,10 @@
         }
 
         .nav-links.active {
-            transform: translateX(0%);
+            transform: translateY(0%);
+            padding: 2rem;
+            visibility: visible;
+            opacity: 1;
         }
 
 
