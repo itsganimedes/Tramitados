@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //variables
 let str=" responsables inscriptos.";
 
-let total=21;
+let total=document.querySelectorAll(".servicevig").length;
 
 //cantidad de inscriptos por servicio
 let inscriptos=[
@@ -20,15 +20,17 @@ let inscriptos=[
     0,              //9 FLETES
     0,              //10 FOTOGRAFÍA
     0,              //11 GASISTA
-    0,              //12 JARDINERÍA 
-    0,              //13 MÚSICA
-    0,              //14 ORGANIZACIÓN
-    0,              //15 PINTOR
-    0,              //16 PLOMERÍA 
-    0,               //17 PROFESORES
-    0,               //18 RECADOS
-    0,               //19 SERVICIO TÉCNICO
-    0               //20 TRÁMITES LEGALES
+    0,              //12 JARDINERÍA
+    0,              //13 LAVADO DE AUTOS 
+    0,              //14 MESA DULCE 
+    0,              //15 MÚSICA
+    0,              //16 ORGANIZACIÓN
+    0,              //17 PINTOR
+    0,              //18 PLOMERÍA 
+    0,               //19 PROFESORES
+    0,               //20 RECADOS
+    0,               //21 SERVICIO TÉCNICO
+    0               //22 TRÁMITES LEGALES
 ];
 
 let recarga_emergencias=10;
@@ -65,7 +67,7 @@ document.querySelectorAll('.formulario-servicio').forEach(form => {
 let serviciostotal = document.querySelectorAll(".servicevig");
 
 serviciostotal.forEach((servicio, index) => {
-    const p = servicio.querySelector(".res-ins"); // usamos clase
+    const p = servicio.querySelector(".res-ins");
     if (p) {
         p.id = `res-ins-${index}`;
         p.textContent = `${inscriptos[index]} responsables inscriptos.`;
