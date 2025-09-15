@@ -12,25 +12,26 @@ let inscriptos=[
     0,              //1 ASISTENCIA FÍSICA
     0,              //2 CADENA DE ORACIÓN
     0,              //3 CERRAJERÍA
-    0,              //4 CUIDADO DEL MAYORES
-    0,              //5 CUIDADO DE NIÑOS
-    0,              //6 CUIDADO DEL HOGAR
-    0,              //7 DJ
-    0,              //8 ELECTRICISTA 
-    0,              //9 FLETES
-    0,              //10 FOTOGRAFÍA
-    0,              //11 GASISTA
-    0,              //12 JARDINERÍA
-    0,              //13 LAVADO DE AUTOS 
-    0,              //14 MESA DULCE 
-    0,              //15 MÚSICA
-    0,              //16 ORGANIZACIÓN
-    0,              //17 PINTOR
-    0,              //18 PLOMERÍA 
-    0,               //19 PROFESORES
-    0,               //20 RECADOS
-    0,               //21 SERVICIO TÉCNICO
-    0               //22 TRÁMITES LEGALES
+    0,              //4 CUIDADO DE MASCOTAS
+    0,              //5 CUIDADO DE MAYORES
+    0,              //6 CUIDADO DE NIÑOS
+    0,              //7 CUIDADO DEL HOGAR
+    0,              //8 DJ
+    0,              //9 ELECTRICISTA 
+    0,              //10 FLETES
+    0,              //11 FOTOGRAFÍA
+    0,              //12 GASISTA
+    0,              //13 JARDINERÍA
+    0,              //14 LAVADO DE AUTOS 
+    0,              //15 MESA DULCE 
+    0,              //16 MÚSICA
+    0,              //17 ORGANIZACIÓN
+    0,              //18 PINTOR
+    0,              //19 PLOMERÍA 
+    0,               //20 PROFESORES
+    0,               //21 RECADOS
+    0,               //22 SERVICIO TÉCNICO
+    0               //23 TRÁMITES LEGALES
 ];
 
 let recarga_emergencias=10;
