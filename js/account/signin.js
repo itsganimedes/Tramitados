@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 telefono: telefono,
                 ban: false,
                 fecha_inscripcion: inscripcion,
-                plan: "0"
+                plan: "0",
+                servicio: [""]
             });
 
             // 3️⃣ Opcional: mostrar mensaje o redirigir
