@@ -137,6 +137,14 @@ import {
             estadocolor = "cambiarcolor";
         }
 
+        let tomadoname = "";
+        if (data.tomado === "")
+        {
+            tomadoname = "Nadie";
+        } else {
+            tomadoname = data.tomado;
+        }
+
         //desaparecer boton de cambiar estado si está en proceso
         if (data.prioridad===5) {
             realizadotext="En Proceso";
@@ -175,6 +183,7 @@ import {
             <div><span class="label">Términos y Condiciones: </span>${terminosycondiciones_aceptado}</div>
             <div><span class="label">Fecha:</span> ${data.fecha}</div>
             <div><span class="label">Hora:</span> ${data.horario_solicitud}</div>
+            <div><span>Tomado por:</span> ${tomadoname}</div>
             <div>
                 <span class="label">Comentario:</span>
                 <div class="comentario">${data.comentario}</div>
@@ -372,13 +381,12 @@ window.cambiarEstado2 = async function (docId) {
 
         const data = solicitudSnap.data();
 
-        const nuevoEstado = data.realizado === 3;
+        const nuevoEstado = 3;
 
         let nuevaPrioridad = data.prioridad;
         let updates = { realizado: nuevoEstado };
 
         if (data.prioridad == 4) {
-            // Poner prioridad a 4
             updates.prioridad = 5;
         } else if (data.prioridad === 5) {
             alert("Esta solicitud ya está en proceso.");
@@ -388,10 +396,7 @@ window.cambiarEstado2 = async function (docId) {
             return;
         }
 
-        // Actualizar documento con los cambios
         await updateDoc(solicitudRef, updates);
-
-
 
         console.log(`✅ Estado cambiado a ${nuevoEstado}, prioridad actualizada.`);
 

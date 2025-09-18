@@ -68,7 +68,8 @@ import {
         realizado: 0,
         terminosycondiciones: form.terminosycondiciones.value,
         fecha: fechaFormateada,
-        horario_solicitud: horario
+        horario_solicitud: horario,
+        tomado: ""
     };
 
     } else {
@@ -85,7 +86,8 @@ import {
         terminosycondiciones: form.terminosycondiciones.value,
         fecha: fechaFormateada,
         horario_solicitud: horario,
-        servicio_esp: form.servicio_tecnico.value
+        servicio_esp: form.servicio_tecnico.value,
+        tomado: ""
     };
 
     }
