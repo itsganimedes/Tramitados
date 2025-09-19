@@ -185,13 +185,104 @@
 
             <p id="no-services" class="oculto">No hay servicios de esta categoría actualmente.</p>
 
+            <!--albañil-->
+            <div class="servicevig independiente" onclick="mostrarFormulario('albanil')">
+                <b class="title-2"><i class="fa-solid fa-helmet-safety"></i> Albañil</b>
+                <p>Tramitador Independiente</p>
+                <p class="res-ins"> responsables inscriptos.</p>
+                <p class="unavailable">Disponible</p>
+                <p class="descripcion">Servicios que incluyen construcción, reparaciones y remodelaciones con seguridad y calidad.</p>
+                <form 
+                id="form-albanil"
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="Albañil"
+                class="formulario-servicio oculto"
+                >
+                    <input type="hidden" name="_subject" value="Solicitud de Albañil">
+                    
+                    <input type="hidden" name="_next" value="">
+
+                    <p>Nombre Completo</p>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
+                    
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (con 54)"
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+
+                    <p>Región/Localidad</p>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9 de Julio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="San Martín">San Martín</option>
+                    <option value="Santa Lucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25 de Mayo">25 de Mayo</option>
+                    </select>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
+
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+
+                    <label for="terminosycondiciones">
+                    <input type="checkbox" name="terminosycondiciones" id=terminosycondiciones"" required>
+                    He leído y acepto los <a href="terminosycondiciones.html">Términos y Condiciones</a> sobre mi uso de este servicio
+                    </label>
+
+                    <button type="submit">Enviar solicitud</button>
+
+                </form>
+            </div>
 
             <!--asistencia física-->
             <div class="servicevig oficial mudanzas" onclick="mostrarFormulario('fisica')">
                 <b class="title-2"><i class="fa-solid fa-handshake-angle"></i> Asistencia Física</b>
                 <p>Tramitador Oficial</p>
                 <p class="res-ins"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
+                <p class="unavailable">Disponible</p>
                 <p class="descripcion">Para personas que requieren apoyo en movilidad, traslado, ejercicios adaptados y acompañamiento en actividades diarias, con atención personalizada y segura.</p>
                 <form 
                 id="form-fisica"
@@ -1347,7 +1438,7 @@
                 <b class="title-2"><i class="fa-solid fa-car-side"></i> Lavado de Autos</b>
                 <p>Tramitador Oficial</p>
                 <p class="res-ins"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
+                <p class="unavailable">Disponible</p>
                 <p class="descripcion">Limpieza profunda, rápida y profesional sin que tengas que moverte de tu casa u oficina. ¡Tu auto impecable, vos sin perder tiempo!</p>
 
                 <form 
@@ -1430,12 +1521,100 @@
                 </form>
             </div>
 
+            <!--mecanico-->
+            <div class="servicevig independiente" onclick="mostrarFormulario('mecanico')">
+                <b class="title-2"><i class="fa-solid fa-car"></i> Mecánico</b>
+                <p>Tramitador Independiente</p>
+                <p class="res-ins"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <p class="descripcion">Para mantenimiento, reparación y diagnóstico de vehículos, con profesionalismo y confianza.</p>
+
+                <form 
+                id="form-mecanico"
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="Mecánico"
+                class="formulario-servicio oculto"
+                >
+                    <input type="hidden" name="_subject" value="Solicitud de Metalurgia">
+                    
+                    <input type="hidden" name="_next" value="">
+
+                    <p>Nombre Completo</p>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (con 54)"
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+                    <p>Región/Localidad</p>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9 de Julio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="San Martín">San Martín</option>
+                    <option value="Santa Lucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25 de Mayo">25 de Mayo</option>
+                    </select>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <label for="terminosycondiciones">
+                    <input type="checkbox" name="terminosycondiciones" id=terminosycondiciones"" required>
+                    He leído y acepto los <a href="terminosycondiciones.html">Términos y Condiciones</a> sobre mi uso de este servicio
+                    </label>
+
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
             <!--mesa dulce-->
             <div class="servicevig oficial eventos" onclick="mostrarFormulario('mesa_dulce')">
                 <b class="title-2"><i class="fa-solid fa-cake-candles"></i> Mesa Dulce</b>
                 <p>Tramitador Oficial</p>
                 <p class="res-ins"> responsables inscriptos.</p>
-                <p class="available">Disponible</p>
+                <p class="unavailable">Disponible</p>
                 <p class="descripcion">Postres, golosinas y detalles únicos, ideal para darle un toque especial y delicioso a tu evento.</p>
 
                 <form 
@@ -1446,6 +1625,94 @@
                 class="formulario-servicio oculto"
                 >
                     <input type="hidden" name="_subject" value="Solicitud de Mesa Dulce">
+                    
+                    <input type="hidden" name="_next" value="">
+
+                    <p>Nombre Completo</p>
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <p>Número de Celular</p>
+                    <input 
+                    type="tel" 
+                    name="telefono" 
+                    placeholder="Ej: +5491123456789 (con 54)"
+                    required 
+                    pattern="^\+?54\d{10}$" 
+                    title="Ingresá un número válido comenzando con +54 y 10 dígitos.">
+                    <p>Región/Localidad</p>
+                    <select name="ubicacion" id="ubicacion" required>
+                    <option value="">Región/Localidad</option>
+                    <option value="Albardón">Albardón</option>
+                    <option value="Angaco">Angaco</option>
+                    <option value="Capital">Capital</option>
+                    <option value="Caucete">Caucete</option>
+                    <option value="Chimbas">Chimbas</option>
+                    <option value="9 de Julio">9 de Julio</option>
+                    <option value="Pocito">Pocito</option>
+                    <option value="Rawson">Rawson</option>
+                    <option value="Rivadavia">Rivadavia</option>
+                    <option value="San Martín">San Martín</option>
+                    <option value="Santa Lucía">Santa Lucía</option>
+                    <option value="Sarmiento">Sarmiento</option>
+                    <option value="Ullum">Ullúm</option>
+                    <option value="25 de Mayo">25 de Mayo</option>
+                    </select>
+
+                    <p>Nivel de Urgencia</p>
+
+                    <div class="servicevig-fecha">
+
+                        <div class="fecha-opcion">
+                            <input type="radio" id="emergencia" name="urgencia" value="emergencia" required>
+                            <label for="emergencia" style="color: rgb(255, 0, 0);">Emergencia (Ya)</label><p class="recargaemergencia">(+%0)</p><br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="urgente" name="urgencia" value="urgente">
+                            <label for="urgente" style="color: rgb(255, 153, 0);">Urgente (Hoy)</label><p class="recargaurgencia">(+%0)<br>
+                        </div>
+                        <div class="fecha-opcion">
+                            <input type="radio" id="normal" name="urgencia" value="normal">
+                            <label for="normal" style="color: rgb(46, 83, 3);">Normal (Dentro de 1-2 o más días)</label>
+                        </div>
+
+                    </div>
+
+                    <p>Preferencia horaria</p>
+
+                    <select name="hora" id="hora" required>
+                        <option value="">¿Horario?</option>   
+                        <option value="Mañana(8AM-12PM)">Mañana (8AM - 12PM)</option>
+                        <option value="Tarde(12PM-5PM)">Tarde (12PM - 5PM)</option>
+                        <option value="Noche(5PM-12AM)">Noche (5PM - 12AM)</option>
+                        <option value="Madrugada(12AM-8AM)">Madrugada (12AM - 8AM)</option>
+                    </select>
+
+                    <p>Descripción del Servicio</p>
+                    <textarea name="comentario" placeholder="¿Qué necesitás específicamente? (Opcional)"></textarea>
+                    <label for="terminosycondiciones">
+                    <input type="checkbox" name="terminosycondiciones" id=terminosycondiciones"" required>
+                    He leído y acepto los <a href="terminosycondiciones.html">Términos y Condiciones</a> sobre mi uso de este servicio
+                    </label>
+
+                    <button type="submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!--metalurgia-->
+            <div class="servicevig independiente" onclick="mostrarFormulario('metalurgia')">
+                <b class="title-2"><i class="fa-solid fa-fire-burner"></i> Metalurgia</b>
+                <p>Tramitador Independiente</p>
+                <p class="res-ins"> responsables inscriptos.</p>
+                <p class="available">Disponible</p>
+                <p class="descripcion">Servicios especializados, incluyendo corte, soldadura y fabricación de piezas metálicas con precisión y calidad.</p>
+
+                <form 
+                id="form-metalurgia"
+                method="POST"
+                onsubmit="enviarFormulario(event)"
+                data-servicio="Metalurgia"
+                class="formulario-servicio oculto"
+                >
+                    <input type="hidden" name="_subject" value="Solicitud de Metalurgia">
                     
                     <input type="hidden" name="_next" value="">
 

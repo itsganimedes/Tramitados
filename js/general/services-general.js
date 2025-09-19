@@ -9,29 +9,32 @@ let total=document.querySelectorAll(".servicevig").length;
 
 //cantidad de inscriptos por servicio
 let inscriptos=[
-    0,              //1 ASISTENCIA FÍSICA
-    0,              //2 CADENA DE ORACIÓN
-    0,              //3 CERRAJERÍA
-    0,              //4 CUIDADO DE MASCOTAS
-    0,              //5 CUIDADO DE MAYORES
-    0,              //6 CUIDADO DE NIÑOS
-    0,              //7 CUIDADO DEL HOGAR
-    0,              //8 DJ
-    0,              //9 ELECTRICISTA 
-    0,              //10 FLETES
-    0,              //11 FOTOGRAFÍA
-    0,              //12 GASISTA
-    0,              //13 JARDINERÍA
-    0,              //14 LAVADO DE AUTOS 
-    0,              //15 MESA DULCE 
-    0,              //16 MÚSICA
-    0,              //17 ORGANIZACIÓN
-    0,              //18 PINTOR
-    0,              //19 PLOMERÍA 
-    0,               //20 PROFESORES
-    0,               //21 RECADOS
-    0,               //22 SERVICIO TÉCNICO
-    0               //23 TRÁMITES LEGALES
+    0,              //1 ALBAÑIL
+    0,              //2 ASISTENCIA FÍSICA
+    0,              //3 CADENA DE ORACIÓN
+    0,              //4 CERRAJERÍA
+    0,              //5 CUIDADO DE MASCOTAS
+    0,              //6 CUIDADO DE MAYORES
+    0,              //7 CUIDADO DE NIÑOS
+    0,              //8 CUIDADO DEL HOGAR
+    0,              //9 DJ
+    0,              //10 ELECTRICISTA 
+    0,              //11 FLETES
+    0,              //12 FOTOGRAFÍA
+    0,              //13 GASISTA
+    0,              //14 JARDINERÍA
+    0,              //15 LAVADO DE AUTOS 
+    0,              //16 MECÁNICO
+    0,              //17 MESA DULCE 
+    0,              //18 METALURGIA 
+    0,              //19 MÚSICA
+    0,              //20 ORGANIZACIÓN
+    0,              //21 PINTOR
+    0,              //22 PLOMERÍA 
+    0,               //23 PROFESORES
+    0,               //24 RECADOS
+    0,               //25 SERVICIO TÉCNICO
+    0               //26 TRÁMITES LEGALES
 ];
 
 let recarga_emergencias=10;
